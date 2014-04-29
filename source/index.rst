@@ -22,6 +22,10 @@ Programmation orientée objets
     :maxdepth: 1
 
     theorie/intro
+    theorie/objectifs
+    theorie/concepts-fondamentaux
+
+    exercices/bwillis
 
 
 ..

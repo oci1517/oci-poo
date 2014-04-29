@@ -55,7 +55,6 @@ clean:
 
 html:
 	$(SPHINXBUILD) -b html $(HTML_OPTS) $(ALLSPHINXOPTS) $(BUILDDIR)/html
-	cp -rf test-crawl-web $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 

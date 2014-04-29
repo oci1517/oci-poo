@@ -1,0 +1,1212 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"exclude",
+				"exclude_patterns"
+			],
+			[
+				"fin",
+				"final_argument_whitespace"
+			],
+			[
+				"cloud9",
+				"Cloud9"
+			],
+			[
+				"crawl",
+				"crawl_web"
+			],
+			[
+				"max",
+				"max_liste"
+			],
+			[
+				"Cr",
+				"Corrigé"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "source/index.rst",
+			"settings":
+			{
+				"buffer_size": 1024,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/exercices/bwillis.rst",
+			"settings":
+			{
+				"buffer_size": 1031,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/Dropbox/CS/oc_inf/2013-2015/4-POO-portes-logiques/donnees/Exo_4_1.py",
+			"settings":
+			{
+				"buffer_size": 822,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/theorie/intro.rst",
+			"settings":
+			{
+				"buffer_size": 1835,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/theorie/objectifs.rst",
+			"settings":
+			{
+				"buffer_size": 1360,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/theorie/concepts-fondamentaux.rst",
+			"settings":
+			{
+				"buffer_size": 6162,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 407.0,
+		"selected_items":
+		[
+			[
+				"space",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"spaces",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"spacesa",
+				"Preferences: Package Control Settings – Default"
+			],
+			[
+				"rest",
+				"Set Syntax: reStructuredText Improved"
+			],
+			[
+				"comen",
+				"Toggle Comment"
+			],
+			[
+				"html5",
+				"Set Syntax: HTML5"
+			],
+			[
+				"pythn",
+				"Set Syntax: Python 3"
+			],
+			[
+				"python3",
+				"Set Syntax: Python 3"
+			],
+			[
+				"pyth3",
+				"Set Syntax: Python 3"
+			],
+			[
+				"come",
+				"Toggle Comment"
+			],
+			[
+				"spa",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"comme",
+				"Toggle Comment"
+			],
+			[
+				"com",
+				"Toggle Comment"
+			],
+			[
+				"sap",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"sapce",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"html",
+				"Set Syntax: HTML5"
+			],
+			[
+				"spell",
+				"Google Spell Check"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"comment",
+				"Toggle Comment"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"comm",
+				"Toggle Comment"
+			],
+			[
+				"commen",
+				"Toggle Comment"
+			],
+			[
+				"python",
+				"Set Syntax: PythonImproved"
+			],
+			[
+				"restr",
+				"Set Syntax: reStructuredText Improved"
+			],
+			[
+				"htlm5",
+				"Set Syntax: HTML5"
+			],
+			[
+				"conv",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"conve",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"conver",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"save",
+				"File: Save All"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"setting",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"",
+				"ANF: Delete Current File"
+			],
+			[
+				"pyhton",
+				"Set Syntax: Python"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"conv spa",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"conver spa",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"convert space",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"conv sp",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"synt py",
+				"Set Syntax: Python"
+			],
+			[
+				"conv spac",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"packa re",
+				"Package Control: Remove Package"
+			],
+			[
+				"retr",
+				"Set Syntax: reStructuredText Improved"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 624.0
+	},
+	"console":
+	{
+		"height": 186.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Dropbox/CS/oc_inf/2013-2015/4-POO-portes-logiques/sphinx/Makefile",
+		"/D/Dropbox/CS/oc_inf/2011-2013/oci3/support-cours/source/presentation_python.rst",
+		"/D/Dropbox/CS/oc_inf/2011-2013/oci3/support-cours/source/deroulement.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/m4-POO-portes-logiques/sphinx/source/conf.py",
+		"/D/Dropbox/CS/oc_inf/2013-2015/m4-POO-portes-logiques/sphinx/source/index.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/m4-POO-portes-logiques/donnees/Exo_4_1.py",
+		"/D/Sublime Text Build 3059 x64/Data/Packages/Package Control/Package Control.sublime-settings",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/test-seed.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-01/figures/~$Projet 1.pptx",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-02/operations-index-alt4-donnee.py",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-02/lookup-alt4-donnee.py",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-02/lookup-alt4-corrige.py",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-02/lookup-alt2-corrige.py",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-01/11a-get_all_links_corr.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-02/add_kw_to_index.py",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/criteres/eval-1",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/index.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/projet-1-search-engine-sphinx",
+		"/C/cygwin64/home/donnerc/phy1ecg/site/_sources/refraction/corriges/exo-41.rst",
+		"/C/cygwin64/home/donnerc/phy1ecg/site/_sources/refraction/index.rst",
+		"/C/cygwin64/home/donnerc/phy1ecg/site/continuous-build.py",
+		"/C/cygwin64/home/donnerc/phy1ecg/site/_templates/sphinx_bootstrap/layout.html",
+		"/C/cygwin64/home/donnerc/phy1ecg/site/build/_sources/index.txt",
+		"/C/cygwin64/home/donnerc/phy1ecg/site/refraction/index.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/make.bat",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-02/op-implementation-alt-4.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-01/10-etape-01.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-02/intro-index.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-02/choix-implementation.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/runstone/RunestoneTools/pavement.py",
+		"/D/Dropbox/CS/oc_inf/2013-2015/runstone/RunestoneTools/_sources/index.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/runstone/RunestoneTools/conf.py",
+		"/D/Dropbox/CS/oc_inf/2013-2015/runstone/RunestoneTools/_templates/sphinx_bootstrap/layout.html",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-02/op-implementation-alt-2.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-02/lookup-alt2-donnee.py",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/test-crawl-web/page3.html",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/test-crawl-web/page4.html",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/test-crawl-web/page5.html",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/test-crawl-web/index.html",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/test-crawl-web/page1.html",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/test-crawl-web/page2.html",
+		"/C/Python27/Lib/site-packages/sphinxcontrib/youtube/youtube.py",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/devenv/git/git-theorie.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/devenv/real-time-collaborative-coding.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/realtime-collab/neutron-drive.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/realtime-collab/c9-ide.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/notions/tuples.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/notions/struct/modele-memoire.rst",
+		"/C/Users/donnerc/Desktop/test.py",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/notions/exceptions-1.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/notions/quiz-exceptions-tuples.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-01/03-parcours-web.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-01/04-url-request.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-01/05-composants-crawler.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-01/06-composant-interface-fonctions.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/devenv/linux-packages.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/devenv/sublime-text.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/crawler/code-brouillon.py",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/devenv/installation-linux.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/devenv/install-chrome.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/Makefile",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/subl/python-packages.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/intro.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-01/02-composants-moteur-recherche.rst",
+		"/D/Dropbox/mooc-web-dev/hello-udacity-6175/main.py",
+		"/D/Dropbox/mooc-web-dev/hello-udacity-6175/unit_2_signup.py",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/crawler/main.py",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/crawler/crawler-variante.py",
+		"/D/Dropbox/mooc-web-dev/hello-udacity-6175/play.html",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/conf.py",
+		"/D/Dropbox/CS/mathematiques/generate_algebra/exo_01.py",
+		"/C/Users/donnerc/Desktop/screencast/math/trigo/exa-formatif/pub/pub_video_3.py",
+		"/C/Users/donnerc/Desktop/screencast/math/trigo/exa-formatif/pub/index.html",
+		"/C/Users/donnerc/Desktop/screencast/math/trigo/exa-formatif/pub/Makefile",
+		"/C/Users/donnerc/Desktop/screencast/math/geometrie/corrige-exa-4/pub/pub_video_3.py",
+		"/C/Users/donnerc/Desktop/screencast/physique/ondes/pub/generate-camproj.py",
+		"/C/Users/donnerc/Desktop/screencast/physique/ondes/pub/pub_video_3.py",
+		"/D/Dropbox/CS/oc_inf/2013-2015/runstone/RunestoneTools/_sources/conf.py",
+		"/C/Users/donnerc/Desktop/test-vincent.py",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-02/lookup.py",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-02/alt-2-lookup.rst",
+		"/C/Users/donnerc/Desktop/screencast/inbox/projet-1-get-page-03-notion-docstring/projet-1-get-page-03-notion-docstring_embed.css",
+		"/C/Users/donnerc/Desktop/screencast/inbox/projet-1-get-page-03-notion-docstring/projet-1-get-page-03-notion-docstring.mp4",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-02/test-seed.rst",
+		"/C/Users/donnerc/Desktop/screencast/inbox/projet-1-get-page-03-notion-docstring/scripts/handlebars.js",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-02/figures/operations-index.png",
+		"/C/Users/donnerc/Desktop/video.html",
+		"/C/Users/donnerc/Desktop/screencast/inbox/projet-1-get-page-03-notion-docstring/projet-1-get-page-03-notion-docstring_player.html",
+		"/C/Users/donnerc/Desktop/screencast/inbox/projet-1-get-page-03-notion-docstring/projet-1-get-page-03-notion-docstring_config.xml",
+		"/C/Users/donnerc/Desktop/screencast/inbox/projet-1-get-page-03-notion-docstring/projet-1-get-page-03-notion-docstring.html",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-01/tasks/10-etape-01.rst",
+		"/C/Python27/Lib/site-packages/sphinxcontrib/youtube/__init__.py",
+		"/C/Python27/Lib/site-packages/sphinxcontrib/youtube/youtube_backup.py",
+		"/C/Python27/Lib/site-packages/sphinxcontrib/youtube/youtube-backup.py",
+		"/C/Python27/Lib/site-packages/setuptools/__init__.py",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/notions/struct/modele-memoire",
+		"/D/Dropbox/mooc-web-dev/hello-udacity-6175/rot13.py",
+		"/D/Dropbox/mooc-web-dev/hello-udacity-6175/main-1.py",
+		"/C/Users/donnerc/Desktop/screencast/math/geometrie/corrige-exa-1/pub/Makefile",
+		"/C/Users/donnerc/Desktop/screencast/math/geometrie/corrige-exa-1/pub/pub_video_3.py",
+		"/C/Users/donnerc/Desktop/screencast/math/geometrie/corrige-exa-1/pub/index.html",
+		"/C/Users/donnerc/Desktop/screencast/math/geometrie/corrige-exa-1/pub/video-template.html",
+		"/D/Sublime Text Build 3059 x64/Data/Packages/User/AdvancedNewFile.sublime-settings",
+		"/D/Sublime Text Build 3059 x64/Data/Packages/AdvancedNewFile/AdvancedNewFile.sublime-settings",
+		"/D/Sublime Text Build 3059 x64/Data/Packages/AdvancedNewFile/Default (Windows).sublime-keymap",
+		"/D/Sublime Text Build 3059 x64/Data/Packages/User/Package Control.sublime-settings",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-01/etape-01.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-01/04",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-01/01-fonctionnement.rst",
+		"/C/Users/donnerc/Desktop/screencast/inbox/pub/pub_video_3.py",
+		"/C/Users/donnerc/Desktop/screencast/inbox/pub/Makefile",
+		"/C/Users/donnerc/Desktop/screencast/inbox/pub/index.html",
+		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/.gitignore",
+		"/D/Dropbox/CS/oc_inf/2013-2015/helix-prog/source/devoirs/devoir-16.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/helix-prog/source/index.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/helix-prog/source/conf.py",
+		"/D/Dropbox/CS/oc_inf/2013-2015/helix-prog/make.bat",
+		"/D/Dropbox/CS/oc_inf/2013-2015/helix-prog/Makefile",
+		"/D/Dropbox/CS/oc_inf/2013-2015/helix-prog/source/examen2/partie-theorique.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/helix-prog/source/examen2/scripts/find.py",
+		"/D/Dropbox/CS/oc_inf/2013-2015/oci-prog-devoirs-etudiants/create-reports.sh",
+		"/D/Dropbox/CS/oc_inf/2013-2015/helix-prog/source/examen2/partie-pratique.rst",
+		"/D/Dropbox/CS/oc_inf/2013-2015/helix-prog/source/examen2/scripts/compte_voyelles.py",
+		"/D/Dropbox/CS/oc_inf/2013-2015/helix-prog/source/examen2/scripts/my_max.py",
+		"/C/Users/donnerc/Desktop/screencast/physique/ondes/Makefile",
+		"/C/Users/donnerc/Desktop/screencast/physique/ondes/pub/pub_video.py",
+		"/C/Kivy-1.7.2-w32/kivy/examples/tutorials/pong/main.py",
+		"/C/Users/donnerc/Desktop/screencast/physique/ondes/pub/index.html"
+	],
+	"find":
+	{
+		"height": 50.0
+	},
+	"find_in_files":
+	{
+		"height": 138.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"put:",
+			"IMAGE",
+			"projet",
+			"``",
+			":",
+			"*",
+			":",
+			"*   ",
+			"[i]",
+			"Corrigé",
+			"mimeMap",
+			"2013",
+			"depth",
+			"refraction/",
+			"refraction",
+			"={1,}",
+			"======================================================",
+			"=====================================================",
+			"====================================================",
+			"===================================================",
+			"==================================================",
+			"=================================================",
+			"================================================",
+			"===============================================",
+			"==============================================",
+			"=============================================",
+			"============================================",
+			"===========================================",
+			"==========================================",
+			"=========================================",
+			"========================================",
+			"=======================================",
+			"======================================",
+			"=====================================",
+			"====================================",
+			"===================================",
+			"==================================",
+			"=================================",
+			"================================",
+			"===============================",
+			"==============================",
+			"=============================",
+			"============================",
+			"===========================",
+			"==========================",
+			"=========================",
+			"========================",
+			"=======================",
+			"======================",
+			"=====================",
+			"====================",
+			"===================",
+			"==================",
+			"=================",
+			"================",
+			"===============",
+			"==============",
+			"=============",
+			"============",
+			"===========",
+			"==========",
+			"=========",
+			"===================",
+			"==================",
+			"=================",
+			"================",
+			"===============",
+			"==============",
+			"=============",
+			"============",
+			"===========",
+			"==========",
+			"=========",
+			"========",
+			"=======",
+			"statique",
+			"proje",
+			"mp4",
+			" *\\d{1,} *",
+			">>> ",
+			"alt2",
+			"lookup",
+			"add_to_index",
+			"lookup",
+			"kw",
+			"index4",
+			"alt2",
+			"Réponse",
+			"url",
+			"p",
+			"url",
+			" ur",
+			"keyword",
+			"index2",
+			"DS",
+			"corrige",
+			"ien vers une autre page",
+			"page\\d",
+			"html:",
+			"a href",
+			"/a>",
+			"only",
+			"html:",
+			"Représentation",
+			"width",
+			"index",
+			"index1",
+			"index",
+			"Alternative",
+			"ndex",
+			"structure",
+			"Question",
+			"caractères",
+			"structurer",
+			"l’information",
+			"problèmes",
+			"quelques",
+			"el",
+			"1",
+			",",
+			"conf",
+			"BK6PXdrj7ug",
+			"div",
+			"from",
+			"form",
+			"flag",
+			"youtube.",
+			"page"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "source/index.rst",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1024,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								849,
+								849
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RestructuredText Improved/reStructuredText Improved.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "source/exercices/bwillis.rst",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1031,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1031
+							]
+						],
+						"settings":
+						{
+							"_anf_new": "",
+							"syntax": "Packages/RestructuredText Improved/reStructuredText Improved.tmLanguage",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 116.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/D/Dropbox/CS/oc_inf/2013-2015/4-POO-portes-logiques/donnees/Exo_4_1.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 822,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								822
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "source/theorie/intro.rst",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1835,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1258,
+								1258
+							]
+						],
+						"settings":
+						{
+							"_anf_new": "",
+							"syntax": "Packages/RestructuredText Improved/reStructuredText Improved.tmLanguage",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 477.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "source/theorie/objectifs.rst",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1360,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								131,
+								131
+							]
+						],
+						"settings":
+						{
+							"_anf_new": "",
+							"syntax": "Packages/RestructuredText Improved/reStructuredText Improved.tmLanguage",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "source/theorie/concepts-fondamentaux.rst",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6162,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5621,
+								5621
+							]
+						],
+						"settings":
+						{
+							"_anf_new": "",
+							"syntax": "Packages/RestructuredText Improved/reStructuredText Improved.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2701.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 47.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 317.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "m4-poo-logic-gates.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\exercices\\bwillis.rst"
+			],
+			[
+				"inde",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\index.rst"
+			],
+			[
+				"in",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\index.rst"
+			],
+			[
+				"index",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\index.rst"
+			],
+			[
+				"th",
+				"eval\\theorique.rst"
+			],
+			[
+				"alt4",
+				"partie-02\\op-implementation-alt-4.rst"
+			],
+			[
+				"15",
+				"partie-02\\15-random_index_test.rst"
+			],
+			[
+				"conf",
+				"C:\\cygwin64\\home\\donnerc\\phy1ecg\\site\\conf.py"
+			],
+			[
+				"ref",
+				"C:\\cygwin64\\home\\donnerc\\phy1ecg\\site\\_sources\\refraction\\index.rst"
+			],
+			[
+				"refrac",
+				"C:\\cygwin64\\home\\donnerc\\phy1ecg\\site\\_sources\\refraction\\index.rst"
+			],
+			[
+				"comp",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-01\\02-composants-moteur-recherche.rst"
+			],
+			[
+				"page1",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\page1.html"
+			],
+			[
+				"page",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\page3.html"
+			],
+			[
+				"indehtml",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\index.html"
+			],
+			[
+				"page4",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\page4.html"
+			],
+			[
+				"age2",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\page2.html"
+			],
+			[
+				"indexhtlm",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\index.html"
+			],
+			[
+				"page2",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\page2.html"
+			],
+			[
+				"indexhtml",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\index.html"
+			],
+			[
+				"choix",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-02\\choix-implementation.rst"
+			],
+			[
+				"alt",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-02\\op-implementation-alt-4.rst"
+			],
+			[
+				"alt2",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-02\\lookup-alt2-donnee.py"
+			],
+			[
+				"corr",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-02\\lookup-alt4-corrige.py"
+			],
+			[
+				"donnee",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-02\\lookup-alt4-donnee.py"
+			],
+			[
+				"inderst",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\index.rst"
+			],
+			[
+				"indexrst",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\index.rst"
+			],
+			[
+				"introinde",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-02\\intro-index.rst"
+			],
+			[
+				"eta",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-01\\10-etape-01.rst"
+			],
+			[
+				"indeht",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\index.html"
+			],
+			[
+				"etape",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-01\\10-etape-01.rst"
+			],
+			[
+				"etap",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-01\\10-etape-01.rst"
+			],
+			[
+				"pag3",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\page3.html"
+			],
+			[
+				"page3",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\page3.html"
+			],
+			[
+				"page43",
+				"projet-1-get-page-03-notion-docstring.mp4"
+			],
+			[
+				"main",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\crawler\\main.py"
+			],
+			[
+				"page5",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\page5.html"
+			],
+			[
+				"makefile",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\Makefile"
+			],
+			[
+				"indexht",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\index.html"
+			],
+			[
+				"tests",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-02\\test-seed.rst"
+			],
+			[
+				"eape",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-01\\10-etape-01.rst"
+			],
+			[
+				"salut",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\devenv\\installation-linux.rst"
+			],
+			[
+				"youtu",
+				"C:\\Python27\\Lib\\site-packages\\sphinxcontrib\\youtube\\youtube.py"
+			],
+			[
+				"quiz",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\notions\\quiz-exceptions-tuples.rst"
+			],
+			[
+				"notions",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\notions\\exceptions-1.rst"
+			],
+			[
+				"mode",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\notions\\struct\\modele-memoire.rst"
+			],
+			[
+				"sub",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\devenv\\sublime-text.rst"
+			],
+			[
+				"suble",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\devenv\\sublime-text.rst"
+			],
+			[
+				"exc",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\notions\\exceptions-1.rst"
+			],
+			[
+				"et",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-01\\tasks\\10-etape-01.rst"
+			],
+			[
+				"ini",
+				"C:\\Python27\\Lib\\site-packages\\sphinxcontrib\\youtube\\__init__.py"
+			],
+			[
+				"you",
+				"C:\\Python27\\Lib\\site-packages\\sphinxcontrib\\youtube\\youtube.py"
+			],
+			[
+				"back",
+				"C:\\Python27\\Lib\\site-packages\\sphinxcontrib\\youtube\\youtube_backup.py"
+			],
+			[
+				"vide",
+				"C:\\Users\\donnerc\\Desktop\\video.html"
+			],
+			[
+				"usb",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\devenv\\sublime-text.rst"
+			],
+			[
+				"yout",
+				"C:\\Python27\\Lib\\site-packages\\sphinxcontrib\\youtube\\youtube_backup.py"
+			],
+			[
+				"subl",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\devenv\\sublime-text.rst"
+			],
+			[
+				"init",
+				"C:\\Python27\\Lib\\site-packages\\sphinxcontrib\\youtube\\__init__.py"
+			],
+			[
+				"sublim",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\devenv\\sublime-text.rst"
+			],
+			[
+				"craw",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\crawler\\crawler-variante.py"
+			],
+			[
+				"10",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-01\\tasks\\10-etape-01.rst"
+			],
+			[
+				"cra",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\crawler\\crawler-variante.py"
+			],
+			[
+				"excep",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\notions\\exceptions-1.rst"
+			],
+			[
+				"neutr",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\realtime-collab\\neutron-drive.rst"
+			],
+			[
+				"find",
+				"Find Results"
+			],
+			[
+				"c9",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\realtime-collab\\c9-ide.rst"
+			],
+			[
+				"intro",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\intro.rst"
+			],
+			[
+				"instal",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\devenv\\install-chrome.rst"
+			],
+			[
+				"tupe",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\notions\\tuples.rst"
+			],
+			[
+				"tuples",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\notions\\tuples.rst"
+			],
+			[
+				"tuple",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\notions\\tuples.rst"
+			],
+			[
+				"git",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\devenv\\git\\git-theorie.rst"
+			],
+			[
+				"ake",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\Makefile"
+			],
+			[
+				"make",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\Makefile"
+			],
+			[
+				"neut",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\realtime-collab\\neutron-drive.rst"
+			],
+			[
+				"ide",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\realtime-collab\\c9-ide.rst"
+			],
+			[
+				"col",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\devenv\\real-time-collaborative-coding.rst"
+			],
+			[
+				"insta",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\devenv\\install-chrome.rst"
+			],
+			[
+				"index.",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\index.rst"
+			],
+			[
+				"rst",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\devenv\\installation-linux.rst"
+			],
+			[
+				"subli",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\devenv\\sublime-text.rst"
+			],
+			[
+				"packa",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\devenv\\linux-packages.rst"
+			],
+			[
+				"06",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-01\\06-composant-interface-fonctions.rst"
+			],
+			[
+				"composa",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-01\\02-composants-moteur-recherche.rst"
+			],
+			[
+				"compo",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-01\\02-composants-moteur-recherche.rst"
+			],
+			[
+				"install",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\devenv\\installation-linux.rst"
+			],
+			[
+				"url",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-01\\04-url-request.rst"
+			],
+			[
+				"04",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-01\\04-url-request.rst"
+			],
+			[
+				"pratique",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\helix-prog\\source\\examen2\\partie-pratique.rst"
+			],
+			[
+				"the",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\helix-prog\\source\\examen2\\partie-theorique.rst"
+			],
+			[
+				"prat",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\helix-prog\\source\\examen2\\partie-pratique.rst"
+			],
+			[
+				"ind",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\helix-prog\\source\\index.rst"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 750.0,
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\projet.sublime-project"
+			]
+		],
+		"width": 570.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 225.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

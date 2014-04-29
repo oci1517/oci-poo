@@ -25,7 +25,7 @@ Programmation orientée objets
     theorie/objectifs
     theorie/concepts-fondamentaux
 
-    exercices/bwillis
+    theorie/bwillis-analyse
 
 
 ..

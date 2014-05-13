@@ -9,7 +9,7 @@ Module 4 : Programmation orientée objets et portes logiques
 
 ..  admonition:: Matériel de cours
 
-    *   Théorie : https://www.dropbox.com/s/xm75t0mhnry39uj/theorie-m4-POO.pdf
+    *   Théorie distribuée en cours (en cours d'amélioration) : https://www.dropbox.com/s/xm75t0mhnry39uj/theorie-m4-POO.pdf
     *   Exercices (CHAJ) : https://www.dropbox.com/s/sin4qwgz7q5yl1k/exercices-chaj--m4-POO.pdf
     *   Notes de cours : https://www.dropbox.com/s/jiy3ov9wi3v2pp7/dossier-perso.pdf
 
@@ -22,10 +22,22 @@ Programmation orientée objets
     :maxdepth: 1
 
     theorie/intro
-    theorie/objectifs
+    ..  theorie/objectifs
     theorie/concepts-fondamentaux
 
     theorie/bwillis-analyse
+
+..  only:: hidden
+    
+    Jeux et POO
+    ===========
+
+    ..  toctree::
+        :glob:
+        :maxdepth: 1
+
+        theorie/objects
+
 
 
 ..

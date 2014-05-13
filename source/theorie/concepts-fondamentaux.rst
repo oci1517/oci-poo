@@ -102,7 +102,7 @@ Cela est rendu possible grâce aux concepts de dérivation et de
 	:align: center
 	:width: 50%
 
-polymorphisme
+Polymorphisme
 -------------
 
 Le polymorphisme permet d’attribuer des comportements différents à des objets

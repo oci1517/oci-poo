@@ -37,8 +37,16 @@ Programmation orientée objets
         :maxdepth: 1
 
         theorie/objects
+        theorie/classes-et-objets
 
+Annexes
+=======
 
+..  toctree::
+    :glob:
+    :maxdepth: 1
+
+    annexes/install-tigerjython-linux
 
 ..
     Indices and ref

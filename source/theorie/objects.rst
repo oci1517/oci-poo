@@ -148,7 +148,7 @@ Code à étudier
     # ---------------- class Alien ----------------
     class Alien(Actor):
         def __init__(self):
-            Actor.__init__(self, "sprites/alieng.png")
+            Actor.__init__(self, "sprites/alien.png")
 
         def act(self):
             self.move()
@@ -243,7 +243,7 @@ Code Python
     # ---------------- class Alien ----------------
     class Alien(Actor):
         def __init__(self):
-            Actor.__init__(self, "sprites/alieng.png")
+            Actor.__init__(self, "sprites/alien.png")
 
         def act(self):
             self.move()
@@ -440,7 +440,7 @@ Devoirs
             # ---------------- class Alien ----------------
             class Alien(Actor):
                 def __init__(self):
-                    Actor.__init__(self, "sprites/alieng.png")
+                    Actor.__init__(self, "sprites/alien.png")
                 
                 def act(self):
                     self.move()
@@ -463,7 +463,7 @@ Devoirs
             # ---------------- class Alien ----------------
             class Alien(Actor):
                 def __init__(self):
-                    Actor.__init__(self, "sprites/alieng.png")
+                    Actor.__init__(self, "sprites/alien.png")
                 
                 def act(self):
                     self.move()
@@ -489,7 +489,7 @@ Devoirs
             # ---------------- class Alien ----------------
             class Alien(Actor):
                 def __init__(self):
-                    Actor.__init__(self, "sprites/alieng.png")
+                    Actor.__init__(self, "sprites/alien.png")
                 
                 def act(self):
                     self.move()

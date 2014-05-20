@@ -27,7 +27,7 @@ Programmation orientée objets
 
     theorie/bwillis-analyse
 
-..  only:: hidden
+..  only:: publish
     
     Jeux et POO
     ===========
@@ -37,7 +37,7 @@ Programmation orientée objets
         :maxdepth: 1
 
         theorie/objects
-        theorie/classes-et-objets
+        ..  theorie/classes-et-objets
 
 Annexes
 =======

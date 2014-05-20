@@ -39,7 +39,7 @@
 			"file": "source/index.rst",
 			"settings":
 			{
-				"buffer_size": 1314,
+				"buffer_size": 1353,
 				"line_ending": "Unix"
 			}
 		},
@@ -55,15 +55,52 @@
 			"file": "source/theorie/objects.rst",
 			"settings":
 			{
-				"buffer_size": 7911,
+				"buffer_size": 21399,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "source/theorie/bwillis-analyse.rst",
+			"file": "source/theorie/classes-et-objets.rst",
 			"settings":
 			{
-				"buffer_size": 5001,
+				"buffer_size": 5259,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "from gamegrid import *\nimport random\n\n# ---------------- class Alien ----------------\nclass Alien(Actor):\n    def __init__(self):\n        Actor.__init__(self, \"sprites/alieng.png\")\n    \n    def act(self):\n        self.move()\n\ndef pressCallback(e):\n    location = toLocationInGrid(e.getX(), e.getY())\n    actor = getOneActorAt(location)\n    if actor != None:\n        removeActor(actor)\n    refresh()\n\nmakeGameGrid(10, 10, 60, Color.red, \"sprites/town.jpg\", False, \n             mousePressed = pressCallback)\nsetSimulationPeriod(800)\nshow()\ndoRun()\n\nwhile not isDisposed():\n    alien = Alien()\n    addActor(alien, Location(random.randint(0, 9), 0), 90)\n    delay(1000)",
+			"file": "source/scripts/space_invader_light.py",
+			"file_size": 0,
+			"file_write_time": 130444588767124236,
+			"settings":
+			{
+				"buffer_size": 666,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/scripts/animaux.py",
+			"settings":
+			{
+				"buffer_size": 1490,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "********\nApprentissage par l'exemple\n********\n\nDéfinition d'une classe\n=======================\n\nUn bon exemple vaut mieux qu'on long discours pour cerner immédiatement les\ndifférentes notions de base de la programmation orientée  objets. Enfilez vos\nmeilleures lunettes (ou lentilles) et observez attentivement le code suivant\nqui montre comment définir une nouvelle classe ``Recipient`` qui dérive de la\nclasse de base ``object`` :\n\n..  code-block:: python\n    :linenos:\n\n    class Recipient(object):\n\n    def __init__(self, contenance, no):\n       self.no = no                         \n       self.contenance = contenance\n       self.volume = 0\n\n    def vider(self):\n       self.volume = 0\n\n    def transferer(self, autre):\n        quantite_transferee = min(autre.contenance - autre.volume, self.volume)\n        autre.volume += quantite_transferee\n        self.volume -= quantite_transferee\n\n    def remplir(self):\n       self.volume = self.contenance\n\n    def __str__(self):\n        return \"Récipient no {}, Contenance : {}, Volume : {}\".format(self.no,\n                                                                      self.contenance,\n                                                                      self.volume)\n\n    def __repr__(self):\n        return str(self)\n\nAnalyse du code\n---------------\n\nÉtudiez attentivement le code ci-dessus à l'aide des annotations.\n\n..  tip::\n\n    Si vous ne comprenez pas tout, c'est normal ... la programmation orientée\n    objets est difficile d'accès au début, mais dès qu'on commence à la\n    maîtriser, c'est un petit paradis de la programmation.\n\n..  figure:: figures/analyse-recipient.png\n    :align: center\n    :width: 98%\n\n\n\n\nCette classe va nous permettre d'aider Bruce Willis à désamorcer une bombe ...\n\nUtilisation de la classe\n========================\n\nPour pouvoir utiliser une classe, il faut créer un ou plusieurs objets de\ncette classe. En termes techniques, on dit qu'on crée une **instance** de la\nclasse ou qu'on **instancie** la classe. Ainsi, après avoir défini la classe à\nl'aide du mot-clé ``class``, on peut créer des récipients différents.\n\n::\n\n    >>> r1 = Recipient(no = 1, contenance = 5) \n    >>> r2 = Recipient(no = 2, contenance = 3) \n\nÀ l'aide de ces deux lignes, ont vient de créer deux objets concrets\n(instances) de la classe ``Recipient`` (on pourrait dire du *type*\n``Recipient``). En effet, notre classe ``Recipient`` constitue un nouveau type\nde données utilisable dans notre programme.\n     \n    >>> r2.remplir() # remplir le recipient r2 \n    >>> r1.transferer(r2) # transfère le contenu de r2 dans r1 \n    >>> r2.vider() # vider le récipient r2 \n    >>> r2.volume \n    0 \n    >>> r1.volume \n    3 \n    ... \n    >>> r2.volume == 2 # ce que l’on devrait obtenir à la fin ... \n    True \n\n..\n    ..  activecode:: oop_exemple1\n        :nocanvas:\n        :language: python\n        :caption: Premier exemple de test\n\n        from math import pi\n\n        def add(a,b):\n            return a+b\n\n        ## grading\n        import unittestgui\n\n        class myTests(unittestgui.unittest):\n\n           def testOne(self):\n               self.assertEqual(add(2,2),4,\"A feedback string when the test fails\")\n               self.assertEqual(add(2, 0), 2, \"balba\")\n               #self.assertAlmostEqual(add(2.0,3.0),5.0,\"Your function failed on inputs of 2.0 and 3.0\")\n\n        myTests().main()\n\n\nRécréation\n----------\n\nDans *Die Hard 3*, Bruce Willis a besoin de 4 \"gallons\" d'eau pour\ndésamorcer une bombe, mais il ne dispose que d'un récipient de contenant 3\ngallons et un autre de contenance 5 gallons. Comment doit-il s'y prendre?\n\n\n..  tip::\n\n    Regarder la séquence du film https://www.youtube.com/watch?v=BVtQNK_ZUJg\n\n    ..  only:: html\n\n        ..  youtube:: BVtQNK_ZUJg\n\n\nUtilisez la classe ``Recipient`` définie ci-dessus pour écrire un programme qui permet d'avoir 4 gallons dans le grand récipient.\n\n..  admonition:: Contraintes\n\n\n    Les récipients ne sont pas gradués. On peut donc uniquement faire les opérations suivantes avec les récipients :\n\n    *   Remplir le récipient ``r1`` avec \n        \n        ::\n\n            r1.remplir()\n\n    *   Transférer le contenu du récipient ``r1`` dans le récipient ``r2``. Uniquement le volume encore disponible dans le récipient ``r2`` sera transféré, le reste demeure dans le récipient de départ ``r1``. \n        \n        ::\n\n            r1.transferer(r2)\n\n    *   Vider le récipient avec\n      \n        ::\n\n            r1.vider()\n      \n\n\n..  tip:: \n\n    Si vous ne parvenez pas à la solution, faites une recherche sur Google avec la requête\n\n    ::\n\n        Die Hard 3 jug riddle\n\n\nCode de base\n------------\n\n..  code-block:: python\n\n    # On commence par créer les instances de la classe Recipient en\n    # spécifiant la capacité\n    r1 = Recipient(no = 1, contenance = 5) \n    r2 = Recipient(no = 2, contenance = 3) \n\n    # Procédure à compléter  ...\n\n\n\n    # La bombe ne peut être désamorcée que si le volume de r1 vaut 4\n    # gallons\n    assert(r1.volume == 4)",
+			"file": "source/theorie/bwillis-analyse.rst",
+			"file_size": 5252,
+			"file_write_time": 130440352507633784,
+			"settings":
+			{
+				"buffer_size": 4997,
 				"line_ending": "Windows"
 			}
 		},
@@ -103,12 +140,20 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 343.0,
+		"height": 279.0,
 		"selected_items":
 		[
 			[
+				"spaces",
+				"Indentation: Convert to Spaces"
+			],
+			[
 				"restr",
 				"Set Syntax: reStructuredText Improved"
+			],
+			[
+				"copy rtf",
+				"SublimeHighlight: copy to clipboard as RTF"
 			],
 			[
 				"copy rt",
@@ -117,10 +162,6 @@
 			[
 				"python3",
 				"Set Syntax: Python3_TEST"
-			],
-			[
-				"spaces",
-				"Indentation: Convert to Spaces"
 			],
 			[
 				"spel",
@@ -312,6 +353,9 @@
 	},
 	"file_history":
 	[
+		"/C/Python27/Lib/site-packages/sphinxcontrib/youtube/youtube.py",
+		"/C/Users/donnerc/Desktop/screencast/inbox/poo-02-fonctionnement-gamegrid.camproj",
+		"/D/Dropbox/CS/oc_inf/2013-2015/4-POO-portes-logiques/sphinx/source/theorie/polymorphisme.rst",
 		"/C/Users/donnerc/Desktop/reponses-exo26.rst",
 		"/C/cygwin64/home/donnerc/runestone/applications/runestone/thinkcspy/index.rst",
 		"/C/cygwin64/home/donnerc/runestone/applications/runestone/source/toc.rst",
@@ -358,7 +402,6 @@
 		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/test-crawl-web/index.html",
 		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/test-crawl-web/page1.html",
 		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/test-crawl-web/page2.html",
-		"/C/Python27/Lib/site-packages/sphinxcontrib/youtube/youtube.py",
 		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/devenv/git/git-theorie.rst",
 		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/devenv/real-time-collaborative-coding.rst",
 		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/realtime-collab/neutron-drive.rst",
@@ -437,9 +480,7 @@
 		"/D/Dropbox/CS/oc_inf/2013-2015/helix-prog/Makefile",
 		"/D/Dropbox/CS/oc_inf/2013-2015/helix-prog/source/examen2/partie-theorique.rst",
 		"/D/Dropbox/CS/oc_inf/2013-2015/helix-prog/source/examen2/scripts/find.py",
-		"/D/Dropbox/CS/oc_inf/2013-2015/oci-prog-devoirs-etudiants/create-reports.sh",
-		"/D/Dropbox/CS/oc_inf/2013-2015/helix-prog/source/examen2/partie-pratique.rst",
-		"/D/Dropbox/CS/oc_inf/2013-2015/helix-prog/source/examen2/scripts/compte_voyelles.py"
+		"/D/Dropbox/CS/oc_inf/2013-2015/oci-prog-devoirs-etudiants/create-reports.sh"
 	],
 	"find":
 	{
@@ -458,6 +499,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"fig",
+			"par la méthode par la ",
+			"tous les",
+			"95",
+			"http://youtu.be/",
+			" ",
+			"http://you.*\\.be/.*",
+			"http://youtu.be/",
+			"poo-fonctionnement-gamegrid",
+			"def",
 			">>>",
 			"S =",
 			"\\)",
@@ -575,17 +626,7 @@
 			"Alternative",
 			"ndex",
 			"structure",
-			"Question",
-			"caractères",
-			"structurer",
-			"l’information",
-			"problèmes",
-			"quelques",
-			"el",
-			"1",
-			",",
-			"conf",
-			"BK6PXdrj7ug"
+			"Question"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -603,7 +644,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -612,15 +653,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1314,
+						"buffer_size": 1353,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1198,
-								1198
+								1112,
+								1112
 							]
 						],
 						"settings":
@@ -630,7 +671,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 528.0,
+						"translation.y": 291.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -662,7 +703,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -671,15 +712,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7911,
+						"buffer_size": 21399,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								12004,
+								12004
 							]
 						],
 						"settings":
@@ -690,19 +731,19 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 5942.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "source/theorie/bwillis-analyse.rst",
+					"file": "source/theorie/classes-et-objets.rst",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5001,
+						"buffer_size": 5259,
 						"regions":
 						{
 						},
@@ -728,6 +769,124 @@
 				},
 				{
 					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "source/scripts/space_invader_light.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 666,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								666,
+								666
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "source/scripts/animaux.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1490,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1490
+							]
+						],
+						"settings":
+						{
+							"_anf_new": "",
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "source/theorie/bwillis-analyse.rst",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4997,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								805,
+								805
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RestructuredText Improved/reStructuredText Improved.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 245.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
 					"file": "/D/Dropbox/CS/oc_inf/2013-2015/4-POO-portes-logiques/donnees/Exo_4_1.py",
 					"semi_transient": false,
 					"settings":
@@ -753,11 +912,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 9,
 					"file": "source/theorie/intro.rst",
 					"semi_transient": false,
 					"settings":
@@ -780,14 +939,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 441.0,
+						"translation.y": 417.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 10,
 					"file": "source/theorie/objectifs.rst",
 					"semi_transient": false,
 					"settings":
@@ -813,11 +972,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 11,
 					"file": "source/theorie/concepts-fondamentaux.rst",
 					"semi_transient": false,
 					"settings":
@@ -840,10 +999,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1992.0,
+						"translation.y": 372.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -901,11 +1060,31 @@
 		[
 			[
 				"",
-				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\annexes\\install-tigerjython-linux.rst"
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\theorie\\objects.rst"
+			],
+			[
+				"object",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\theorie\\objects.rst"
+			],
+			[
+				"index",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\index.rst"
+			],
+			[
+				"classes",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\theorie\\classes-et-objets.rst"
 			],
 			[
 				"inde",
 				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\index.rst"
+			],
+			[
+				"objec",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\theorie\\objects.rst"
+			],
+			[
+				"willis",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\theorie\\bwillis-analyse.rst"
 			],
 			[
 				"concept",
@@ -914,10 +1093,6 @@
 			[
 				"obje",
 				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\theorie\\objects.rst"
-			],
-			[
-				"willis",
-				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\theorie\\bwillis-analyse.rst"
 			],
 			[
 				"bwill",
@@ -929,10 +1104,6 @@
 			],
 			[
 				"in",
-				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\index.rst"
-			],
-			[
-				"index",
 				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\index.rst"
 			],
 			[
@@ -1291,6 +1462,10 @@
 		"height": 750.0,
 		"selected_items":
 		[
+			[
+				"ma",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\ma1ecg.sublime-project"
+			],
 			[
 				"projet",
 				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\projet-1-search-engine-sphinx.sublime-workspace"

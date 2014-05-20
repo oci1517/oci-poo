@@ -300,11 +300,118 @@ Code Python
 
 
 
+Devoirs
+=======
+
+..  admonition:: Page d'origine 
+
+    http://tigerjython.ch/index.php?inhalt_links=navigation.inc.php&inhalt_mitte=gamegrid/objekte.inc.php
+
+    
+
+1.  
+
+    Générer une image avec un éditeur d'images ou prendre une image libre de
+    droits sur Internet et la placer en image de fond du jeu.
+
+    ..  admonition:: Conseils
+
+        *   Créer un dossier ``sprites`` dans le dossier dans lequel se trouve le fichier ``tigerjython.jar``
+        *   Déposer votre image dans ce dossier ``sprites``
+        *   modifier l'appel à la fonction ``makeGameGrid`` pour charger votre fichier
+            
+        Remarque : il est également possible de charger une image se trouvant
+        n'importe où sur le disque mais il faudra alors indiquer le chemin
+        absolu complet de ce fichier.
+
+2.  Ajouter une barre d'état de 30 pixels de hauteur qui indique combien
+    d'aliens ont pu atterrir dans la ville malgré la vigilence du joueur.
+
+    ..  admonition:: Conseils
+
+        *   utiliser ``addStatusBar(<nbre_pixels>)`` pour ajouter la barre d'état à la fenêtre du jeu.
+        *   utiliser ``setStatusText(chaine)`` pour afficher la chaine ``chaine`` dans la barre d'état.
+
+3.  Les aliens qui ont atterri dans la ville ne doivent pas simplement
+    disparaître mais doivent, une fois atterri dans la ville, se prendre une autre
+    forme (par exemple ``sprites/alien_1.png``) et garder leur position.
+
+
+    ..  admonition:: Conseil
+
+        *   Il faut modifier la méthode ``act()`` des aliens qui est appelée à  
+            chaque cycle du jeu pour les faire bouger. À l'intérieur de cette méthode,
+            ``self`` fait référence à l'acteur courant.
+
+        *   Consulter la documentation de *GameGrid* (en allemand pour le moment
+            : http://tigerjython.ch/index.php?inhalt_links=navigation.inc.php&inhalt_mitte=gamegrid/gamegriddoc.inc.php).
+            Cette page présente surtout les méthodes des classes
+            ``GameGrid``, ``Actor``, ``Location`` et ``GGBackground``. Ce sont
+            surtout les classes ``GameGrid``, ``Actor`` et ``Location`` qui nous
+            intéressent pour le moment.
+
+        *   Dans cette documentation, on apprend que la classe ``Alien`` définit
+            les méthodes ``getX()``, ``getY()`` qui permet de déterminer les
+            coordonnées :math:`x` et :math:`y` d'un acteur dans la grille de jeu.
+
+        *   Il est aussi possible de déterminer si un acteur se trouve dans la
+            dernière rangée de la grille à l'aide de la méthode
+            ``Actor.isMoveValid()`` qui permet de savoir si le prochain appel de
+            la méthode ``move()`` de cet acteur va le faire sortir de la grille.
+
+
+        *   La méthode ``Actor.removeSelf()`` permet de supprimer du jeu
+            l'acteur sur lequel la méthode est appelée. Donc, dans la méthode ``Alien.act()``,
+            on peut faire appel à cette méthode avec 
+
+            ::
+
+                def act(self):
+                    # supprimer l'acteur
+                    if condition():
+                        self.removeSelf()
+
+4.  Lorsque les aliens atterrissent, ils communiquent à leur vaisseau spatial le numéro de la colonne dans laquelle
+    ils ont atterri. Celui-ci ne va plus larguer d'alien dans ces colonnes, mais uniquement dans les
+    colonnes dans lesquelles aucun alien n'a encore atterri.
+
+    ..  admonition:: Conseils
+
+        *   Consulter la documentation du module ``random`` de Python, en particulier pour la méthode ``random.choice``
+
+5)  Faire preuve de créativité pour ajouter d'autres règles au jeu.
+    
+    ..  admonition:: Suggestions
+
+        1.  Compter le nombre de points pour chaque alien tué et afficher le score dans la barre d'état
+        2.  Accélérer la chute des aliens et/ou réduire le délai de parachutage des aliens
+            lorsque le score dépasse certains seuils
+        3.  ...
+
+
+
+
 
 
 ..
-    Code à tester
-    -------------
+    ##############################################################################################
+    ## COMMENTAIRE # viré
+    ##############################################################################################
+    ##############################################################################################
+    ## COMMENTAIRE # viré
+    ##############################################################################################
+    ##############################################################################################
+    ## COMMENTAIRE # viré
+    ##############################################################################################
+    ##############################################################################################
+    ## COMMENTAIRE # viré
+    ##############################################################################################
+    ##############################################################################################
+    ## COMMENTAIRE # viré
+    ##############################################################################################
+    ##############################################################################################
+    ## COMMENTAIRE # viré
+    ##############################################################################################
 
     #.
 

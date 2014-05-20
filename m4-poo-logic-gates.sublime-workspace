@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"Gam",
+				"GameGrid"
+			],
+			[
 				"progra",
 				"programme"
 			],
@@ -39,7 +43,7 @@
 			"file": "source/index.rst",
 			"settings":
 			{
-				"buffer_size": 1353,
+				"buffer_size": 1349,
 				"line_ending": "Unix"
 			}
 		},
@@ -55,7 +59,7 @@
 			"file": "source/theorie/objects.rst",
 			"settings":
 			{
-				"buffer_size": 21399,
+				"buffer_size": 23971,
 				"line_ending": "Windows"
 			}
 		},
@@ -63,7 +67,7 @@
 			"file": "source/theorie/classes-et-objets.rst",
 			"settings":
 			{
-				"buffer_size": 5259,
+				"buffer_size": 6108,
 				"line_ending": "Windows"
 			}
 		},
@@ -140,16 +144,20 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 279.0,
+		"height": 375.0,
 		"selected_items":
 		[
 			[
-				"spaces",
-				"Indentation: Convert to Spaces"
+				"plain",
+				"Set Syntax: Plain Text"
 			],
 			[
 				"restr",
 				"Set Syntax: reStructuredText Improved"
+			],
+			[
+				"spaces",
+				"Indentation: Convert to Spaces"
 			],
 			[
 				"copy rtf",
@@ -499,6 +507,20 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			")  ",
+			"def ",
+			"=============",
+			"============",
+			"===========",
+			"==========",
+			"=========",
+			"========",
+			"=======",
+			"======",
+			"=====",
+			"====",
+			"localt",
+			"sprites",
 			"fig",
 			"par la méthode par la ",
 			"tous les",
@@ -612,21 +634,7 @@
 			"DS",
 			"corrige",
 			"ien vers une autre page",
-			"page\\d",
-			"html:",
-			"a href",
-			"/a>",
-			"only",
-			"html:",
-			"Représentation",
-			"width",
-			"index",
-			"index1",
-			"index",
-			"Alternative",
-			"ndex",
-			"structure",
-			"Question"
+			"page\\d"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -644,7 +652,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -653,15 +661,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1353,
+						"buffer_size": 1349,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1112,
-								1112
+								1108,
+								1108
 							]
 						],
 						"settings":
@@ -703,7 +711,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -712,15 +720,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 21399,
+						"buffer_size": 23971,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12004,
-								12004
+								14623,
+								14623
 							]
 						],
 						"settings":
@@ -731,10 +739,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5942.0,
+						"translation.y": 7209.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -743,20 +751,44 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5259,
+						"buffer_size": 6108,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								809,
+								809
+							],
+							[
+								903,
+								903
+							],
+							[
+								1038,
+								1038
+							],
+							[
+								1157,
+								1157
+							],
+							[
+								1274,
+								1274
+							],
+							[
+								1371,
+								1371
+							],
+							[
+								1466,
+								1466
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/RestructuredText Improved/reStructuredText Improved.tmLanguage",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -764,7 +796,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -821,7 +853,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1060,7 +1092,11 @@
 		[
 			[
 				"",
-				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\theorie\\objects.rst"
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\theorie\\classes-et-objets.rst"
+			],
+			[
+				"inde",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\index.rst"
 			],
 			[
 				"object",
@@ -1073,10 +1109,6 @@
 			[
 				"classes",
 				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\theorie\\classes-et-objets.rst"
-			],
-			[
-				"inde",
-				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\index.rst"
 			],
 			[
 				"objec",
@@ -1463,12 +1495,12 @@
 		"selected_items":
 		[
 			[
-				"ma",
-				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\ma1ecg.sublime-project"
-			],
-			[
 				"projet",
 				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\projet-1-search-engine-sphinx.sublime-workspace"
+			],
+			[
+				"ma",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\ma1ecg.sublime-project"
 			],
 			[
 				"projet1",

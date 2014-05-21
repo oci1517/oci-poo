@@ -324,6 +324,12 @@ Devoirs
         n'importe où sur le disque mais il faudra alors indiquer le chemin
         absolu complet de ce fichier.
 
+    ..  only:: html and corrige
+
+        ..  admonition:: Corrigé
+
+            ..  youtube:: kbc4DwhOdLs
+
 2.  Ajouter une barre d'état de 30 pixels de hauteur qui indique combien
     d'aliens ont pu atterrir dans la ville malgré la vigilence du joueur.
 
@@ -331,11 +337,16 @@ Devoirs
 
         *   utiliser ``addStatusBar(<nbre_pixels>)`` pour ajouter la barre d'état à la fenêtre du jeu.
         *   utiliser ``setStatusText(chaine)`` pour afficher la chaine ``chaine`` dans la barre d'état.
+            
+    ..  only:: html and corrige
+
+        ..  admonition:: Corrigé
+
+            ..  youtube:: XrEvSLjv-84
 
 3.  Les aliens qui ont atterri dans la ville ne doivent pas simplement
-    disparaître mais doivent, une fois atterri dans la ville, se prendre une autre
+    disparaître mais doivent, une fois atterri dans la ville, prendre une autre
     forme (par exemple ``sprites/alien_1.png``) et garder leur position.
-
 
     ..  admonition:: Conseil
 
@@ -371,6 +382,13 @@ Devoirs
                     if condition():
                         self.removeSelf()
 
+    ..  only:: html and corrige
+
+        ..  admonition:: Corrigé
+
+            ..  youtube:: SYPSwJlxcEY
+
+
 4.  Lorsque les aliens atterrissent, ils communiquent à leur vaisseau spatial le numéro de la colonne dans laquelle
     ils ont atterri. Celui-ci ne va plus larguer d'alien dans ces colonnes, mais uniquement dans les
     colonnes dans lesquelles aucun alien n'a encore atterri.
@@ -378,6 +396,12 @@ Devoirs
     ..  admonition:: Conseils
 
         *   Consulter la documentation du module ``random`` de Python, en particulier pour la méthode ``random.choice``
+            
+    ..  only:: html and corrige
+
+        ..  admonition:: Corrigé
+
+            ..  youtube:: _Md1MSA8Rzw
 
 5)  Faire preuve de créativité pour ajouter d'autres règles au jeu.
     

@@ -6,6 +6,13 @@
 Classes et objets
 *************
 
+..  admonition:: Documents
+
+    Voici une version PDF de cette section pour vous permettre d'étudier et
+    annoter le code sur papier. 
+
+    *   Version PDF de cette section : :download:`classes-et-objets.pdf`
+
 Récapitulation des notions de base de la POO
 ============================================
 
@@ -48,11 +55,29 @@ Analyse de code
 
         Spacer 0 90
 
+    ..  only:: html and corrige
+
+        ..  admonition:: Corrigé
+
+            La fonction ``__init__`` est le constructeur de la classe ``Animal``.
+            Cette fonction est appelée automatiquement à fois que l'on crée un animal avec 
+
+            ::
+
+                mon_animal = Animal("sprites/example.png")
+
 2)  Décrire précisément ce qui se passe à la ligne 7
 
     ..  raw:: pdf
 
         Spacer 0 90
+
+    ..  only:: html and corrige
+
+        ..  admonition:: Corrigé
+
+            Cette ligne crée la variable d'instance ``self.imagePath`` et
+            l'initialise avec le contenu de la variable locale ``igmPath``.
 
 3)  Que représente le premier paramètre ``self`` dans la définition des méthodes d'instance ?
 
@@ -60,11 +85,57 @@ Analyse de code
 
         Spacer 0 90
 
+    ..  only:: html and corrige
+
+        ..  admonition:: Corrigé
+
+            Le paramètre ``self`` est propre à toutes les méthodes d'instance
+            et doit toujours se trouver en première position. Il s'agit d'une
+            référence vers l'instance concrète sur laquelle la méthode a été
+            invoquée.
+
+            Lors de l'invocation de la méthode avec 
+
+            ::
+
+                mon_animal.showMe(10, 20)
+
+            on ne renseigne pas ce paramètre ``self`` car Python s'en charge
+            pour nous en transformant notre appel dans le code suivant avant
+            de l'exécuter :
+
+            ::
+
+                Animal.showMe(mon_animal, 10, 20)
+
 4)  À quoi sert la fonction ``pressCallback(e)`` définie aux lignes 14 à 16 ?
 
     ..  raw:: pdf
 
         Spacer 0 120
+
+    ..  only:: html and corrige
+
+        ..  admonition:: Corrigé
+
+            Cette fonction est un **gestionnaire d'événement** (*Event
+            handler* en anglais). Elle sera appelée à par le système du jeu à
+            chaque fois qu'un événement de type ``MousePressed`` est généré
+            par le système.
+
+            C'est uniquement à la ligne 18 
+
+            ::
+
+                makeGameGrid(600, 600, 1, False, mousePressed = pressCallback)
+
+            que notre fonction ``pressCallback`` est "connectée" à l'événemnt
+            ``mousePressed``. Ce qui se passe à la ligne 18 est très nouveau
+            : on passe à la fonction ``makeGameGrid`` la fonction
+            ``pressCallback`` en guise de paramètre. Notez bien que l'on n'a pas
+            écrit ``mousePressed = pressCallback()`` mais bien ``mousePressed
+            = pressCallback`` sans appeler la fonction ``pressCallback`` avec
+            des parenthèses ``()``.
 
 5)  Que représente le paramètre ``e`` de la fonctoin ``pressCallback(e)`` ?
 
@@ -72,17 +143,44 @@ Analyse de code
 
         Spacer 0 90
 
+    ..  only:: html and corrige
+
+        ..  admonition:: Corrigé
+
+            Il s'agit d'un objet représentant l'événement qui a déclenché
+            l'appel de ``pressCallback``. Cet objet ``e`` contient des
+            informations sur l'événement généré par le clic de souris, en
+            particulier les coordonnées du clic récupérables avec ``e.getX()``
+            et ``e.getY()``.
+
 6)  Décrire précisément ce qui se passe à la ligne 16 ?
 
     ..  raw:: pdf
 
         Spacer 0 90
 
+    ..  only:: html and corrige
+
+        ..  admonition:: Corrigé
+
+            En gros, on crée une instance de la classe ``Animal`` à la ligne
+            15 que l'on affiche à la ligne 16 à l'emplacement du clic de la
+            souris.
+
 7)  Expliquer ce que fait globalement ce code Python?
 
     ..  raw:: pdf
 
         Spacer 0 130
+
+    ..  only:: html and corrige
+
+        ..  admonition:: Corrigé
+
+            Globalement, le programme affiche des petits animaux lorsqu'on
+            clique dans l'espace de jeu. Le coin supérieur gauche du rectangle
+            contenant le sprite de l'animal correspondra aux coordonnées du
+            clic de la souris.
 
 
 Héritage
@@ -180,6 +278,7 @@ Questions
 
         Spacer 0 120
 
+
 4)  Dessiner le diagramme de classes de ``Animals`` et ``Pet``
 
     ..  raw:: pdf
@@ -233,7 +332,6 @@ Hiérarchie de classes
         
         def __init__(self, imgPath, name):
             Pet.__init__(self, imgPath, name)
-            self.name = name
         
         def tell(self, x, y): # Overriding
             bg.setPaintColor(Color.gray)
@@ -264,10 +362,11 @@ Questions
 
     ..  raw:: pdf
 
-        Spacer 0 130
+        Spacer 0 300
 
 2)  Modifier les classes ``Dog`` et ``Cat`` pour qu'elles chargent automatiquement le bon sprite (la bonne image représentative) 
-    sans devoir le spécifier dans le construteur
+    sans devoir le spécifier dans le co
+    nstruteur
 
     ..  raw:: pdf
 

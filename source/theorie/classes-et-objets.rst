@@ -6,18 +6,20 @@
 Classes et objets
 *************
 
-..  admonition:: Documents
+..  only:: html
 
-    Voici une version PDF de cette section pour vous permettre d'étudier et
-    annoter le code sur papier. 
+    ..  admonition:: Documents
 
-    *   Version PDF de cette section : :download:`classes-et-objets.pdf`
+        Voici une version PDF de cette section pour vous permettre d'étudier et
+        annoter le code sur papier. 
+
+        *   Version PDF de cette section : :download:`classes-et-objets.pdf`
 
 Récapitulation des notions de base de la POO
 ============================================
 
 Observez attentivement le code ci-dessous et répondre aux questions. Toutes
-les questions posées sont vraiment essentielles et dont des questions types
+les questions posées sont vraiment essentielles et donc des questions types
 qui peuvent être posées lors d'un oral de BAC.
 
 ..  code-block:: python
@@ -266,11 +268,41 @@ Questions
 
         Spacer 0 90
 
+    ..  only:: html and corrige
+
+        ..  admonition:: Corrigé
+
+            Pour indiquer que la classe ``Pet`` est basée sur la classe
+            ``Animal``. Autrement dit, la classe ``Pet`` hérite de toutes les
+            propriétés (variables d'instances) et méthodes de la classe
+            ``Animal``.
+
 2)  Décrire précisément ce que fait la ligne 20
 
     ..  raw:: pdf
 
         Spacer 0 90
+
+
+    ..  only:: html and corrige
+
+        ..  admonition:: Corrigé
+
+            La ligne 20 
+
+            ::
+
+                Animal.__init__(self, imgPath)
+
+            appelle explicitement le constructeur de la classe parent pour lui
+            déléguer l'initialisation des attributs d'instances définis dans
+            la classe ``Animal``.
+
+        ..  tip::
+
+            Il faut toujours déléguer l'initialisation des variables
+            d'instances définies dans la classe de base au construteur de la
+            classe de base.
 
 3)  Décrire ce que fait le programme globalement
 
@@ -285,6 +317,15 @@ Questions
 
         Spacer 0 400
 
+    ..  only:: html and corrige
+
+        ..  admonition:: Corrigé
+
+            ..  figure:: figures/diagramme-classe-Animal-Pet.png
+                :width: 95%
+                :align: center
+
+                Diagramme de classes montrant la classe ``Pet`` dérivée de la classe ``Animal``
 
 Hiérarchie de classes
 ---------------------
@@ -364,22 +405,50 @@ Questions
 
         Spacer 0 300
 
+    ..  only:: html and corrige
+
+        ..  admonition:: Corrigé
+
+            ..  figure:: figures/diag-classe-Animal-Pet-Cat-Dog.png
+                :width: 95%
+                :align: center
+
+                Diagramme de classes montrant la classe ``Pet`` dérivée de la classe ``Animal``
+
+
 2)  Modifier les classes ``Dog`` et ``Cat`` pour qu'elles chargent automatiquement le bon sprite (la bonne image représentative) 
-    sans devoir le spécifier dans le co
-    nstruteur
+    sans devoir le spécifier dans le construteur
 
     ..  raw:: pdf
 
         Spacer 0 130
+
+
+    ..  only:: html and corrige
+
+        ..  admonition:: Corrigé
+
+            Il suffit de modifier le construteur des classes ``Dog`` et
+            ``Cat``. Par exemple, pour la classe ``Dog``, en supposant que le
+            sprite voulu soit ``sprites/dog.png``, il apporter les modifications suivantes :
+            
+            ..  code-block:: python
+
+                class Dog(Pet):
+
+                    def __init__(self, name):
+                        Pet.__init__(self, imgPath="dog.png")
+                        self.name = name
 
 ..  only:: not pdf
 
     Polymorphisme
     =============
 
-    Le polymorphisme consiste à **surcharger** les méthodes de la classe de base
-    dans les classes dérivées. Ici, en l'occurrence, on utilise ce mécanisme pour
-    surcharger la méthode ``tell`` dans les classes ``Dog`` et ``Cat`` :
+    Le polymorphisme consiste à **surcharger** (*override* en anglais) les
+    méthodes de la classe de base dans les classes dérivées. Ici, en
+    l'occurrence, on utilise ce mécanisme pour surcharger la méthode ``tell``
+    dans les classes ``Dog`` et ``Cat`` :
 
     ..  code-block:: python
         :linenos:
@@ -447,7 +516,7 @@ Questions
         for animal in animals:
             animal.showMe(100, y)     
             animal.tell(200, y + 30)    # Which tell()???? 
-            pet.show())
+            pet.show()
             y = y + 200
             delay(1000)
 

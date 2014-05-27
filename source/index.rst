@@ -4,7 +4,7 @@
     contain the root `toctree` directive.
 
 #######################################
-Module 4 : Programmation orientée objets et portes logiques
+Module 4 : Programmation orientée objets et développement de jeux
 #######################################
 
 ..  admonition:: Matériel de cours

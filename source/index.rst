@@ -45,7 +45,7 @@ Programmation orientée objets
         theorie/objects
         theorie/classes-et-objets
         theorie/static_vars_methods
-        theorie/gestion-evenements
+        theorie/jeux-arcades-frogger
 
 Annexes
 =======

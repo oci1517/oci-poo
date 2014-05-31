@@ -27,7 +27,7 @@ import sys, os
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.intersphinx', 'sphinx.ext.todo', 'sphinx.ext.ifconfig', 'sphinx.ext.viewcode', 'sphinxcontrib.youtube']
 # extensions += [ 'sphinxcontrib.findanything']
-# extensions += ['sphinx.ext.mathjax']
+extensions += ['sphinx.ext.mathjax']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -42,7 +42,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'OCI : projet I'
+project = u'OCI : Programmation orientée objets'
 copyright = u'2014, Cédric Donner'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -199,7 +199,7 @@ html_show_copyright = False
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'OCI-projet'
+htmlhelp_basename = 'OCI-POO'
 
 
 # -- Option for LaTeX output --------------------------------------------------
@@ -218,7 +218,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-('index', 'oci-projet-I.tex', u'Option complémentaire informatique : projet I',
+('index', 'oci-chap-poo.tex', u'Programmation orientée objets et développement de jeux',
  u'Cédric Donner', 'manual'),
 ]
 

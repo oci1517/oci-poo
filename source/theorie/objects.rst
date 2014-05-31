@@ -43,7 +43,9 @@ Présentation de l'IDE TigerJython
 La vidéo suivante présente l'environnement de développer *TigerJython* et les
 différents éléments son interface graphique.
 
-..  youtube:: zlR7H_zRl3I
+..  only:: html
+
+    ..  youtube:: zlR7H_zRl3I
 
 
 
@@ -68,7 +70,9 @@ Tous les programmes utilisant ``gamegrid`` partagent certains ingrédients de
 base que montrent le code ci-dessous qui se contente de créer la grille de
 jeux et de l'afficher dans une fenêtre.
 
-..  youtube:: TXPnTpMipDY
+..  only:: html
+
+    ..  youtube:: TXPnTpMipDY
 
 Résumé
 ++++++
@@ -167,7 +171,9 @@ Analyse du code
 
 ..  only:: html
 
-    ..  youtube:: L-RFwlpI_m0
+    ..  only:: html
+
+        ..  youtube:: L-RFwlpI_m0
 
 
 Résumé
@@ -201,7 +207,9 @@ classe dérivée ``Alien`` (cf. figure :ref:`fig-explication-methode-act`)
 
 ..  only:: html
 
-    ..  youtube:: IZXbmaCOEw4
+    ..  only:: html
+
+        ..  youtube:: IZXbmaCOEw4
 
 Résumé de la vidéo
 ++++++++++++++++++
@@ -296,7 +304,9 @@ Code Python
     Présentation vidéo
     ++++++++++++++++++        
 
-    ..  youtube:: wIMWD_9zV6A
+    ..  only:: html
+
+        ..  youtube:: wIMWD_9zV6A
 
 
 
@@ -328,7 +338,9 @@ Devoirs
 
         ..  admonition:: Corrigé
 
-            ..  youtube:: kbc4DwhOdLs
+            ..  only:: html
+
+                ..  youtube:: kbc4DwhOdLs
 
 2.  Ajouter une barre d'état de 30 pixels de hauteur qui indique combien
     d'aliens ont pu atterrir dans la ville malgré la vigilence du joueur.
@@ -342,7 +354,9 @@ Devoirs
 
         ..  admonition:: Corrigé
 
-            ..  youtube:: XrEvSLjv-84
+            ..  only:: html
+
+                ..  youtube:: XrEvSLjv-84
 
 3.  Les aliens qui ont atterri dans la ville ne doivent pas simplement
     disparaître mais doivent, une fois atterri dans la ville, prendre une autre
@@ -386,7 +400,9 @@ Devoirs
 
         ..  admonition:: Corrigé
 
-            ..  youtube:: SYPSwJlxcEY
+            ..  only:: html
+
+                ..  youtube:: SYPSwJlxcEY
 
 
 4.  Lorsque les aliens atterrissent, ils communiquent à leur vaisseau spatial le numéro de la colonne dans laquelle
@@ -401,7 +417,9 @@ Devoirs
 
         ..  admonition:: Corrigé
 
-            ..  youtube:: _Md1MSA8Rzw
+            ..  only:: html
+
+                ..  youtube:: _Md1MSA8Rzw
 
 5)  Faire preuve de créativité pour ajouter d'autres règles au jeu.
     
@@ -414,8 +432,18 @@ Devoirs
 
 
 
+Corrigé complet de tous les exercices
+-------------------------------------
 
+Voici le code obtenu après correction de tous les exercices. Il constitue donc
+un code fonctionnel implémentant toutes les fonctionnalités demandées dans les
+exercices.
 
+..  _code-space_invader_corrige:
+
+..  literalinclude:: scripts/space_invader_corrige.py
+    :language: python
+    :linenos:
 
 ..
     ##############################################################################################

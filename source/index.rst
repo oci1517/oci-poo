@@ -7,11 +7,17 @@
 Module 4 : Programmation orientée objets et développement de jeux
 #######################################
 
-..  admonition:: Matériel de cours
+..  only:: html
 
-    *   Théorie distribuée en cours (en cours d'amélioration) : https://www.dropbox.com/s/xm75t0mhnry39uj/theorie-m4-POO.pdf
-    *   Exercices (CHAJ) : https://www.dropbox.com/s/sin4qwgz7q5yl1k/exercices-chaj--m4-POO.pdf
-    *   Notes de cours : https://www.dropbox.com/s/jiy3ov9wi3v2pp7/dossier-perso.pdf
+    ..  admonition:: Matériel de cours
+
+        *   Théorie distribuée en cours (en cours d'amélioration) : https://www.dropbox.com/s/xm75t0mhnry39uj/theorie-m4-POO.pdf
+        *   Exercices (CHAJ) : https://www.dropbox.com/s/sin4qwgz7q5yl1k/exercices-chaj--m4-POO.pdf
+        *   Notes de cours : https://www.dropbox.com/s/jiy3ov9wi3v2pp7/dossier-perso.pdf
+            
+    ..  admonition:: Version PDF de ce cours
+
+        *   :download:`files/oci-chap-poo.pdf`
 
 
 Programmation orientée objets
@@ -38,6 +44,8 @@ Programmation orientée objets
 
         theorie/objects
         theorie/classes-et-objets
+        theorie/static_vars_methods
+        theorie/gestion-evenements
 
 Annexes
 =======
@@ -47,6 +55,7 @@ Annexes
     :maxdepth: 1
 
     annexes/install-tigerjython-linux
+    annexes/uml
 
 ..
     Indices and ref

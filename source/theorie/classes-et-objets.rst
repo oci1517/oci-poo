@@ -57,7 +57,7 @@ Analyse de code
 
         Spacer 0 90
 
-    ..  only:: html and corrige
+    ..  only:: corrige
 
         ..  admonition:: Corrigé
 
@@ -74,7 +74,7 @@ Analyse de code
 
         Spacer 0 90
 
-    ..  only:: html and corrige
+    ..  only:: corrige
 
         ..  admonition:: Corrigé
 
@@ -87,7 +87,7 @@ Analyse de code
 
         Spacer 0 90
 
-    ..  only:: html and corrige
+    ..  only:: corrige
 
         ..  admonition:: Corrigé
 
@@ -116,7 +116,7 @@ Analyse de code
 
         Spacer 0 120
 
-    ..  only:: html and corrige
+    ..  only:: corrige
 
         ..  admonition:: Corrigé
 
@@ -145,7 +145,7 @@ Analyse de code
 
         Spacer 0 90
 
-    ..  only:: html and corrige
+    ..  only:: corrige
 
         ..  admonition:: Corrigé
 
@@ -161,7 +161,7 @@ Analyse de code
 
         Spacer 0 90
 
-    ..  only:: html and corrige
+    ..  only:: corrige
 
         ..  admonition:: Corrigé
 
@@ -175,7 +175,7 @@ Analyse de code
 
         Spacer 0 130
 
-    ..  only:: html and corrige
+    ..  only:: corrige
 
         ..  admonition:: Corrigé
 
@@ -268,7 +268,7 @@ Questions
 
         Spacer 0 90
 
-    ..  only:: html and corrige
+    ..  only:: corrige
 
         ..  admonition:: Corrigé
 
@@ -284,7 +284,7 @@ Questions
         Spacer 0 90
 
 
-    ..  only:: html and corrige
+    ..  only:: corrige
 
         ..  admonition:: Corrigé
 
@@ -310,6 +310,14 @@ Questions
 
         Spacer 0 120
 
+    ..  only:: corrige
+
+        ..  admonition:: Corrigé
+
+            En général, un bon programmeur peut prendre le code de quelqu'un
+            d'autre et savoir ce qu'il va faire sans l'exécuter. Le commun des
+            mortels  exécutent le programme et s'étonnent lorsque ça ne
+            fonctionne pas comme ils pensaient ...
 
 4)  Dessiner le diagramme de classes de ``Animals`` et ``Pet``
 
@@ -317,7 +325,7 @@ Questions
 
         Spacer 0 400
 
-    ..  only:: html and corrige
+    ..  only:: corrige
 
         ..  admonition:: Corrigé
 
@@ -326,6 +334,54 @@ Questions
                 :align: center
 
                 Diagramme de classes montrant la classe ``Pet`` dérivée de la classe ``Animal``
+
+..  admonition:: À retenir
+
+    On peut appeler sans problème la méthode ``myPet.showMe()`` alors même que
+    ``showMe()`` n'est pas définie dans la classe ``Pet``, car un animal de
+    compagnie est bien un animal et dispose donc des mêmes comportements. On
+    appelle cette relation des classes ``Pet`` et ``Animal`` une relation
+    **Est-Un(e)** (*IS-A* en anglais), car un ``Pet`` *est un* ``Animal``.
+
+    Pour que ``DerivedClass`` dérive de la classe ``BaseClass``, il suffit
+    d'indiquer ``(BaseClass)`` entre parenthèses dans la définition de
+    ``DerivedClass`` :
+
+    ::
+
+        class BaseClass:
+
+            # définition de la classe de base
+            pass
+
+        class DerivedClass(BaseClass):
+
+            # définition de la classe dérivée
+            pass
+
+    En Python 3, par convention, les classes qui n'ont pas de classe de base
+    dérivent de la classe ``object`` et il est considéré comme une bonne
+    pratique de l'indiquer explicitement :
+
+    ::
+
+        # classe qui ne dérive d'aucune autre classe
+        class MaClasse(object):
+
+            # définition de la classe
+            pass
+
+
+    Le langage Python permet l'**héritage multiple** (*Mutliple inheritance* en anglais), ce qui permet de dériver une classe à partir de plusieurs classes de base :
+
+    ::
+
+        # classe qui ne dérive d'aucune autre classe
+        class MaClasse(BaseClass1, BaseClass2):
+
+            # définition de la classe
+            pass
+
 
 Hiérarchie de classes
 ---------------------
@@ -405,7 +461,7 @@ Questions
 
         Spacer 0 300
 
-    ..  only:: html and corrige
+    ..  only:: corrige
 
         ..  admonition:: Corrigé
 
@@ -424,7 +480,7 @@ Questions
         Spacer 0 130
 
 
-    ..  only:: html and corrige
+    ..  only:: corrige
 
         ..  admonition:: Corrigé
 
@@ -458,31 +514,31 @@ Questions
 
         # ---------------- classe Animal ----------------
         class Animal():
-            
-            def __init__(self, imgPath): 
-                self.imagePath = imgPath 
 
-            
-            def showMe(self, x, y):  
-                 bg.drawImage(self.imagePath, x, y) 
-                 
+            def __init__(self, imgPath):
+                self.imagePath = imgPath
+
+
+            def showMe(self, x, y):
+                 bg.drawImage(self.imagePath, x, y)
+
         # ---------------- classe Pet ----------------
-        class Pet(Animal): 
-            
-            def __init__(self, imgPath, name): 
+        class Pet(Animal):
+
+            def __init__(self, imgPath, name):
                 Animal.__init__(self, imgPath)
                 self.name = name
-            
+
             def tell(self, x, y):
                 bg.drawText(self.name, Point(x, y))
 
         # ---------------- classe Dog ----------------
         class Dog(Pet):
-            
-            def __init__(self, imgPath, name): 
-                Pet.__init__(self, imgPath)
+
+            def __init__(self, imgPath, name):
+                Pet.__init__(self, imgPath, name)
                 self.name = name
-            
+
             def tell(self, x, y): # Overridden
                 Pet.tell(self, x, y)
                 openSoundPlayer("wav/dog.wav")
@@ -490,11 +546,11 @@ Questions
 
         # ---------------- classe Cat ----------------
         class Cat(Pet):
-            
+
             def __init__(self, imgPath, name):
-                Pet.__init__(self, imgPath)
+                Pet.__init__(self, imgPath, name)
                 self.name = name
-            
+
             def tell(self, x, y): # Overridden
                 Pet.tell(self, x, y)
                 openSoundPlayer("wav/cat.wav")
@@ -507,23 +563,85 @@ Questions
         doRun()
         bg = getBg()
 
-        animals = 
-            [Dog("sprites/dog.gif", "Alex"), 
-             Dog("sprites/dog.gif", "Rex"), 
-             Cat("sprites/cat.gif", "Xara")]
+        pets = [Dog("sprites/dog.gif", "Alex"),
+                   Dog("sprites/dog.gif", "Rex"),
+                   Cat("sprites/cat.gif", "Xara")]
 
         y = 100
-        for animal in animals:
-            animal.showMe(100, y)     
-            animal.tell(200, y + 30)    # Which tell()???? 
-            pet.show()
+        for pet in pets:
+            animal.showMe(100, y)
+            animal.tell(200, y + 30)    # Which tell()????
             y = y + 200
             delay(1000)
 
 
-..  only:: not pdf
+..  admonition:: À retenir
 
-    Exercices
-    =========
+    a)  Lorsqu'un méthode est redéfinie à plusieurs endroits dans une
+        hiérachie de classes, le polymorphisme permet d'appeler la bonne version
+        de la méthode. En Python, le polymorphisme est logique puisque le type des
+        données est déterminé de manière dynamique lors de l'exécution. Toutefois,
+        dans les langages à typage statique tels que Java ou C++, le mécanisme de
+        polymorphisme est bien moins trivial.
 
-            
+    b)  Le polymorphisme pratiqué par Python est parfois appelé *Duck-Typing*
+        selon la citation de James Whitcomb Riley (1849 - 1916) :
+
+            Si je vois un oiseau qui marche comme un canard, nage comme un
+            canard et qui cancane comme un canard, alors il s'agit d'un canard
+
+    c)  Il arrive qu'une méthode soit définie dans la classe de base mais
+        qu'elle ne doive rien faire du tout à part être redéfinie dans les classes
+        dérivées. On parle alors de **méthode virtuelle** définie dans une
+        **classe abstraite**.
+
+        En Python, on spécifie qu'une méthode est virtuelle et ne doit donc
+        pas être appelée en levant l'exception ``NotImplementedError``
+
+        ::
+
+            class AbstractClass(object):
+
+                def __init__(self):
+                    pass
+
+                def VirtualMethod(self):
+                    raise NotImplementedError
+
+Es gibt Fälle, wo eine überschriebene Methode in der Basisklasse zwar definiert ist, aber nichts bewirken soll.  Dies erreicht man entweder mit einem sofortigen return oder mit der leeren Anweisung pass.
+
+
+
+Toute la puissance du polymorphisme
+===================================
+
+Il est possible d'obtenir exactement le même résultat avec moins de code. En
+effet, la seule différence entre les méthodes ``Dog.tell`` et ``Cat.tell`` est
+le nom du fichier WAV joué. Dès lors, on peut éviter de surcharger cette
+méthode dans les classes filles et faire référence, dans la classe de base
+``Pet``, à une variable d'instance qui est définie dans la classe de base
+``Pet`` mais qui sera spécifiée de manière différente uniquement dans le
+construteur des classes dérivées ``Cat`` et ``Dog``.
+
+Observez bien le code ci-dessous pour comprendre comment cela fonctionne :
+
+..  literalinclude:: scripts/catsndogs_3.py
+    :language: python
+    :linenos:
+
+
+Modifications effectuées
+------------------------
+
+Lorsqu'on a deux versions différentes d'un même fichier, on peut toujours
+observer rapidement les ajouts ou suppression du deuxième fichier par rapport
+au fichier original avec la commande 
+
+..  code-block:: bash
+
+    diff fichier1.py fichier2.py
+
+qui donne le résultat suivant
+
+..  literalinclude:: scripts/catsndogs.diff
+    :language: diff

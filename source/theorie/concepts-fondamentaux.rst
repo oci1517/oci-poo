@@ -98,9 +98,9 @@ préexistants, et donc de réutiliser des pans entiers d’une programmation dé
 Cela est rendu possible grâce aux concepts de dérivation et de
 **polymorphisme** :
 
-..	figure:: figures/hierarchie-animaux.gif
+..	figure:: figures/hierarchie-animaux.png
 	:align: center
-	:width: 50%
+	:width: 80%
 
 Polymorphisme
 -------------
@@ -112,3 +112,9 @@ d'objets différents, le polymorphisme permet une programmation beaucoup plus
 générique. Le développeur n'a pas à savoir, lorsqu'il programme une méthode,
 le type précis de l'objet sur lequel la méthode va s'appliquer. Il lui suffit
 de savoir que cet objet implémentera la méthode.
+
+..	admonition:: En savoir plus
+
+	Consulter les références suivantes :
+
+	*	http://www.commentcamarche.net/contents/811-poo-le-polymorphisme

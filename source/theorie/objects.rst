@@ -40,7 +40,7 @@ sont de bons exemples.
 Présentation de l'IDE TigerJython
 =================================
 
-La vidéo suivante présente l'environnement de développer *TigerJython* et les
+La vidéo suivante présente l'environnement de développement *TigerJython* et les
 différents éléments son interface graphique.
 
 ..  only:: html

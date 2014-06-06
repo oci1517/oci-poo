@@ -13,6 +13,16 @@ Dans cette section, tu vas apprendre les éléments suivantes
 *   Raffraichissement rapide et fluide (25 fps) de l'image
 *   Comment développer un jeu un peu plus compliqué (environ 100 lignes de code)
 
+Matériel
+========
+
+Dans cette section, la base du code du jeu sera développée pas-à-pas. Une
+version imprimable du code a été distribuée en cours.
+
+..  admonition:: Téléchargement
+
+    *   :download:`scripts/frogger/handout-code.pdf`
+
 Scénario du jeu et cahier des charges
 =====================================
 
@@ -145,7 +155,7 @@ faut faire le suivant :
 
         Si tu ne connais pas le ``keyCode`` d'une touche du clavier, il suffit
         d'essayer en exécutant ce programme qui fait appel à un gestionnaire
-        d'événements qui affiche le code reçu avec un ``print`` :
+        d'événements affichant le code reçu avec un ``print`` :
 
         ..  literalinclude:: scripts/testkbd.py
             :language: python
@@ -290,7 +300,7 @@ paramètres en tant que variables d'instances.
 Extensions / Exercices
 ======================
 
-#.  Créer une nouvelle classe ``FroggerGame`` pour pour modéliser le jeu dans
+#.  Créer une nouvelle classe ``FroggerGame`` pour pour modéliser le moteur de jeu dans
     une classe qui constituera le programme principal. Il ne doit y avoir aucune
     variable dans l'espace de noms global.
 
@@ -327,6 +337,9 @@ Extensions / Exercices
 
 #.  Jouer le son ``"wav/boing.wav"`` lorsque la grenouille se fait écraser et le
     son ``"wav/notify.wav"`` lorsqu'elle parvient avec succès à traverser la route.
+
+#.  Changer le code pour pouvoir bouger la grenouille avec les touches ``A``, ``S``, ``D``, ``W``,
+    au lieu des touches "flèches" du clavier
      
 #.  Faire un comptage de points qui sera affiché dans la barre de titre de la
     fenêtre.

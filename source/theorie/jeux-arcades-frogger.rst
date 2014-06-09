@@ -61,7 +61,9 @@ Cahier des charges
 
 ..  admonition:: À compléter
 
-    Le cahier des charges pour ce jeu n'est pas encore en ligne.
+    Le cahier des charges se trouve dans le document GoogleDocs modifiable suivant : https://docs.google.com/document/d/1zaWUF-Erd_0qmbAar9z98FhnQ4RvtNIJERj7RTOalg8/edit?usp=sharing.
+    N'hésitez pas à rajouter des fonctionnalités que vous trouverez
+    intéressantes en couleur rouge.
 
 
 Principes de développement

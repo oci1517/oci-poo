@@ -47,6 +47,14 @@ Programmation orientée objets
         theorie/static_vars_methods
         theorie/jeux-arcades-frogger
 
+..
+    Questionnaire sur le cours
+    ==========================
+
+    ..  raw:: html
+
+        <iframe src="https://docs.google.com/forms/d/19venArqzZgNsIXZUbwkumMoCeJiI4L_FNL7hOG6EyKU/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Chargement en cours...</iframe>        
+
 Annexes
 =======
 

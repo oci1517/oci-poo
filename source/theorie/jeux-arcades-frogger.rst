@@ -298,13 +298,48 @@ serait de créer une classe ``FroggerGame`` qui va stocker ces différents
 paramètres en tant que variables d'instances.
 
     
-
 Extensions / Exercices
 ======================
 
 #.  Créer une nouvelle classe ``FroggerGame`` pour pour modéliser le moteur de jeu dans
     une classe qui constituera le programme principal. Il ne doit y avoir aucune
     variable dans l'espace de noms global.
+
+    Tout le code du programme principal doit donc se trouver dans la classe
+    ``FroggerGame``.
+
+    ..  only:: corrige
+
+        ..  admonition:: Corrigé
+
+            Le code mis à disposition ci-dessous et donc le développement
+            complet peut être rejoué sur la plateforme Cloud9 IDE
+            (https://c9.io/csud_oci/frogger) encapsule toute la logique du et
+            tous les objets précédemment définis dans l'espace de noms global
+            à l'intérieur de la classe ``FroggerGame`` qui est instancié à la
+            toute dernière ligne.
+
+            *   La grenouille devient une variable d'instance de ``FroggerGame`` et tous les ``frog``
+                doivent être remplacés par ``self.frog``
+
+            *   Le gestionnaire d'événement ``keyCallback`` devient également
+                une méthode d'instance de la classe ``FroggerGame`` puisque cette 
+                méthode doit accéder à la variable d'instance ``self.frog``. Il faut donc modifier 
+                l'appel de ``makeGameGrid`` aux lignes 13-14 pour faire référence à la méthode
+                d'instance ``self.keyCallback`` :
+
+                ::
+
+                    makeGameGrid(800, 600, 1, None, "sprites/lane.gif", False, 
+                             keyRepeated = self.keyCallback )
+
+            *   Les codes d'accès ``K_LEFT`` etc ... sont devenus des variables de classe, définis en dehors du constructeur et accessibles avec ``FroggerGame.K_LEFT`` etc ...
+
+            ..  literalinclude:: scripts/frogger/exo-01_cor.py
+                :language: python
+                :linenos:
+
+#.  Rajouter les fonctionnalités suivantes dans le jeu :    
 
     ..  admonition:: Consignes
 
@@ -337,8 +372,28 @@ Extensions / Exercices
             :linenos:
             :language: python
 
+
 #.  Jouer le son ``"wav/boing.wav"`` lorsque la grenouille se fait écraser et le
     son ``"wav/notify.wav"`` lorsqu'elle parvient avec succès à traverser la route.
+
+    ..  only:: corrige
+
+        ..  admonition:: Corrigé
+
+            Il suffit d'ajouter l'importation du module ``soundsystem`` et de
+            jouer ensuite le son au bon moment avec 
+
+            ::
+
+                from soundsystem import *
+
+                # jouer le son stocké dans le fichier "wav/boing.wav"
+                openSoundPlayer("wav/boing.wav")
+
+            ..  literalinclude:: scripts/frogger/exo-02_cor.py
+                :language: python
+
+#.  Modifier le code pour que la grenouille revienne à la position de départ lorsqu'elle a fini de traverser la route                
 
 #.  Changer le code pour pouvoir bouger la grenouille avec les touches ``A``, ``S``, ``D``, ``W``,
     au lieu des touches "flèches" du clavier
@@ -352,10 +407,68 @@ Extensions / Exercices
 #.  Inclure un temps limite pour chaque traversée de la route. Si le temps est
     dépassé, supprimer 10 points et remettre la grenouille au point de départ.
 
-#.  Fais en sorte que les voitures ne roulent pas à la même vitesse sur
+#.  Faire en sorte que les voitures ne roulent pas à la même vitesse sur
     toutes les voies.
 
 #.  Au lieu d'avoir un décallage régulier entre les voitures, introduis
     une distance aléatoire comprise entre 20 et 100 pixels. 
 
 #.  Sois créatif et ajoute tes propres fonctionnalités au jeu.
+    
+Corrections
+-----------
+
+Code complet des exercices 1 à 8
+++++++++++++++++++++++++++++++++
+
+..  literalinclude:: scripts/frogger/frogger_complet.py
+    :language: python
+
+01 correction exercice 1
+++++++++++++++++++++++++
+
+..  only:: html and corrige
+
+    ..  youtube::   kTO-P4ridIY
+
+02 correction exercice 2a vies gameover
+++++++++++++++++++++++++
+
+..  only:: html and corrige
+
+    ..  youtube::   shY6zKr3CGQ
+
+03 correction exercice 2b succes infos titre barre titre retour
+++++++++++++++++++++++++
+
+..  only:: html and corrige
+
+    ..  youtube::   Zxlglu7izng
+
+04 correction ajout son
+++++++++++++++++++++++++
+
+..  only:: html and corrige
+
+    ..  youtube::   YKnEHSy6xfk
+
+05 correction modification touches
+++++++++++++++++++++++++
+
+..  only:: html and corrige
+
+    ..  youtube::   zdc6BeRn-MM
+
+06 correction comptage points
+++++++++++++++++++++++++
+
+..  only:: html and corrige
+
+    ..  youtube::   xD4LCQjzhY4
+
+07 correction temps limite
+++++++++++++++++++++++++
+
+..  only:: html and corrige
+
+    ..  youtube::   cwu7Zdic4g4

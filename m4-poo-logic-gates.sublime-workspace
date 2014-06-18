@@ -4,8 +4,12 @@
 		"selected_items":
 		[
 			[
+				"wi",
+				"width"
+			],
+			[
 				"key",
-				"keyRepeated"
+				"keyCallback"
 			],
 			[
 				"make",
@@ -59,15 +63,98 @@
 			"file": "source/index.rst",
 			"settings":
 			{
-				"buffer_size": 1583,
+				"buffer_size": 2034,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/eval/theorie.rst",
+			"settings":
+			{
+				"buffer_size": 8388,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/eval/theorie - Copie.rst",
+			"settings":
+			{
+				"buffer_size": 8376,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/eval/pratique.rst",
+			"settings":
+			{
+				"buffer_size": 1771,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/eval/frogger_complet.py",
+			"settings":
+			{
+				"buffer_size": 4711,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/eval/style.txt",
+			"settings":
+			{
+				"buffer_size": 13166,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/eval/corrige/geometry.py",
+			"settings":
+			{
+				"buffer_size": 1828,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/eval/frogger-analyse.py",
+			"settings":
+			{
+				"buffer_size": 4081,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "..  header::\n\n    OCI 3, Programmation Orientée Objets,                  Prénom : ....................... / Note : ...........\n\n\n***************************************\nProgrammation Orientée Objets : examen écrit\n***************************************\n\n..  admonition:: Consignes générales\n\n    *   Barème : ...... / 50 points\n    *   Les temps indicatifs pour chaque question sont indiqués\n    *   Respecter la syntaxe Python au mieux\n    *   Si vous ne parvenez pas à voir comment coder quelque chose en Python, expliquez au mieux les étapes de résolution en pseudo-code et/ou en français.\n        \nPartie 1 : une bibliothèque de classe\n-------------------------------------\n\n\n\nQuestion 1 (... / 5 points)\n==========\n\n\n\n\n\n..  _sec-exo-keyword-freq:\n\nQuestion 2 ( ... / 9 points)\n==========\n\nRédiger le code d'une fonction ``keyword_freq(text) ==> dict`` qui retourne un\ndictionnaire indiquant tous les mots clés apparaissant dans la chaine de\ncaractères ``content`` et le nombre d'apparition de chaque mot clé dans la\nchaine en question. \n\n**Indications**\n\n*   La casse ne doit pas être respectée (il ne faut pas faire la différence entre\n    les majuscules et les minuscules). Tous les caractères doivent donc être mis\n    en minuscules.\n\n*   Utiliser la fonction ``supprime_ponctuation`` de la question précédente\n    pour supprimer la ponctuation avant d'extraire les mots de ``text``.\n\n*   Utiliser la méthode ``str.lower()`` qui permet de mettre le texte en minuscules :\n        \n    ::\n\n        >>> 'SaLuT'.lower()\n        'salut'\n\nExemples d'utilisation\n----------------------\n\n::  \n\n    >>> content = '''Si six scies scient six cyprès, six cent six scies scient six cent six cyprès'''\n    >>> keyword_freq(content)\n    {'cyprès': 2, 'scient': 2, 'cent': 2, 'six': 6, 'si': 1, 'scies': 2}\n    >>> keyword_freq('')\n    {}\n\nCode Python\n-----------\n\n..  only:: not corrige\n\n    ..  raw:: pdf\n\n        Spacer 0 200\n\n\n..  only:: corrige\n\n    ..  literalinclude:: scripts/keyword_freq.py\n        :linenos:\n\n..  raw:: pdf\n\n    PageBreak        \n\nQuestion 3 ( ... / 6 points)\n==========\n\nOn donne la fonction ``mystery`` définie par\n\n::\n\n    def mystery(c, k):\n        w = []\n        for a,b in c.items():\n            if b == k and a not in w:\n                w += [a]\n        return w\n\nExpliquer ce que fait la fonction ``mystery`` et déterminer la valeur de ``A``\net ``B`` après l'exécution des instructions suivantes :\n\n::\n\n    f = {'cyprès': 2, 'scient': 2, 'cent': 2, 'six': 6, 'si': 1, 'scies': 2}\n    A = mystery(f, 2)\n    B = mystery(f, 3)\n\n..  raw:: pdf\n\n    Spacer 0 30\n\n..  only:: corrige\n    \n    Solution\n    --------\n\n    La fonction ``mystery(c,k)`` retourne une liste contenant tous les mots\n    apparaissant exactemement ``k`` fois dans le dictionnaire ``c``. Ainsi, on\n    aura les valeurs suivantes pour ``A`` et ``B`` : \n\n    ::\n\n        >>> print(sorted(A))\n        ['cent', 'scient', 'scies', 'cyprès']\n        >>> print(sorted(B))\n        []\n\nQuestion 4 ( ... / 2 points)\n==========\n\nQu'affiche le programme suivant :\n\n::\n\n    nombres = [1,2,3,4,5]\n    copie = nombres\n    copie[0] = 10\n    print(nombres)\n    print(copie)\n\n**Affichage**\n\n..  raw:: pdf\n    \n    Spacer 0 80\n    PageBreak\n\n..  only:: corrige\n\n    Puisque la liste ``copie`` est un alias et non une véritable copie de\n    ``nombres``, ces deux identifiants pointent vers la même liste en mémoire,\n    ce qui engendre la sortie suivante :\n\n    ::\n\n        [10, 2, 3, 4, 5]\n        [10, 2, 3, 4, 5]\n\n\nQuestion 5 ( ... / 4 points)\n==========\n\nCompléter le code de la fonction ``copy`` pour qu'elle retourne une\nvéritable copie de la liste ``original``.\n\n**Exemple d'utilisation**\n\n::\n\n    >>> fibonacci = [1,1,2,3,5,8,11]\n    >>> copie = copy(fibonacci)\n    >>> copie[0] = 2\n    >>> print(fibonacci)\n    [1,1,2,3,5,8,11]\n    >>> print(copie)\n    [2,1,2,3,5,8,11]\n\n..  only:: not corrige\n\n    ::\n\n        def copy(original):\n\n            # compléter le code\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n            ##########\n\n..  only:: corrige\n\n    Solution 1\n    ----------\n\n    ..  code-block:: python\n        :linenos:\n\n        def copy(original):\n\n            copie = []\n\n            for element in original:\n                copie += [element]\n\n            return copie\n\n\n    Solution 2\n    ----------\n\n    ..  code-block:: python\n        :linenos:\n\n        def copy(original):\n\n            return original[:]\n\n\n\nQuestion 6 ( ... / 6 points)\n==========\n\nIndiquer la valeur de chaque variable du code ci-dessous après l'exécution du\nprogramme. Signaler toute erreur éventuelle du programme\n\n\n..  code-block:: python\n\n    >>> notes = dict([(\"A\", 5.6),\n                      (\"B\", 5.37),\n                      (\"C\", 3.97)])\n\n    >>> a = notes[\"A\"]\n\n    >>> b = notes[5.37]\n\n    >>> c = notes[B]\n\n    >>> d = list(notes.keys())\n\n    >>> e = list(notes.values())\n\n    >>> f = list(notes.items())\n\n..  only:: corrige\n\n    Valeurs des variables\n    ---------------------\n\n    Voici la valeur des variables après l'exécution de chaque instruction\n\n    *   ``notes`` : ``{'C': 3.97, 'B': 5.37, 'A': 5.6}``. Attention, il se peut que les éléments n'apparaissent pas dans cet ordre\n    \n    *   ``a`` : ``5.6``\n    \n    *   ``b`` : Produit une erreur\n    \n    *   ``c`` : Produit une erreur\n    \n    *   ``d`` : ``['C', 'B', 'A']``\n    \n    *   ``e`` : ``[3.97, 5.37, 5.6]``\n    \n    *   ``f`` : ``[('C', 3.97), ('B', 5.37), ('A', 5.6)]``\n\n\nQuestion 7 : analyse de code ( ... / 8 points)\n============================\n\nQuestions de compréhension de code\n----------------------------------\n\nLes questions suivantes se rapportent au code distribué en annexe à la fin de l'examen.\n\na)  Indiquer une ligne qui définit une variable globale\n    \n    ..  only:: not corrige\n        \n        ::\n\n            # variable globale : \n\n    ..  only:: corrige\n\n        ..  admonition:: Réponse\n\n            Dans ``crawler.py``, la variable ``index`` définie à la ligne 9\n            est une variable globale\n\nb)  Indiquer une ligne qui définit une variable locale\n\n    ..  only:: not corrige\n        \n        ::\n\n            # variable locale : \n\n    ..  only:: corrige\n\n        ..  admonition:: Réponse\n\n            Toutes les variables définies dans le corps d'une fonction est une\n            variable **locale**, par exemple la variable ``start`` définie à\n            la ligne 38 dans la fonction ``get_all_links`` dans le fichier\n            ``crawler.py``.\n\nc)  À quoi sert le module ``urllib.request`` et préciser dans quel cas le code se trouvant dans le bloc ``except`` est exécuté.\n    \n    ..  raw:: pdf\n\n        Spacer 0 65\n\n    ..  only:: corrige\n\n        ..  admonition:: Réponse\n\n            a)  Ce module sert à télécharger des pages depuis Internet à l'aide d'une\n                URL grâce à la méthode ``urlib.request.urlopen(<url>)``. De manière\n                plus précise, ce module permet d'envoyer des requêtes **GET** à un\n                serveur HTTP pour recevoir le document spécifié par l'URL ``<url>``.\n\n            b)  La ligne de code \n\n                ::\n\n                    fd = urllib.request.urlopen(url)\n\n                lève une exception et causera l'exécution du bloc ``except`` si\n                l'url spécifiée dans ``url`` n'existe pas (mauvaise URL) ou si la\n                page en question n'est pas accessible pour des raisons de\n                connexion Internet ou de problèmes du serveur HTTP.\n\n\n\nd)  À quoi servent les instructions ``try ... except ...`` dans le fichier ``crawler.py`` aux lignes 12 à 18.\n    :\n\n    ..  raw:: pdf\n\n        Spacer 0 65\n\n    ..  only:: corrige\n\n        ..  admonition:: Réponse\n\n            L'instruction ``try ... except ...`` permet de gérer les\n            exceptions (*Exception handling* en anglais). Ainsi, si l'une des\n            instructions contenues dans le bloc ``try`` lèvent une exception,\n            le programme ne va pas planter avec un message d'erreur, mais ce\n            seront les instructions présentes dans le bloc ``except`` qui vont\n            prendre en charge la gestion de l'exception et permettre au\n            programme de réagir de manière adaptée.\n\nQuestion 8 ( ... / 8 points)\n==========\n\nLe patron de ProSearch vous demande d'améliorer l'index pour\npouvoir tenir compte du nombre d'occurrences des mots-clés sur la page web correspondant à l'URL. Les\ndéveloppeurs novices que vous avez sous vous ordres vous proposent les\nstructures de données suivantes pour implémenter l'index et n'arrivent pas à choisir la bonne alternative :\n\n::\n\n    index1 = [[kw1, [url11, url12, ...], n1],\n              [kw2, [url21, url22, url23], n2],\n               ...]\n\n    index2 = [[kw1, [[url11, n11], [url12, n12], ...]],\n              [kw2, [[url21, n21], [url22, n22], ...]],\n              ...]\n\n    index3 = {kw1 : [n1, [urls]],\n              kw2 : [n2, [urls]],\n              ...}\n\n    index4 = {kw1 : [[url11, n11], [url12, n12], ...],\n              kw2 : [[url21, n21], [url22, n22], ...],\n              ...}\n\nConsignes\n---------\n\nDéterminer quelles sont les structures de données possibles pour implémenter\nla fonctionnalité souhaitée dans l'index et déterminer laquelle est la meilleure.\n\na)  Souligner les structures utilisables mais pas nécessairement optimales.\n\n\nb)  Entourner la meilleure structure de données et justifier votre choix\n\n    ..  raw:: pdf\n\n        Spacer 0 120\n\nc)  Faites une représentation de chaque structure de données ``index2`` selon\n    la nomenclature vue au cours\n\n..  raw:: pdf\n\n    Spacer 0 500\n\nQuestion 9 (6 points)\n==========\n\na)  Modifier le fichier ``crawler.py`` pour implémenter la fonctionnalité demandée\n    à l'exercice 8 avec la structure de données choisie dans la partie 8.b)\n\nb)  Modifier la fonction ``lookup(kw)`` dans ``index.py`` pour tenir compte du nombre de\n    recherches impliquant le mot-clé ``kw``.\n\nc)  Définir une fonction ``count_kw(url, kw)`` qui retourne le nombre\n    d'occurrences du mot-clé ``kw`` dans la page Web indiquée par ``url`` sur la base\n    de ce qui est stocké dans l'index avec l'aternative choisie.\n\nAnnexes : code source à analyser\n================================\n\n``index.py``\n------------\n\n..  code-block:: python\n    :linenos:\n\n    ##############################################################\n    ### Structure de données à utiliser pour l'index\n    ##############################################################\n\n    index4 = [['Python', ['http://www.python.org', 'http://www.donner-onlinech/oci']],\n              ['Informatique', ['http://www.soi.ch', 'http://concours.castor-informatique.ch/']]\n             ]\n\n    # indiquer l'implémentation utilisée\n    index = index4\n\n    ##############################################################\n    ### Fonctions auxiliaires\n    ##############################################################\n\n    def get_kw(entry):\n        return entry[0]\n\n    def get_urls(entry):\n        return entry[1]\n\n    def add_entry_to_index(index, keyword, url):\n        index.append([keyword, [url]])\n\n    def add_url_to_entry(entry, url):\n        entry[1].append(url)\n\n    def get_kw_position(index, keyword):\n        i = 0\n        while i < len(index):\n            if get_kw(index[i]) == keyword:\n                position = i\n                break            \n            i += 1\n\n        return position\n\n    ##############################################################\n    ### Fonctions principales\n    ##############################################################\n\n    def lookup(index, keyword):\n\n        for entry in index:\n            if get_kw(entry) == keyword:\n                urls = get_urls(entry)\n                break\n\n        return urls\n\n    def add_to_index(index, keyword, url):\n\n        position = get_kw_position(index, keyword) \n        if position == -1:\n            add_entry_to_index(index, keyword, url)\n\n        else:\n            add_url_to_entry(index[position], url)\n\n\n\n``crawler.py``\n--------------\n\n..  code-block:: python\n    :linenos:\n\n    ############################################################################################\n    ## Moteur d'indexation\n    ############################################################################################\n\n    import urllib.request\n\n    from index import *\n\n    index = []\n\n    def get_page(url):\n        try:\n            fd = urllib.request.urlopen(url)\n            html = fd.read()\n\n            return str(html)\n        except:\n            return ''\n\n    def get_next_target(page, start=0):\n        \n        url = None\n        pattern = '<a href=\"'\n        start_tag = page.find(pattern, start)\n        \n        if start_tag == -1:\n            return (None, -1)\n        \n        start_url = start_tag + len(pattern)\n        end_url = page.find('\"', start_url)\n        \n        url = page[start_url:end_url]\n        \n        return (url, end_url+1)\n        \n    def get_all_links(html):\n        \n        start = 0\n        urls = []\n        \n        if len(html) == 0:\n            return []\n            \n        while start != -1:\n            url, end = get_next_target(html, start)\n            start = end\n            \n            if url is not None:\n                urls.append(url)\n        \n        return urls\n        \n    def get_keywords(html):\n        mots = html.split(' ')\n        return mots\n        \n    def crawl_web(seed): \n        tocrawl = [seed]\n        crawled = [] \n\n        while tocrawl:\n            \n            page = tocrawl.pop() \n            \n            if page not in crawled:\n                html = get_page(page)\n                newpages = get_all_links(html)\n                \n                keywords = get_keywords(html)\n                for kw in keywords:\n                    add_to_index(index, kw, page)\n                    \n                \n                for url in newpages:\n                    if url not in tocrawl:\n                        tocrawl = tocrawl + [url]\n\n                crawled.append(page)\n                \n        return crawled    \n        \n",
+			"file": "source/eval/theorie-donnee.rst",
+			"file_size": 15488,
+			"file_write_time": 130474550573301558,
+			"settings":
+			{
+				"buffer_size": 13947,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "source/theorie/jeux-arcades-frogger.rst",
 			"settings":
 			{
-				"buffer_size": 13863,
+				"buffer_size": 17381,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/theorie/scripts/frogger/frogger_complet.py",
+			"settings":
+			{
+				"buffer_size": 4711,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/theorie/scripts/frogger/exo-01_cor.py",
+			"settings":
+			{
+				"buffer_size": 2034,
 				"line_ending": "Windows"
 			}
 		},
@@ -189,7 +276,7 @@
 			"file": "source/theorie/static_vars_methods.rst",
 			"settings":
 			{
-				"buffer_size": 5228,
+				"buffer_size": 8112,
 				"line_ending": "Windows"
 			}
 		},
@@ -299,16 +386,32 @@
 				"Set Syntax: reStructuredText Improved"
 			],
 			[
-				"copyrst",
-				"SublimeHighlight: copy to clipboard as RTF"
+				"eval",
+				"Evaluate: Evaluate Selections"
 			],
 			[
 				"plain",
 				"Set Syntax: Plain Text"
 			],
 			[
+				"python",
+				"Set Syntax: Python3"
+			],
+			[
 				"spaces",
 				"Indentation: Convert to Spaces"
+			],
+			[
+				"cop",
+				"SublimeHighlight: copy to clipboard as RTF"
+			],
+			[
+				"copyr",
+				"SublimeHighlight: copy to clipboard as RTF"
+			],
+			[
+				"copyrst",
+				"SublimeHighlight: copy to clipboard as RTF"
 			],
 			[
 				"python 3",
@@ -419,10 +522,6 @@
 				"Toggle Comment"
 			],
 			[
-				"python",
-				"Set Syntax: PythonImproved"
-			],
-			[
 				"htlm5",
 				"Set Syntax: HTML5"
 			],
@@ -524,6 +623,10 @@
 	},
 	"file_history":
 	[
+		"/C/Users/donnerc/Desktop/screencast/inbox/description.txt",
+		"/D/Dropbox/CS/oc_inf/2013-2015/4-POO-portes-logiques/sphinx/source/eval/theorie.rst",
+		"/C/Users/donnerc/Desktop/screencast/inbox/change_names.py",
+		"/C/Users/donnerc/Desktop/test.svg",
 		"/C/Users/donnerc/Desktop/test/index.html",
 		"/C/Users/donnerc/Desktop/test/diff.js",
 		"/D/Dropbox/CS/oc_inf/2013-2015/4-POO-portes-logiques/sphinx/source/theorie/scripts/space_invader_corrige.py",
@@ -647,11 +750,7 @@
 		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-01/04",
 		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/source/partie-01/01-fonctionnement.rst",
 		"/C/Users/donnerc/Desktop/screencast/inbox/pub/pub_video_3.py",
-		"/C/Users/donnerc/Desktop/screencast/inbox/pub/Makefile",
-		"/C/Users/donnerc/Desktop/screencast/inbox/pub/index.html",
-		"/D/Dropbox/CS/oc_inf/2013-2015/projet-1/.gitignore",
-		"/D/Dropbox/CS/oc_inf/2013-2015/helix-prog/source/devoirs/devoir-16.rst",
-		"/D/Dropbox/CS/oc_inf/2013-2015/helix-prog/source/index.rst"
+		"/C/Users/donnerc/Desktop/screencast/inbox/pub/Makefile"
 	],
 	"find":
 	{
@@ -670,6 +769,65 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"http",
+			"publiée sur http",
+			"Icône d'alerte",
+			"Revenir au mode \"Édition\" ",
+			"00",
+			"^\\d\\d-",
+			"0",
+			"1\\d",
+			"\\d\\d",
+			"-",
+			" ==> ",
+			"==>",
+			"-1",
+			"-0",
+			"capture",
+			", ",
+			"errata",
+			"origin",
+			"side",
+			"frogger_complet",
+			"4",
+			"ligne 46",
+			"Indiquer",
+			"#.",
+			"analyse",
+			"sqrt",
+			"question",
+			"# ",
+			"class rec",
+			"et ``",
+			"Point",
+			"attribut",
+			"fonctionnement",
+			"indications",
+			"exemple",
+			"\n::\n\n",
+			"::",
+			"%\n",
+			"origine",
+			"p",
+			"ref_point",
+			"5 minute",
+			"random",
+			"#",
+			"pour ne pas surcharger",
+			"youtube",
+			"correction",
+			"\n    ",
+			"    ------------------------",
+			"correction",
+			"Votre vidéo a été publiée sur ",
+			"Icône d'alerte",
+			"0",
+			"==>",
+			"capture",
+			"exercice",
+			"fais ",
+			"foncit",
+			"\\n\\n",
 			"qui affiche",
 			"développer",
 			"conf",
@@ -738,66 +896,7 @@
 			"http://youtu.be/",
 			" ",
 			"http://you.*\\.be/.*",
-			"http://youtu.be/",
-			"poo-fonctionnement-gamegrid",
-			"def",
-			">>>",
-			"S =",
-			"\\)",
-			"\\R",
-			"/",
-			"place",
-			"put:",
-			"IMAGE",
-			"projet",
-			"``",
-			":",
-			"*",
-			":",
-			"*   ",
-			"[i]",
-			"Corrigé",
-			"mimeMap",
-			"2013",
-			"depth",
-			"refraction/",
-			"refraction",
-			"={1,}",
-			"======================================================",
-			"=====================================================",
-			"====================================================",
-			"===================================================",
-			"==================================================",
-			"=================================================",
-			"================================================",
-			"===============================================",
-			"==============================================",
-			"=============================================",
-			"============================================",
-			"===========================================",
-			"==========================================",
-			"=========================================",
-			"========================================",
-			"=======================================",
-			"======================================",
-			"=====================================",
-			"====================================",
-			"===================================",
-			"==================================",
-			"=================================",
-			"================================",
-			"===============================",
-			"==============================",
-			"=============================",
-			"============================",
-			"===========================",
-			"==========================",
-			"=========================",
-			"========================",
-			"=======================",
-			"======================",
-			"=====================",
-			"===================="
+			"http://youtu.be/"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -824,15 +923,283 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1583,
+						"buffer_size": 2034,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1352,
-								1352
+								1802,
+								1802
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/RestructuredText Improved/reStructuredText Improved.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1162.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "source/eval/theorie.rst",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8388,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3599,
+								3599
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/RestructuredText Improved/reStructuredText Improved.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3662.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "source/eval/theorie - Copie.rst",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8376,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -842,27 +1209,697 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 613.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "source/theorie/jeux-arcades-frogger.rst",
+					"buffer": 3,
+					"file": "source/eval/pratique.rst",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13863,
+						"buffer_size": 1771,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11591,
-								11591
+								1296,
+								1296
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/RestructuredText Improved/reStructuredText Improved.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 935.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "source/eval/frogger_complet.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4711,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4711,
+								4711
+							]
+						],
+						"settings":
+						{
+							"_anf_new": "",
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3257.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "source/eval/style.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13166,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								246,
+								246
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "source/eval/corrige/geometry.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1828,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"_anf_new": "",
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "source/eval/frogger-analyse.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4081,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								987,
+								987
+							]
+						],
+						"settings":
+						{
+							"_anf_new": "",
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 918.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "source/eval/theorie-donnee.rst",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13947,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1901,
+								1922
 							]
 						],
 						"settings":
@@ -977,14 +2014,418 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 6546.0,
+						"translation.y": 1491.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 9,
+					"file": "source/theorie/jeux-arcades-frogger.rst",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17381,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6899,
+								6905
+							]
+						],
+						"settings":
+						{
+							"_anf_new": "",
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/RestructuredText Improved/reStructuredText Improved.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1275.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "source/theorie/scripts/frogger/frogger_complet.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4711,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								4711
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "source/theorie/scripts/frogger/exo-01_cor.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2034,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								355,
+								355
+							]
+						],
+						"settings":
+						{
+							"_anf_new": "",
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
 					"file": "source/theorie/scripts/frogger/frogger4.py",
 					"semi_transient": false,
 					"settings":
@@ -1011,11 +2452,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 13,
 					"file": "source/theorie/scripts/frogger/frogger3.py",
 					"semi_transient": false,
 					"settings":
@@ -1042,11 +2483,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 21,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 14,
 					"file": "source/theorie/scripts/testkbd.py",
 					"semi_transient": false,
 					"settings":
@@ -1071,11 +2512,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 23,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 15,
 					"file": "source/theorie/scripts/frogger/frogger2.py",
 					"semi_transient": false,
 					"settings":
@@ -1102,11 +2543,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 22,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 16,
 					"file": "source/theorie/scripts/frogger/frogger1.py",
 					"semi_transient": false,
 					"settings":
@@ -1133,11 +2574,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 20,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 17,
 					"file": "source/annexes/uml.rst",
 					"semi_transient": false,
 					"settings":
@@ -1162,11 +2603,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 24,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 18,
 					"file": "source/annexes/install-tigerjython-linux.rst",
 					"semi_transient": false,
 					"settings":
@@ -1191,11 +2632,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 22,
+					"stack_index": 33,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 19,
 					"file": "source/theorie/objects.rst",
 					"semi_transient": false,
 					"settings":
@@ -1222,11 +2663,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 20,
 					"semi_transient": false,
 					"settings":
 					{
@@ -1372,11 +2813,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 29,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 21,
 					"file": "source/conf.py",
 					"semi_transient": false,
 					"settings":
@@ -1399,14 +2840,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1865.0,
+						"translation.y": 2285.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 22,
 					"file": "source/theorie/scripts/frogger/distribue_analyse_code.py",
 					"semi_transient": false,
 					"settings":
@@ -1432,11 +2873,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 23,
 					"file": "source/theorie/scripts/frogger/handout-code.rst",
 					"semi_transient": false,
 					"settings":
@@ -1462,11 +2903,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 24,
 					"semi_transient": false,
 					"settings":
 					{
@@ -1595,11 +3036,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 21,
+					"stack_index": 32,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 25,
 					"file": "source/theorie/classes-et-objets.rst",
 					"semi_transient": false,
 					"settings":
@@ -1622,45 +3063,149 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 737.0,
+						"translation.y": 802.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 26,
 					"file": "source/theorie/static_vars_methods.rst",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5228,
+						"buffer_size": 8112,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								209,
-								209
+								4204,
+								4204
 							]
 						],
 						"settings":
 						{
 							"_anf_new": "",
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
 							"syntax": "Packages/RestructuredText Improved/reStructuredText Improved.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3275.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 27,
 					"file": "Makefile",
 					"semi_transient": false,
 					"settings":
@@ -1681,14 +3226,14 @@
 							"syntax": "Packages/Makefile/Makefile.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2117.0,
+						"translation.y": 2597.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 25,
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 28,
 					"semi_transient": false,
 					"settings":
 					{
@@ -1817,11 +3362,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
+					"stack_index": 30,
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 29,
 					"file": "source/scripts/space_invader_light.py",
 					"semi_transient": false,
 					"settings":
@@ -1951,11 +3496,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
+					"stack_index": 31,
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 30,
 					"file": "source/scripts/animaux.py",
 					"semi_transient": false,
 					"settings":
@@ -1982,11 +3527,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 23,
+					"stack_index": 34,
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 31,
 					"file": "source/theorie/bwillis-analyse.rst",
 					"semi_transient": false,
 					"settings":
@@ -2113,14 +3658,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 269.0,
+						"translation.y": 309.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 24,
+					"stack_index": 35,
 					"type": "text"
 				},
 				{
-					"buffer": 22,
+					"buffer": 32,
 					"file": "/D/Dropbox/CS/oc_inf/2013-2015/4-POO-portes-logiques/donnees/Exo_4_1.py",
 					"semi_transient": false,
 					"settings":
@@ -2146,11 +3691,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 25,
+					"stack_index": 36,
 					"type": "text"
 				},
 				{
-					"buffer": 23,
+					"buffer": 33,
 					"file": "source/theorie/intro.rst",
 					"semi_transient": false,
 					"settings":
@@ -2173,14 +3718,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 453.0,
+						"translation.y": 216.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 26,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 24,
+					"buffer": 34,
 					"file": "source/theorie/objectifs.rst",
 					"semi_transient": false,
 					"settings":
@@ -2206,11 +3751,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 27,
+					"stack_index": 37,
 					"type": "text"
 				},
 				{
-					"buffer": 25,
+					"buffer": 35,
 					"file": "source/theorie/concepts-fondamentaux.rst",
 					"semi_transient": false,
 					"settings":
@@ -2233,14 +3778,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2010.0,
+						"translation.y": 2395.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 28,
 					"type": "text"
 				},
 				{
-					"buffer": 26,
+					"buffer": 36,
 					"file": "source/theorie/scripts/catsndogs_3.py",
 					"semi_transient": false,
 					"settings":
@@ -2266,11 +3811,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 26,
 					"type": "text"
 				},
 				{
-					"buffer": 27,
+					"buffer": 37,
 					"file": "source/theorie/scripts/catsndogs_1.py",
 					"semi_transient": false,
 					"settings":
@@ -2294,10 +3839,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 567.0,
+						"translation.y": 692.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 27,
 					"type": "text"
 				}
 			]
@@ -2305,7 +3850,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 46.0
+		"height": 35.0
 	},
 	"input":
 	{
@@ -2345,7 +3890,7 @@
 	"project": "m4-poo-logic-gates.sublime-project",
 	"replace":
 	{
-		"height": 58.0
+		"height": 66.0
 	},
 	"save_all_on_build": false,
 	"select_file":
@@ -2353,6 +3898,74 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"the",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\eval\\theorie.rst"
+			],
+			[
+				"pra",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\eval\\pratique.rst"
+			],
+			[
+				"",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\eval\\theorie.rst"
+			],
+			[
+				"in",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\index.rst"
+			],
+			[
+				"ana",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\eval\\frogger-analyse.py"
+			],
+			[
+				"complet",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\theorie\\scripts\\frogger\\frogger_complet.py"
+			],
+			[
+				"tho",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\eval\\theorie-donnee.rst"
+			],
+			[
+				"theor",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\eval\\theorie.rst"
+			],
+			[
+				"thoe",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\eval\\theorie-donnee.rst"
+			],
+			[
+				"inde",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\index.rst"
+			],
+			[
+				"restr",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\eval\\theorie.rst"
+			],
+			[
+				"froggcom",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\theorie\\scripts\\frogger\\frogger_complet.py"
+			],
+			[
+				"index",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\index.rst"
+			],
+			[
+				"fro",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\theorie\\jeux-arcades-frogger.rst"
+			],
+			[
+				"arca",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\theorie\\jeux-arcades-frogger.rst"
+			],
+			[
+				"stati",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\theorie\\static_vars_methods.rst"
+			],
+			[
+				"stsatic",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\theorie\\static_vars_methods.rst"
+			],
 			[
 				"frogrst",
 				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\theorie\\jeux-arcades-frogger.rst"
@@ -2364,18 +3977,6 @@
 			[
 				"conf",
 				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\conf.py"
-			],
-			[
-				"",
-				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\theorie\\jeux-arcades-frogger.rst"
-			],
-			[
-				"inde",
-				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\index.rst"
-			],
-			[
-				"index",
-				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\index.rst"
 			],
 			[
 				"makefile",
@@ -2436,10 +4037,6 @@
 			[
 				"willi",
 				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\exercices\\bwillis.rst"
-			],
-			[
-				"in",
-				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\source\\index.rst"
 			],
 			[
 				"th",
@@ -2770,10 +4367,6 @@
 				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\helix-prog\\source\\examen2\\partie-pratique.rst"
 			],
 			[
-				"the",
-				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\helix-prog\\source\\examen2\\partie-theorique.rst"
-			],
-			[
 				"prat",
 				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\helix-prog\\source\\examen2\\partie-pratique.rst"
 			],
@@ -2790,20 +4383,28 @@
 		"selected_items":
 		[
 			[
-				"phys",
-				"C:\\cygwin64\\home\\donnerc\\phy1ecg\\site\\site-physique-1ecg.sublime-project"
+				"ma",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\ma1ecg.sublime-project"
 			],
 			[
-				"py",
-				"C:\\cygwin64\\home\\donnerc\\phy1ecg\\site\\site-physique-1ecg.sublime-project"
+				"m4",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\m4-poo-logic-gates.sublime-project"
 			],
 			[
 				"projet",
 				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\projet-1-search-engine-sphinx.sublime-workspace"
 			],
 			[
-				"ma",
-				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\ma1ecg.sublime-project"
+				"poo",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\m4-poo-logic-gates.sublime-project"
+			],
+			[
+				"phys",
+				"C:\\cygwin64\\home\\donnerc\\phy1ecg\\site\\site-physique-1ecg.sublime-project"
+			],
+			[
+				"py",
+				"C:\\cygwin64\\home\\donnerc\\phy1ecg\\site\\site-physique-1ecg.sublime-project"
 			],
 			[
 				"projet1",

@@ -19,47 +19,58 @@ endobj
 << /BaseFont /Courier-Oblique /Encoding /WinAnsiEncoding /Name /F5 /Subtype /Type1 /Type /Font >>
 endobj
 7 0 obj
-<< /Contents 19 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 18 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
+<< /Contents 22 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 21 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
   /Type /Page >>
 endobj
 8 0 obj
-<< /Contents 20 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 18 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
+<< /Contents 23 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 21 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
   /Type /Page >>
 endobj
 9 0 obj
 << /BaseFont /Helvetica-BoldOblique /Encoding /WinAnsiEncoding /Name /F6 /Subtype /Type1 /Type /Font >>
 endobj
 10 0 obj
-<< /Contents 21 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 18 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
+<< /Contents 24 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 21 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
   /Type /Page >>
 endobj
 11 0 obj
-<< /Outlines 13 0 R /PageLabels 22 0 R /PageMode /UseNone /Pages 18 0 R /Type /Catalog >>
+<< /Contents 25 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 21 0 R /Resources << /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans <<  >> 
+  /Type /Page >>
 endobj
 12 0 obj
-<< /Author () /CreationDate (D:20140527144156-01'00') /Creator (\(unspecified\)) /Keywords () /Producer (ReportLab PDF Library - www.reportlab.com) /Subject (\(unspecified\)) 
-  /Title (Variables et m\351thodes de classe) >>
+<< /Outlines 14 0 R /PageLabels 26 0 R /PageMode /UseNone /Pages 21 0 R /Type /Catalog >>
 endobj
 13 0 obj
-<< /Count 5 /First 14 0 R /Last 17 0 R /Type /Outlines >>
+<< /Author () /CreationDate (D:20140610204243-01'00') /Creator (\(unspecified\)) /Keywords () /Producer (ReportLab PDF Library - www.reportlab.com) /Subject (\(unspecified\)) 
+  /Title (Variables et m\351thodes de classe) >>
 endobj
 14 0 obj
-<< /Count 2 /Dest [ 7 0 R /XYZ 62.69291 647.0236 0 ] /First 15 0 R /Last 16 0 R /Next 17 0 R /Parent 13 0 R 
-  /Title (Variables de classe \(variables statiques\)) >>
+<< /Count 8 /First 15 0 R /Last 20 0 R /Type /Outlines >>
 endobj
 15 0 obj
-<< /Dest [ 7 0 R /XYZ 62.69291 572.0236 0 ] /Next 16 0 R /Parent 14 0 R /Title (Syntaxe) >>
+<< /Count 2 /Dest [ 7 0 R /XYZ 62.69291 647.0236 0 ] /First 16 0 R /Last 17 0 R /Next 18 0 R /Parent 14 0 R 
+  /Title (Variables de classe \(variables statiques\)) >>
 endobj
 16 0 obj
-<< /Dest [ 7 0 R /XYZ 62.69291 233.6236 0 ] /Parent 14 0 R /Prev 15 0 R /Title (Exemple) >>
+<< /Dest [ 7 0 R /XYZ 62.69291 572.0236 0 ] /Next 17 0 R /Parent 15 0 R /Title (Syntaxe) >>
 endobj
 17 0 obj
-<< /Dest [ 8 0 R /XYZ 62.69291 463.8236 0 ] /Parent 13 0 R /Prev 14 0 R /Title (M\351thodes de classe) >>
+<< /Dest [ 7 0 R /XYZ 62.69291 233.6236 0 ] /Parent 15 0 R /Prev 16 0 R /Title (Exemple) >>
 endobj
 18 0 obj
-<< /Count 3 /Kids [ 7 0 R 8 0 R 10 0 R ] /Type /Pages >>
+<< /Count 1 /Dest [ 8 0 R /XYZ 62.69291 463.8236 0 ] /First 19 0 R /Last 19 0 R /Next 20 0 R /Parent 14 0 R 
+  /Prev 15 0 R /Title (M\351thodes de classe) >>
 endobj
 19 0 obj
+<< /Dest [ 8 0 R /XYZ 62.69291 289.6236 0 ] /Parent 18 0 R /Title (Utilisation) >>
+endobj
+20 0 obj
+<< /Dest [ 10 0 R /XYZ 62.69291 683.8236 0 ] /Parent 14 0 R /Prev 18 0 R /Title (M\351thodes statiques) >>
+endobj
+21 0 obj
+<< /Count 4 /Kids [ 7 0 R 8 0 R 10 0 R 11 0 R ] /Type /Pages >>
+endobj
+22 0 obj
 << /Length 6766 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
@@ -280,8 +291,8 @@ Q
  
 endstream
 endobj
-20 0 obj
-<< /Length 19204 >>
+23 0 obj
+<< /Length 15178 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 q
@@ -557,13 +568,175 @@ BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (M\351thodes de classe) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 400.8236 cm
+1 0 0 1 62.69291 301.6236 cm
 q
-BT 1 0 0 1 0 26 Tm .717045 Tw 12 TL /F1 10 Tf 0 0 0 rg (Des m\351thodes qui ne font pas r\351f\351rence \340 des attributs d'instance sont des m\351thodes de classe et elles) Tj T* 0 Tw 1.56311 Tw (ne n\351cessitent pas le param\350tre ) Tj /F3 10 Tf 0 0 0 rg (self ) Tj /F1 10 Tf 0 0 0 rg (en premi\350re position. De plus, elles sont d\351cor\351es \340 l'aide du) Tj T* 0 Tw (d\351corateur ) Tj /F3 10 Tf 0 0 0 rg (@staticmethod ) Tj /F1 10 Tf 0 0 0 rg (qui doit figurer sur la ligne pr\351c\351dent la d\351finition de la m\351thode :) Tj T* ET
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 132 re B*
+Q
+q
+.960784 .960784 .862745 rg
+n 0 108.75 30 12 re f*
+.960784 .960784 .862745 rg
+n 36 108.75 48 12 re f*
+.960784 .960784 .862745 rg
+n 84 108.75 6 12 re f*
+.960784 .960784 .862745 rg
+n 90 108.75 36 12 re f*
+.960784 .960784 .862745 rg
+n 126 108.75 12 12 re f*
+.960784 .960784 .862745 rg
+n 24 84.75 72 12 re f*
+.960784 .960784 .862745 rg
+n 102 84.75 6 12 re f*
+.960784 .960784 .862745 rg
+n 114 84.75 6 12 re f*
+.960784 .960784 .862745 rg
+n 132 84.75 180 12 re f*
+.960784 .960784 .862745 rg
+n 24 60.75 18 12 re f*
+.960784 .960784 .862745 rg
+n 48 60.75 48 12 re f*
+.960784 .960784 .862745 rg
+n 96 60.75 6 12 re f*
+.960784 .960784 .862745 rg
+n 102 60.75 24 12 re f*
+.960784 .960784 .862745 rg
+n 126 60.75 12 12 re f*
+.960784 .960784 .862745 rg
+n 48 48.75 48 12 re f*
+.960784 .960784 .862745 rg
+n 96 48.75 6 12 re f*
+.960784 .960784 .862745 rg
+n 102 48.75 72 12 re f*
+.960784 .960784 .862745 rg
+n 180 48.75 12 12 re f*
+.960784 .960784 .862745 rg
+n 198 48.75 6 12 re f*
+.960784 .960784 .862745 rg
+n 24 24.75 72 12 re f*
+.960784 .960784 .862745 rg
+n 24 12.75 18 12 re f*
+.960784 .960784 .862745 rg
+n 48 12.75 30 12 re f*
+.960784 .960784 .862745 rg
+n 78 12.75 6 12 re f*
+.960784 .960784 .862745 rg
+n 84 12.75 18 12 re f*
+.960784 .960784 .862745 rg
+n 102 12.75 12 12 re f*
+.960784 .960784 .862745 rg
+n 48 .75 30 12 re f*
+.960784 .960784 .862745 rg
+n 78 .75 6 12 re f*
+.960784 .960784 .862745 rg
+n 84 .75 108 12 re f*
+.960784 .960784 .862745 rg
+n 192 .75 6 12 re f*
+.960784 .960784 .862745 rg
+n 204 .75 18 12 re f*
+.960784 .960784 .862745 rg
+n 222 .75 6 12 re f*
+.960784 .960784 .862745 rg
+n 228 .75 72 12 re f*
+.960784 .960784 .862745 rg
+n 300 .75 6 12 re f*
+.960784 .960784 .862745 rg
+n 312 .75 138 12 re f*
+.960784 .960784 .862745 rg
+n 450 .75 6 12 re f*
+BT 1 0 0 1 0 110 Tm 12 TL /F4 10 Tf 0 .501961 0 rg (class) Tj /F3 10 Tf 0 0 0 rg ( ) Tj /F4 10 Tf 0 0 1 rg (Compteur) Tj /F3 10 Tf 0 0 0 rg (\() Tj 0 .501961 0 rg (object) Tj 0 0 0 rg (\):) Tj 0 0 0 rg  T*  T* (    ) Tj 0 0 0 rg (objets_crees) Tj 0 0 0 rg ( ) Tj .4 .4 .4 rg (=) Tj 0 0 0 rg ( ) Tj .4 .4 .4 rg (0) Tj 0 0 0 rg (  ) Tj /F5 10 Tf .25098 .501961 .501961 rg (# le compteur vaut 0 au d\351part) Tj /F3 10 Tf 0 0 0 rg  T*  T* (    ) Tj /F4 10 Tf 0 .501961 0 rg (def) Tj /F3 10 Tf 0 0 0 rg ( ) Tj 0 0 1 rg (__init__) Tj 0 0 0 rg (\() Tj 0 .501961 0 rg (self) Tj 0 0 0 rg (\):) Tj 0 0 0 rg  T* (        ) Tj 0 0 0 rg (Compteur) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (objets_crees) Tj 0 0 0 rg ( ) Tj .4 .4 .4 rg (+=) Tj 0 0 0 rg ( ) Tj .4 .4 .4 rg (1) Tj 0 0 0 rg  T*  T* (    ) Tj .666667 .133333 1 rg (@classmethod) Tj 0 0 0 rg  T* (    ) Tj /F4 10 Tf 0 .501961 0 rg (def) Tj /F3 10 Tf 0 0 0 rg ( ) Tj 0 0 1 rg (count) Tj 0 0 0 rg (\() Tj 0 0 0 rg (cls) Tj 0 0 0 rg (\):) Tj 0 0 0 rg  T* (        ) Tj /F4 10 Tf 0 .501961 0 rg (print) Tj /F3 10 Tf 0 0 0 rg (\() Tj .729412 .129412 .129412 rg ("Jusqu'\340 pr\351sent,") Tj 0 0 0 rg (,) Tj 0 0 0 rg ( ) Tj 0 0 0 rg (cls) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (objets_crees) Tj 0 0 0 rg (,) Tj 0 0 0 rg ( ) Tj .729412 .129412 .129412 rg ("objets ont \351t\351 cr\351\351s.") Tj 0 0 0 rg (\)) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 271.6236 cm
+q
+BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (Utilisation) Tj T* ET
 Q
 Q
 q
-1 0 0 1 62.69291 151.6236 cm
+1 0 0 1 62.69291 241.6236 cm
+q
+BT 1 0 0 1 0 14 Tm 1.11284 Tw 12 TL /F1 10 Tf 0 0 0 rg (Voici l'\351volution de la variable de classe ) Tj /F3 10 Tf 0 0 0 rg (Compteur.objets_crees ) Tj /F1 10 Tf 0 0 0 rg (affich\351 \340 l'aide de la m\351thode de) Tj T* 0 Tw (classe ) Tj /F3 10 Tf 0 0 0 rg (Compteur.count\(\)) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 88.42362 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 144 re B*
+Q
+q
+BT 1 0 0 1 0 122 Tm 12 TL /F3 10 Tf 0 0 0 rg (>) Tj (>) Tj (>) Tj ( Compteur.count\(\)) Tj T* (Jusqu'\340 pr\351sent, 0 objets ont \351t\351 cr\351\351s.) Tj T* (>) Tj (>) Tj (>) Tj ( a = Compteur\(\)) Tj T* (>) Tj (>) Tj (>) Tj ( Compteur.count\(\)) Tj T* (Jusqu'\340 pr\351sent, 1 objets ont \351t\351 cr\351\351s.) Tj T* (>) Tj (>) Tj (>) Tj ( b = Compteur\(\)) Tj T* (>) Tj (>) Tj (>) Tj ( Compteur.count\(\)) Tj T* (Jusqu'\340 pr\351sent, 2 objets ont \351t\351 cr\351\351s.) Tj T* (>) Tj (>) Tj (>) Tj ( a = Compteur\(\)) Tj T* (>) Tj (>) Tj (>) Tj ( Compteur.count\(\)) Tj T* (Jusqu'\340 pr\351sent, 3 objets ont \351t\351 cr\351\351s.) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+ 
+endstream
+endobj
+24 0 obj
+<< /Length 12182 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 741.0236 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 2.653059 Tw (Il est paradoxalement \351galement possible d'appeler une m\351thode de classe \340 l'aide d'une instance) Tj T* 0 Tw (particuli\350re :) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 695.8236 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 36 re B*
+Q
+q
+BT 1 0 0 1 0 14 Tm 12 TL /F3 10 Tf 0 0 0 rg (>) Tj (>) Tj (>) Tj ( a.count\(\)) Tj T* (Jusqu'\340 pr\351sent, 3 objets ont \351t\351 cr\351\351s.) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 662.8236 cm
+q
+BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (M\351thodes statiques) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 608.8236 cm
+q
+BT 1 0 0 1 0 38 Tm .539318 Tw 12 TL /F1 10 Tf 0 0 0 rg (Les m\351thodes statiques n'utilisent ni les attributs d'instance ni les attributs de classe sont des ) Tj /F2 10 Tf (m\351thodes) Tj T* 0 Tw 2.388651 Tw (statiques ) Tj /F1 10 Tf (et elles ne n\351cessitent pas le param\350tre ) Tj /F3 10 Tf 0 0 0 rg (self ) Tj /F1 10 Tf 0 0 0 rg (en premi\350re position. De plus, elles sont) Tj T* 0 Tw .23686 Tw (d\351cor\351es \340 l'aide du d\351corateur ) Tj /F3 10 Tf 0 0 0 rg (@staticmethod ) Tj /F1 10 Tf 0 0 0 rg (qui doit figurer sur la ligne pr\351c\351dent la d\351finition de la) Tj T* 0 Tw (m\351thode :) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 359.6236 cm
 q
 q
 1 0 0 1 0 0 cm
@@ -785,37 +958,30 @@ Q
 Q
 Q
 q
-1 0 0 1 62.69291 131.6236 cm
+1 0 0 1 62.69291 339.6236 cm
 Q
- 
-endstream
-endobj
-21 0 obj
-<< /Length 3225 >>
-stream
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 q
-1 0 0 1 62.69291 436.4236 cm
+1 0 0 1 62.69291 76.86614 cm
 .960784 .960784 .862745 rg
-n 0 328.6 469.8898 -328.6 re f*
+n 0 262.7575 469.8898 -262.7575 re f*
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
-BT 1 0 0 1 6 302.6 Tm  T* ET
+BT 1 0 0 1 6 236.7575 Tm  T* ET
 q
-1 0 0 1 16 297.6 cm
+1 0 0 1 16 231.7575 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F6 12.5 Tf 15 TL (\300 retenir) Tj T* ET
 Q
 Q
 q
-1 0 0 1 16 285.6 cm
+1 0 0 1 16 219.7575 cm
 Q
 q
-1 0 0 1 16 285.6 cm
+1 0 0 1 16 219.7575 cm
 Q
 q
-1 0 0 1 16 216.4 cm
+1 0 0 1 16 150.5575 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -857,10 +1023,10 @@ q
 Q
 Q
 q
-1 0 0 1 16 210.4 cm
+1 0 0 1 16 144.5575 cm
 Q
 q
-1 0 0 1 16 186.4 cm
+1 0 0 1 16 120.5575 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
@@ -881,24 +1047,129 @@ q
 Q
 Q
 q
-1 0 0 1 16 180.4 cm
+1 0 0 1 16 114.5575 cm
 Q
 q
-1 0 0 1 16 16 cm
+1 0 0 1 16 -2 cm
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
 q
-1 0 0 1 6 149.4 cm
+1 0 0 1 6 101.5575 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
 Q
 Q
 q
-1 0 0 1 23 137.4 cm
+1 0 0 1 23 89.55748 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .633555 Tw (Les m\351thodes de classe ne peuvent acc\351der qu'aux variables de classe et ne peuvent donc) Tj T* 0 Tw (pas acc\351der aux variables d'instance. Leur d\351finition suit la syntaxe :) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 -3.64252 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 410.6898 84 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 62 Tm /F3 10 Tf 12 TL (class MaClasse\(object\):) Tj T*  T* (    @classmethod) Tj T* (    def methode_de_classe\(cls, arg1, arg2\):) Tj T* (        # code de la fonction) Tj T* (        pass) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+Q
+Q
+q
+1 J
+1 j
+.662745 .662745 .662745 RG
+.5 w
+n 0 262.7575 m 469.8898 262.7575 l S
+n 0 0 m 469.8898 0 l S
+n 0 0 m 0 262.7575 l S
+n 469.8898 0 m 469.8898 262.7575 l S
+Q
+Q
+ 
+endstream
+endobj
+25 0 obj
+<< /Length 2556 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 481.4236 cm
+.960784 .960784 .862745 rg
+n 0 283.6 469.8898 -283.6 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 6 257.6 Tm  T* ET
+q
+1 0 0 1 16 210.4 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+BT 1 0 0 1 6 44.2 Tm  T* ET
+q
+1 0 0 1 23 30.2 cm
+q
+BT 1 0 0 1 0 14 Tm 1.163555 Tw 12 TL /F1 10 Tf 0 0 0 rg (et utilisent par convention le paramp\350tre ) Tj /F3 10 Tf 0 0 0 rg (cls ) Tj /F1 10 Tf 0 0 0 rg (au lieu de ) Tj /F3 10 Tf 0 0 0 rg (self ) Tj /F1 10 Tf 0 0 0 rg (en premi\350re position. Elles) Tj T* 0 Tw (sont appel\351es avec la syntaxe) Tj T* ET
+Q
+Q
+q
+1 0 0 1 23 -3 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 413.6898 24 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F3 10 Tf 12 TL (MaClasse.methode_de_classe\(arg1=val1, arg2=val2\)) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 16 204.4 cm
+Q
+q
+1 0 0 1 16 16 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 173.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 161.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 1.326136 Tw (Les m\351thodes statiques ne acc\351der ni aux variables d'instance ni aux variables de classe.) Tj T* 0 Tw (Leur d\351finition suit la syntaxe :) Tj T* ET
 Q
 Q
 q
@@ -912,11 +1183,11 @@ q
 .662745 .662745 .662745 RG
 .5 w
 .960784 .960784 .862745 rg
-n -6 -6 413.6898 60 re B*
+n -6 -6 413.6898 84 re B*
 Q
 q
 0 0 0 rg
-BT 1 0 0 1 0 38 Tm /F3 10 Tf 12 TL (class MaClasse\(object\):) Tj T*  T* (    @staticmethod) Tj T* (    def methode_de_classe\(arg1, arg2\)) Tj T* ET
+BT 1 0 0 1 0 62 Tm /F3 10 Tf 12 TL (class MaClasse\(object\):) Tj T*  T* (    @staticmethod) Tj T* (    def methode_de_classe\(arg1, arg2\):) Tj T* (        # code de la fonction) Tj T* (        pass) Tj T* ET
 Q
 Q
 Q
@@ -960,32 +1231,35 @@ q
 1 j
 .662745 .662745 .662745 RG
 .5 w
-n 0 328.6 m 469.8898 328.6 l S
+n 0 283.6 m 469.8898 283.6 l S
 n 0 0 m 469.8898 0 l S
-n 0 0 m 0 328.6 l S
-n 469.8898 0 m 469.8898 328.6 l S
+n 0 0 m 0 283.6 l S
+n 469.8898 0 m 469.8898 283.6 l S
 Q
 Q
 q
-1 0 0 1 62.69291 430.4236 cm
+1 0 0 1 62.69291 475.4236 cm
 Q
  
 endstream
 endobj
-22 0 obj
-<< /Nums [ 0 23 0 R 1 24 0 R 2 25 0 R ] >>
+26 0 obj
+<< /Nums [ 0 27 0 R 1 28 0 R 2 29 0 R 3 30 0 R ] >>
 endobj
-23 0 obj
+27 0 obj
 << /S /D /St 1 >>
 endobj
-24 0 obj
+28 0 obj
 << /S /D /St 2 >>
 endobj
-25 0 obj
+29 0 obj
 << /S /D /St 3 >>
 endobj
+30 0 obj
+<< /S /D /St 4 >>
+endobj
 xref
-0 26
+0 31
 0000000000 65535 f
 0000000075 00000 n
 0000000159 00000 n
@@ -998,25 +1272,30 @@ xref
 0000001139 00000 n
 0000001261 00000 n
 0000001471 00000 n
-0000001580 00000 n
-0000001825 00000 n
-0000001902 00000 n
-0000002089 00000 n
-0000002200 00000 n
-0000002311 00000 n
-0000002436 00000 n
-0000002512 00000 n
-0000009335 00000 n
-0000028597 00000 n
-0000031879 00000 n
-0000031941 00000 n
-0000031978 00000 n
-0000032015 00000 n
+0000001681 00000 n
+0000001790 00000 n
+0000002035 00000 n
+0000002112 00000 n
+0000002299 00000 n
+0000002410 00000 n
+0000002521 00000 n
+0000002699 00000 n
+0000002801 00000 n
+0000002927 00000 n
+0000003010 00000 n
+0000009833 00000 n
+0000025069 00000 n
+0000037309 00000 n
+0000039922 00000 n
+0000039993 00000 n
+0000040030 00000 n
+0000040067 00000 n
+0000040104 00000 n
 trailer
 << /ID 
  % ReportLab generated PDF document -- digest (http://www.reportlab.com)
- [(7h\035s\030\365>\022\353\275\324\220gv\007\331) (7h\035s\030\365>\022\353\275\324\220gv\007\331)]
- /Info 12 0 R /Root 11 0 R /Size 26 >>
+ [(J"\364G\224}\372?\275=K\000\306N\273\274) (J"\364G\224}\372?\275=K\000\306N\273\274)]
+ /Info 13 0 R /Root 12 0 R /Size 31 >>
 startxref
-32052
+40141
 %%EOF

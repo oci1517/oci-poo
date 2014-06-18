@@ -115,15 +115,92 @@ accéder aux variables de classes.
     print("Speed of light (calulated): %s m/s" %c)
     print("Speed of light (table): %s  m/s" %Physics.C_LIGHT)
 
-
 Méthodes de classe
 ==================
 
-Des méthodes qui ne font pas référence à des attributs d'instance sont des
-méthodes de classe et elles ne nécessitent pas le paramètre ``self`` en
-première position. De plus, elles sont décorées à l'aide du décorateur
-``@staticmethod`` qui doit figurer sur la ligne précédent la définition de la
-méthode :
+Les méthodes de classe ne peuvent pas faire usage des variables d'instance,
+mais uniquement des variables de classe. Il n'y a donc pas de raison de leur
+passer un premier paramètre ``self`` comme pour les méthodes d'instance. Ce
+premier paramètre ``self`` sera donc remplacé par ``cls`` qui désigne non plus
+l'instance particulière courante, mais la classe courante.
+
+Pour qu'une méthode soit considérée comme méthode de classe, il faut la
+décorer à l'aide du décorateur ``@classmethod`` qui doit figurer sur la ligne
+précédent la définition de la méthode, selon la syntaxe
+
+..  figure:: figures/class-method-schema.png
+    :align: center
+    :width: 75%
+    
+
+::
+
+    class MaClasse:
+
+        def __init__(self):
+            pass
+            # blablabla
+
+        @classmethod
+        def methode_de_classe(cls, arg1, arg2):
+            pass
+            # blablabla
+
+Voici un exemple complet tiré du tutoriel OpenClassrooms
+(http://fr.openclassrooms.com/informatique/cours/apprenez-a-programmer-en-python/premiere-approche-des-classes) :
+
+
+
+..  code-block:: python
+
+    class Compteur(object):
+
+        objets_crees = 0  # le compteur vaut 0 au départ
+
+        def __init__(self):
+            Compteur.objets_crees += 1
+
+        @classmethod
+        def count(cls):
+            print("Jusqu'à présent,", cls.objets_crees, "objets ont été créés."
+
+Utilisation
+-----------
+
+Voici l'évolution de la variable de classe ``Compteur.objets_crees`` affiché à
+l'aide de la méthode de classe ``Compteur.count()``
+
+::
+
+    >>> Compteur.count()
+    Jusqu'à présent, 0 objets ont été créés.
+    >>> a = Compteur()
+    >>> Compteur.count()
+    Jusqu'à présent, 1 objets ont été créés.
+    >>> b = Compteur()
+    >>> Compteur.count()
+    Jusqu'à présent, 2 objets ont été créés.
+    >>> a = Compteur()
+    >>> Compteur.count()
+    Jusqu'à présent, 3 objets ont été créés.   
+
+Il est paradoxalement également possible d'appeler une méthode de classe à
+l'aide d'une instance particulière :
+
+::
+
+    >>> a.count()
+    Jusqu'à présent, 3 objets ont été créés.
+
+
+Méthodes statiques
+==================
+
+Les méthodes statiques n'utilisent ni les attributs d'instance ni les
+attributs de classe sont des **méthodes statiques** et elles ne nécessitent
+pas le paramètre ``self`` en première position. De plus, elles sont décorées à
+l'aide du décorateur ``@staticmethod`` qui doit figurer sur la ligne précédent
+la définition de la méthode :
 
 ..  code-block:: python
     :linenos:
@@ -169,8 +246,30 @@ méthode :
 
             class MaClasse(object):
 
+                @classmethod
+                def methode_de_classe(cls, arg1, arg2):
+                    # code de la fonction
+                    pass
+
+        et utilisent par convention le parampètre ``cls`` au lieu de ``self``
+        en première position. Elles sont appelées avec la syntaxe
+
+        ::
+
+            MaClasse.methode_de_classe(arg1=val1, arg2=val2)
+
+
+    *   Les méthodes statiques ne accéder ni aux variables d'instance ni aux
+        variables de classe. Leur définition suit la syntaxe :
+
+        ::
+
+            class MaClasse(object):
+
                 @staticmethod
-                def methode_de_classe(arg1, arg2)
+                def methode_de_classe(arg1, arg2):
+                    # code de la fonction
+                    pass
 
         et n'utilisent pas le paramètre ``self`` en première position. Elles
         sont appelées avec la syntaxe
@@ -178,3 +277,11 @@ méthode :
         ::
 
             MaClasse.methode_de_classe(arg1=val1, arg2=val2)
+
+
+
+..  only:: prof
+
+    ..  todo:: 
+
+        Mettre un joli schéma avec flèches pour résumer cette théorie, c'est plus lisible que cette salade 

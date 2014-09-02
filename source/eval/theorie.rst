@@ -85,7 +85,7 @@ Indications
     deux points du plan.
 
 *   Le module ``math`` contient une fonction ``sqrt`` permettant de calculer
-    la racine carrée d'une nombre réel. Veillez à importer le module ``math`` correctement !
+    la racine carrée d'un nombre réel. Veillez à importer le module ``math`` correctement !
         
 *   Définir une variable de classe ``count`` et faire en sorte qu'elle
     indique toujours le nombre d'instances créées, comme le montre l'exemple.
@@ -97,7 +97,10 @@ Classe ``Point``
 
 Écrire le code de la classe ``Point`` ci-dessous :
 
-
+..  literalinclude:: corrige/geometry.py
+    :linenos:
+    :start-after: from random
+    :end-before: class Rect
 
 ..  raw:: pdf
 
@@ -158,11 +161,81 @@ b)  Compléter les classes ci-dessous pour correspondre au diagramme de classe c
     ..  code-block:: python
 
         >>> r = Rect(Point(0,0), 10, 20)
-        >>> r.area
+        >>> r.area()
         200
         >>> s = Square(Point(15, 15), 30)
         >>> s.area()
         900
+
+..  only:: corrige
+
+    ..  admonition:: Erreur fréquente
+
+        Les erreurs suivantes ont été très fréquentes
+
+        *   Faire dériver la classe ``Rect`` de la classe ``Point`` avec 
+            
+            ::
+
+                class Rect(Point):
+
+                    # ...
+                    pass
+
+            Ceci n'a pas de sens car un rectangle n'est pas un type
+            particulier de point. C'est uniquement dans ce cas que l'on
+            utilise l'héritage.
+
+        *   Ne pas retourer de valeurs pour la méthode ``area()``. Le code
+            suivant de la méthode ``area()`` est doublement faux :
+
+            ::
+
+                class Rect(object):
+
+                    def __init__(self, width, height):
+                        self.width = width
+                        self.height = height
+
+                    def area(self):
+                        self.area = self.width * self.height
+
+            En effet, la méthode ``area`` ne retourne aucune valeur, mais en
+            plus la ligne
+
+            ::
+
+                self.area = self.width * self.height
+
+            prend le résultat du calcul ``self.width * self.width`` et
+            l'affecte à la variable d'instance ``self.area`` qui ne pointe
+            ainsi plus vers la méthode ``self.area()``. Ainsi, après un
+            premier appel de la méthode ``self.area()``, tous les appels
+            subséquents vont engendrer une erreur. En effet, avant le premier
+            appel, ``r.area`` est la méthode d'instance ``area()`` de la
+            classe ``Rect`` qui retourne ``None`` :
+
+            ::
+
+                >>> r = Rect(10, 20)
+                >>> r.area
+                <bound method Rect.area of <__main__.Rect object at 0x0000000002E84C18>>
+                >>> r.area()
+                None
+
+            Mais dès lors, ``r.area`` ne fait plus référence à la méthode
+            ``r.area()`` mais à une variable d'instance de type ``int`` qui
+            l'a remplacée et qui contient l'aire et non plus la fonction pour
+            la calculer. Il n'est alors évidemment plus possible d'invoquer
+            cette méthode puisqu'il s'agit d'un nombre entier :
+
+                >>> r.area
+                200
+                >>> r.area()
+                Traceback (most recent call last):
+                  File "C:/Users/donnerc/Desktop/screencast/inbox/test.py", line 12, in <module>
+                    print(r.area())
+                TypeError: 'int' object is not callable
 
 
 ..  raw:: pdf
@@ -362,6 +435,7 @@ Question 5 (... / 15 points)
 Code à analyser
 ---------------
 
+..  uniquement pour la version rst2pdf
 ..  code-block:: python
     :include: frogger-analyse.py
     :linenos:

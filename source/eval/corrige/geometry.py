@@ -1,14 +1,24 @@
-from random import *
-from math import *
+from random import random
+from math import sqrt
 
 class Point(object):
+
+    count = 0
 
     def __init__(self, x, y):
         self.x = x
         self.y = y
 
+        # lors de la création de chaque nouvelle instance, le compteur sera
+        # automatiquement mis à jour
+        Point.count += 1
+
     def distance(self, other):
         return sqrt((self.x - other.x)** 2 + (self.y - other.y)**2)
+
+    @classmethod
+    def count(cls):
+        return cls.count
 
     def __str__(self):
         return 'Point ({x} ; {y})'.format(x=self.x, y=self.y)
@@ -31,7 +41,7 @@ class Rect(object):
 class Square(Rect):
 
     def __init__(self, side):
-        super().__init__(self, origin, side, side)
+        Rect.__init__(self, origin, side, side)
 
 
 class EuclidianPlane(object):

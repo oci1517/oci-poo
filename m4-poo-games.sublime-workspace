@@ -1,0 +1,1316 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"associ",
+				"associée"
+			],
+			[
+				"exclude",
+				"exclude_patterns"
+			],
+			[
+				"fin",
+				"final_argument_whitespace"
+			],
+			[
+				"cloud9",
+				"Cloud9"
+			],
+			[
+				"crawl",
+				"crawl_web"
+			],
+			[
+				"max",
+				"max_liste"
+			],
+			[
+				"Cr",
+				"Corrigé"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 418,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "continuous-build.py",
+			"settings":
+			{
+				"buffer_size": 261,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "make.bat",
+			"settings":
+			{
+				"buffer_size": 6979,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Makefile",
+			"settings":
+			{
+				"buffer_size": 7881,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 183.0,
+		"selected_items":
+		[
+			[
+				"comment",
+				"Toggle Comment"
+			],
+			[
+				"spaces",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"restr",
+				"Set Syntax: reStructuredText Improved"
+			],
+			[
+				"spacs",
+				"Set Syntax: Pascal"
+			],
+			[
+				"spces",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"copy r",
+				"SublimeHighlight: copy to clipboard as RTF"
+			],
+			[
+				"python3",
+				"Set Syntax: Python3"
+			],
+			[
+				"pyt",
+				"Set Syntax: Python3"
+			],
+			[
+				"retr",
+				"Set Syntax: reStructuredText Improved"
+			],
+			[
+				"plain",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"spac",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"plan",
+				"Preferences: LaTeXing Settings - Default"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"SPACES",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"space",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"lo",
+				"Convert Case: Lower Case"
+			],
+			[
+				"html5",
+				"Set Syntax: HTML5"
+			],
+			[
+				"clo",
+				"File: Close All"
+			],
+			[
+				"clos",
+				"File: Close All"
+			],
+			[
+				"latex",
+				"Set Syntax: LaTeXing"
+			],
+			[
+				"late",
+				"LaTeXing: Open"
+			],
+			[
+				"rtf",
+				"SublimeHighlight: copy to clipboard as RTF"
+			],
+			[
+				"restru",
+				"Set Syntax: reStructuredText Improved"
+			],
+			[
+				"low",
+				"Convert Case: Lower Case"
+			],
+			[
+				"lower",
+				"Convert Case: Lower Case"
+			],
+			[
+				"comen",
+				"Toggle Comment"
+			],
+			[
+				"pythn",
+				"Set Syntax: Python 3"
+			],
+			[
+				"pyth3",
+				"Set Syntax: Python 3"
+			],
+			[
+				"come",
+				"Toggle Comment"
+			],
+			[
+				"spa",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"comme",
+				"Toggle Comment"
+			],
+			[
+				"com",
+				"Toggle Comment"
+			],
+			[
+				"sap",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"sapce",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"html",
+				"Set Syntax: HTML5"
+			],
+			[
+				"spell",
+				"Google Spell Check"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"comm",
+				"Toggle Comment"
+			],
+			[
+				"commen",
+				"Toggle Comment"
+			],
+			[
+				"python",
+				"Set Syntax: PythonImproved"
+			],
+			[
+				"htlm5",
+				"Set Syntax: HTML5"
+			],
+			[
+				"conv",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"conve",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"conver",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"save",
+				"File: Save All"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"setting",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"",
+				"ANF: Delete Current File"
+			],
+			[
+				"pyhton",
+				"Set Syntax: Python"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"conv spa",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"conver spa",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"convert space",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"conv sp",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"synt py",
+				"Set Syntax: Python"
+			],
+			[
+				"conv spac",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"packa re",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 804.0
+	},
+	"console":
+	{
+		"height": 186.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Dropbox/CS/oc_inf/2013-2015/chapitres/4-POO-jeux/site/LICENSE",
+		"/D/Dropbox/CS/oc_inf/2013-2015/chapitres/4-POO-jeux/site/README.md",
+		"/D/Dropbox/CS/oc_inf/2013-2015/chapitres/4-POO-jeux/site/send.sh",
+		"/D/Dropbox/CS/oc_inf/2013-2015/chapitres/4-POO-jeux/site/youtube_log.txt",
+		"/D/Dropbox/CS/oc_inf/2013-2015/chapitres/4-POO-jeux/chapitre-8.rst",
+		"/C/cygwin64/home/donnerc/ma1ecg/site/_sources/fonctions/fct-affines/05.rst",
+		"/C/cygwin64/home/donnerc/ma1ecg/site/_sources/fonctions/index.rst",
+		"/C/cygwin64/home/donnerc/ma1ecg/site/_sources/fonctions/exos-concepts.rst",
+		"/C/Users/donnerc/Desktop/screencast/inbox/rename.py",
+		"/C/Users/donnerc/Desktop/screencast/inbox/5a-fonctions-affines.camproj",
+		"/C/cygwin64/home/donnerc/ma1ecg/site/_sources/fonctions/theorie-fonctions-lineaires.rst",
+		"/C/cygwin64/home/donnerc/ma1ecg/site/_sources/fonctions/corriges/toutes-les-videos.rst",
+		"/C/cygwin64/home/donnerc/ma1ecg/site/_sources/vecteurs/corriges/suppl/9.rst",
+		"/C/cygwin64/home/donnerc/ma1ecg/site/_sources/fonctions/corriges/9.rst",
+		"/C/Users/donnerc/Desktop/screencast/inbox/description.txt",
+		"/C/cygwin64/home/donnerc/ma1ecg/site/_sources/fonctions/corriges/3.rst",
+		"/C/Users/donnerc/Desktop/corrige-exos-fonctions/tous-exos/diapo2exos.txt",
+		"/D/Sublime Text Build 3059 x64/Data/Packages/LaTeXing/LaTeXing.sublime-settings",
+		"/C/cygwin64/home/donnerc/ma1ecg/site/_templates/sphinx_bootstrap/layout.html",
+		"/C/cygwin64/home/donnerc/ma1ecg/site/_sources/equations/theorie/figures/figures.txt",
+		"/C/cygwin64/home/donnerc/ma1ecg/site/_sources/equations/theorie/figures/equations-litterales-strategie.png",
+		"/C/cygwin64/home/donnerc/ma1ecg/site/_sources/equations/theorie/figures/equations-litterales-intro.png",
+		"/C/cygwin64/home/donnerc/ma1ecg/site/_sources/equations/theorie/figures/equations-litterales-exemple-a-1.png",
+		"/C/cygwin64/home/donnerc/ma1ecg/site/_sources/equations/theorie/figures/equations-litterales-exemple-a-2.png",
+		"/C/cygwin64/home/donnerc/ma1ecg/site/_sources/equations/theorie/figures/equations-litterales-exemple-b.png",
+		"/C/cygwin64/home/donnerc/ma1ecg/site/_sources/equations/th",
+		"/C/cygwin64/home/donnerc/ma1ecg/site/_sources/equations/theorie/etude_nb_solutions.rst",
+		"/C/cygwin64/home/donnerc/ma1ecg/site/_sources/vecteurs/corriges/exo-4/exo-4.rst",
+		"/C/cygwin64/home/donnerc/ma1ecg/site/_sources/vecteurs/corriges/tous.rst",
+		"/C/cygwin64/home/donnerc/ma1ecg/site/_sources/vec",
+		"/C/cygwin64/home/donnerc/ma1ecg/site/_templates/runestone_slides/layout.html",
+		"/D/Dropbox/CS/oc_inf/2013-2015/runstone/RunestoneTools/_templates/sphinx_bootstrap/layout.html",
+		"/C/cygwin64/home/donnerc/ma1ecg/site/_sources/index.rst",
+		"/D/web-dev/web2py/applications/images/views/default/index.html",
+		"/D/web-dev/web2py/applications/images/views/__init__.py",
+		"/D/web-dev/web2py/applications/images/views/web2py_ajax.html",
+		"/D/web-dev/web2py/applications/images/models/menu.py",
+		"/D/web-dev/web2py/applications/images/web2py-images.sublime-project",
+		"/D/web-dev/web2py/applications/images/controllers/appadmin.py",
+		"/D/web-dev/web2py/applications/images/controllers/default.py",
+		"/D/web-dev/web2py/applications/images/controllers/default.py.bak",
+		"/D/web-dev/web2py/applications/images/views/appadmin.html",
+		"/D/web-dev/web2py/applications/images/views/generic.html",
+		"/D/web-dev/web2py/applications/images/views/generic.ics",
+		"/D/web-dev/web2py/applications/images/views/generic.json",
+		"/D/web-dev/web2py/applications/images/views/generic.jsonp",
+		"/D/web-dev/web2py/applications/images/views/generic.load",
+		"/D/web-dev/web2py/applications/images/views/generic.map",
+		"/D/web-dev/web2py/applications/images/views/generic.rss",
+		"/D/web-dev/web2py/applications/images/views/generic.xml",
+		"/D/web-dev/web2py/applications/images/views/layout.html",
+		"/D/web-dev/web2py/applications/images/views/default/user.html",
+		"/D/web-dev/web2py/applications/images/models/db.py"
+	],
+	"find":
+	{
+		"height": 50.0
+	},
+	"find_in_files":
+	{
+		"height": 138.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\\n{2,}",
+			"\\n\\n",
+			"source",
+			"_source",
+			"source",
+			"q2",
+			"10a",
+			"9",
+			"8",
+			"youtube",
+			"B9Fk3DTR58U",
+			"2higcb08DEY",
+			"video_a_rajouter",
+			"vswSR32Qv2o",
+			"Icône d'alerte\nVotre vidéo a été publiée sur http://youtu.be/",
+			"affinesIcône",
+			"Revenir au mode \"Édition\" ",
+			"7",
+			"8",
+			"d",
+			"6",
+			"youtube",
+			"c",
+			"5",
+			"figure",
+			")",
+			"fct",
+			"fonctionsAffines",
+			"png",
+			"17a",
+			"-",
+			"5a-fonctions-affines",
+			"5a",
+			"fonctions",
+			"correction",
+			"fonctions LIné",
+			"présentation f",
+			"lineaire",
+			"linéaires",
+			"// ",
+			"__",
+			"youtube",
+			"^\\d\\d ",
+			"\"",
+			"-video-id=\"",
+			"data",
+			"data-title=\"",
+			"data",
+			"data-title=\\\".*\\\"",
+			"data",
+			"data-framestrip-url",
+			"data-title=\"",
+			"data-title=\"01 présentation intro\" data-framestrip-url=\"https://i1.ytimg.com/vd?id=RBhDZgTZVbA&amp;w=70&amp;h=67&amp;n=7&amp;sigh=akO_RAX2UX-jwzXRHIHkg-iE9Hk\" data-set-video-id=\"56B44F6D10557CC6\"><td class=\"pl-video-handle yt-uix-dragdrop-drag-handle\"><img src=\"https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif\" class=\"pl-video-handle-img\"></td><td class=\"pl-video-index\"></td><td class=\"pl-video-thumbnail\"><a href=\"/watch?v=RBhDZgTZVbA&amp;list=PLub6lTD5AgToLKXQolrCRSFLIhIxRlZZf&amp;index=2\" class=\"ux-thumb-wrap yt-uix-sessionlink contains-addto pl-video-thumb\"  data-sessionlink=\"ei=WnuhU6nKEue7iwbRv4GADg&amp;feature=plpp_video\">    <span class=\"video-thumb  yt-thumb yt-thumb-72\"",
+			"data-title",
+			"data-video-id=\"",
+			"data-video-id=\"RBhDZgTZVbA\"",
+			"01 présentation intro",
+			"9",
+			"capture",
+			"correction",
+			"Icône d'alerte\nVotre vidéo a été publiée sur http://youtu.be/",
+			" interpretation grapheIcône d'alerte",
+			" interpretation grapheIcône d'alerte\nVotre vidéo a été publiée sur http://youtu.be/",
+			"correction",
+			"20",
+			"18",
+			"17",
+			"16",
+			"14",
+			"16a",
+			"a",
+			"16",
+			"14",
+			"13",
+			"9",
+			"3",
+			"correction",
+			"==>",
+			", ",
+			"70",
+			"center",
+			"png",
+			"Pourcedntages",
+			"depuis",
+			"affluent",
+			"soit",
+			"7785",
+			"3955",
+			"43",
+			"5049",
+			"50",
+			"47",
+			"*",
+			"52",
+			"mathématiques",
+			"physique",
+			"relations-prev",
+			"relations-next",
+			"\\,",
+			"de",
+			", ",
+			"correspond à une",
+			"Une multiplication par ",
+			"0.",
+			".0",
+			"1.",
+			"à une",
+			"diminution",
+			"augme",
+			"augmentation",
+			"augme",
+			"augmentation",
+			"51",
+			":math:`1",
+			"(1+",
+			"0.999",
+			"multiplication",
+			"% =",
+			":math:``",
+			"\\,\\%",
+			"{}{}",
+			"1 +",
+			",\\%",
+			"augmentation",
+			"\\,",
+			"47",
+			"45",
+			"Problème \\d{2}"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"\\1",
+			"\\1\\\\cdot{}\\3",
+			"\\1\\\\cdot{}\\2",
+			"\\1\\cdot{}\\2",
+			":math:`\\1`",
+			"_\\1 \\\\dfrac\\{\\2\\}\\{\\3\\} \\4_",
+			"\\\\frac\\{\\1\\}\\{\\2\\}",
+			"_\\1 \\\\dfrac\\{\\2\\}\\{\\3\\} \\4_",
+			"_\\1 \\dfrac\\{\\2\\}\\{\\3\\} \\4_",
+			"_\\1 \\dfrac\\{\\2\\}\\{\\3\\} \\4__",
+			"\\\\frac\\{\\1\\}\\{\\2\\}",
+			"\\1\\\\cdot{}\\3",
+			"\\1 \\\\cdot \\3",
+			"\\1 \\\\cdot \\2",
+			"\\1 \\cdot \\2",
+			"\\\\frac\\{\\1\\}\\{\\2\\}",
+			":math:`\\1`"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": ".gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 418,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "continuous-build.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 261,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "make.bat",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6979,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Batch File/Batch File.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Makefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7881,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Makefile/Makefile.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 37.0
+	},
+	"input":
+	{
+		"height": 47.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 317.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "m4-poo-games.sublime-project",
+	"replace":
+	{
+		"height": 94.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\index.rst"
+			],
+			[
+				"conf",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\conf.py"
+			],
+			[
+				"index",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\index.rst"
+			],
+			[
+				"paven",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\pavement.py"
+			],
+			[
+				"inde",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\index.rst"
+			],
+			[
+				"10",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\fonctions\\fct-affines\\corriges\\10.rst"
+			],
+			[
+				"07",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\fonctions\\fct-affines\\corriges\\07.rst"
+			],
+			[
+				"08",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\fonctions\\fct-affines\\corriges\\08.rst"
+			],
+			[
+				"09",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\fonctions\\fct-affines\\corriges\\09.rst"
+			],
+			[
+				"tou",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\fonctions\\toutes-videos-affines.rst"
+			],
+			[
+				"05",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\fonctions\\fct-affines\\corriges\\05.rst"
+			],
+			[
+				"06",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\fonctions\\fct-affines\\corriges\\06.rst"
+			],
+			[
+				"fonction",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\fonctions\\index.rst"
+			],
+			[
+				"dia",
+				"C:\\Users\\donnerc\\Desktop\\screencast\\inbox\\diapositives.txt"
+			],
+			[
+				"desc",
+				"C:\\Users\\donnerc\\Desktop\\screencast\\inbox\\description.txt"
+			],
+			[
+				"9rst",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\fonctions\\corriges\\09.rst"
+			],
+			[
+				"toutes",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\fonctions\\corriges\\toutes-les-videos.rst"
+			],
+			[
+				"correc",
+				"correction exo 9"
+			],
+			[
+				"20",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\fonctions\\corriges\\20.rst"
+			],
+			[
+				"18",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\fonctions\\corriges\\18.rst"
+			],
+			[
+				"17",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\fonctions\\corriges\\17.rst"
+			],
+			[
+				"16",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\fonctions\\corriges\\16.rst"
+			],
+			[
+				"15",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\pourcentages\\corriges\\exo-50.rst"
+			],
+			[
+				"14",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\fonctions\\corriges\\14.rst"
+			],
+			[
+				"13",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\fonctions\\corriges\\13.rst"
+			],
+			[
+				"9",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\vecteurs\\corriges\\suppl\\9.rst"
+			],
+			[
+				"3",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\fonctions\\corriges\\3.rst"
+			],
+			[
+				"our",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\equations\\corriges\\tous-les-problemes.rst"
+			],
+			[
+				"43",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\pourcentages\\corriges\\exo-43.rst"
+			],
+			[
+				"50",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\pourcentages\\corriges\\exo-50.rst"
+			],
+			[
+				"pour",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\pourcentages\\index.rst"
+			],
+			[
+				"52",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\pourcentages\\corriges\\exo-52.rst"
+			],
+			[
+				"47",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\pourcentages\\corriges\\exo-47.rst"
+			],
+			[
+				"pavem",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\pavement.py"
+			],
+			[
+				"45",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\pourcentages\\corriges\\exo-45.rst"
+			],
+			[
+				"corr",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\pourcentages\\corriges\\exo-45.rst"
+			],
+			[
+				"tous",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\equations\\corriges\\tous-les-problemes.rst"
+			],
+			[
+				"solut",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\equations\\theorie\\etude-nb-solutions.rst"
+			],
+			[
+				"equation",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\equations\\index.rst"
+			],
+			[
+				"equations",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\equations\\index.rst"
+			],
+			[
+				"litt",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\equations\\theorie\\equations-litterales.rst"
+			],
+			[
+				"theorie",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\equations\\theorie\\etude-nb-solutions.rst"
+			],
+			[
+				"26",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\equations\\corriges\\exo26.rst"
+			],
+			[
+				"equat",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\equations\\index.rst"
+			],
+			[
+				"equa",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\equations\\index.rst"
+			],
+			[
+				"prom",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\equations\\theorie\\probleme-intro.rst"
+			],
+			[
+				"forma",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\vecteurs\\exaformatif\\index.rst"
+			],
+			[
+				"vec",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\vecteurs\\index.rst"
+			],
+			[
+				"8",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\vecteurs\\corriges\\suppl\\8.rst"
+			],
+			[
+				"8.rst",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\vecteurs\\corriges\\suppl\\8.rst"
+			],
+			[
+				"vect",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\vecteurs\\index.rst"
+			],
+			[
+				"11",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\vecteurs\\corriges\\suppl\\11.rst"
+			],
+			[
+				"vectu",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\vecteurs\\index.rst"
+			],
+			[
+				"vecte",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\_sources\\vecteurs\\index.rst"
+			],
+			[
+				"defa",
+				"controllers\\default.py"
+			],
+			[
+				"db",
+				"models\\db.py"
+			],
+			[
+				"index.html",
+				"views\\default\\index.html"
+			],
+			[
+				"defual",
+				"controllers\\default.py"
+			],
+			[
+				"firs",
+				"views\\default\\first.html"
+			],
+			[
+				"default",
+				"controllers\\default.py"
+			],
+			[
+				"alt4",
+				"partie-02\\op-implementation-alt-4.rst"
+			],
+			[
+				"alt2rst",
+				"partie-02\\op-implementation-alt-2.rst"
+			],
+			[
+				"alt4rst",
+				"partie-02\\op-implementation-alt-4.rst"
+			],
+			[
+				"hash",
+				"notions\\hash-table.rst"
+			],
+			[
+				".py",
+				"crawler\\main.py"
+			],
+			[
+				"has",
+				"notions\\hash-table.rst"
+			],
+			[
+				"ran",
+				"partie-02\\15-random_index_test.rst"
+			],
+			[
+				"alt",
+				"partie-02\\op-implementation-alt-4.rst"
+			],
+			[
+				"lat",
+				"partie-02\\lookup-alt2-corrige.py"
+			],
+			[
+				"alt2",
+				"partie-02\\op-implementation-alt-2.rst"
+			],
+			[
+				"etape",
+				"partie-01\\10-etape-01.rst"
+			],
+			[
+				"eta",
+				"partie-01\\10-etape-01.rst"
+			],
+			[
+				"con",
+				"C:\\cygwin64\\home\\donnerc\\phy1ecg\\site\\conf.py"
+			],
+			[
+				"ref",
+				"C:\\cygwin64\\home\\donnerc\\phy1ecg\\site\\_sources\\refraction\\index.rst"
+			],
+			[
+				"refrac",
+				"C:\\cygwin64\\home\\donnerc\\phy1ecg\\site\\_sources\\refraction\\index.rst"
+			],
+			[
+				"comp",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-01\\02-composants-moteur-recherche.rst"
+			],
+			[
+				"page1",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\page1.html"
+			],
+			[
+				"page",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\page3.html"
+			],
+			[
+				"indehtml",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\index.html"
+			],
+			[
+				"page4",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\page4.html"
+			],
+			[
+				"age2",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\page2.html"
+			],
+			[
+				"indexhtlm",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\index.html"
+			],
+			[
+				"page2",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\page2.html"
+			],
+			[
+				"indexhtml",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\index.html"
+			],
+			[
+				"choix",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-02\\choix-implementation.rst"
+			],
+			[
+				"donnee",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-02\\lookup-alt4-donnee.py"
+			],
+			[
+				"inderst",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\index.rst"
+			],
+			[
+				"indexrst",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\index.rst"
+			],
+			[
+				"introinde",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-02\\intro-index.rst"
+			],
+			[
+				"indeht",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\index.html"
+			],
+			[
+				"etap",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-01\\10-etape-01.rst"
+			],
+			[
+				"pag3",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\page3.html"
+			],
+			[
+				"page3",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\page3.html"
+			],
+			[
+				"page43",
+				"projet-1-get-page-03-notion-docstring.mp4"
+			],
+			[
+				"main",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\crawler\\main.py"
+			],
+			[
+				"page5",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\page5.html"
+			],
+			[
+				"makefile",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\Makefile"
+			],
+			[
+				"indexht",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\test-crawl-web\\index.html"
+			],
+			[
+				"tests",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-02\\test-seed.rst"
+			],
+			[
+				"eape",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-01\\10-etape-01.rst"
+			],
+			[
+				"salut",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\devenv\\installation-linux.rst"
+			],
+			[
+				"youtu",
+				"C:\\Python27\\Lib\\site-packages\\sphinxcontrib\\youtube\\youtube.py"
+			],
+			[
+				"quiz",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\notions\\quiz-exceptions-tuples.rst"
+			],
+			[
+				"notions",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\notions\\exceptions-1.rst"
+			],
+			[
+				"mode",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\notions\\struct\\modele-memoire.rst"
+			],
+			[
+				"sub",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\devenv\\sublime-text.rst"
+			],
+			[
+				"suble",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\devenv\\sublime-text.rst"
+			],
+			[
+				"exc",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\notions\\exceptions-1.rst"
+			],
+			[
+				"et",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\partie-01\\tasks\\10-etape-01.rst"
+			],
+			[
+				"ini",
+				"C:\\Python27\\Lib\\site-packages\\sphinxcontrib\\youtube\\__init__.py"
+			],
+			[
+				"you",
+				"C:\\Python27\\Lib\\site-packages\\sphinxcontrib\\youtube\\youtube.py"
+			],
+			[
+				"back",
+				"C:\\Python27\\Lib\\site-packages\\sphinxcontrib\\youtube\\youtube_backup.py"
+			],
+			[
+				"vide",
+				"C:\\Users\\donnerc\\Desktop\\video.html"
+			],
+			[
+				"usb",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\devenv\\sublime-text.rst"
+			],
+			[
+				"yout",
+				"C:\\Python27\\Lib\\site-packages\\sphinxcontrib\\youtube\\youtube_backup.py"
+			],
+			[
+				"subl",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\devenv\\sublime-text.rst"
+			],
+			[
+				"init",
+				"C:\\Python27\\Lib\\site-packages\\sphinxcontrib\\youtube\\__init__.py"
+			],
+			[
+				"sublim",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\devenv\\sublime-text.rst"
+			],
+			[
+				"craw",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\crawler\\crawler-variante.py"
+			],
+			[
+				"cra",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\crawler\\crawler-variante.py"
+			],
+			[
+				"excep",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\notions\\exceptions-1.rst"
+			],
+			[
+				"neutr",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\realtime-collab\\neutron-drive.rst"
+			],
+			[
+				"find",
+				"Find Results"
+			],
+			[
+				"c9",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\realtime-collab\\c9-ide.rst"
+			],
+			[
+				"intro",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\intro.rst"
+			],
+			[
+				"instal",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\devenv\\install-chrome.rst"
+			],
+			[
+				"tupe",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\notions\\tuples.rst"
+			],
+			[
+				"tuples",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\source\\notions\\tuples.rst"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 750.0,
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\chapitres\\4-POO-jeux\\site\\m4-poo.sublime-workspace"
+			],
+			[
+				"poo",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO\\sphinx\\m4-poo.sublime-workspace"
+			],
+			[
+				"py",
+				"C:\\cygwin64\\home\\donnerc\\phy1ecg\\site\\site-physique-1ecg.sublime-project"
+			],
+			[
+				"phy",
+				"C:\\cygwin64\\home\\donnerc\\phy1ecg\\site\\site-physique-1ecg.sublime-project"
+			],
+			[
+				"phyt",
+				"C:\\cygwin64\\home\\donnerc\\phy1ecg\\site\\site-physique-1ecg.sublime-project"
+			],
+			[
+				"m4",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\4-POO-portes-logiques\\sphinx\\m4-poo-logic-gates.sublime-project"
+			],
+			[
+				"projet",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\projet-1-search-engine-sphinx.sublime-workspace"
+			],
+			[
+				"ma",
+				"C:\\cygwin64\\home\\donnerc\\ma1ecg\\site\\ma1ecg.sublime-project"
+			],
+			[
+				"projet1",
+				"D:\\Dropbox\\CS\\oc_inf\\2013-2015\\projet-1\\projet-1-search-engine-sphinx.sublime-workspace"
+			]
+		],
+		"width": 570.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 225.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

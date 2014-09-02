@@ -183,7 +183,7 @@ pseudoxml:
 	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
 
 puthtml:
-	rsync -raz build/html/* www-data@donner-online.ch:/usr/share/nginx/www/oci/m4-poo/
+	rsync -raz build/html/* webpub@donner-online.ch:/home/webpub/html/oci/m4-poo/
 
 putcorrige:
 	rsync -raz build/corrige/html/* www-data@donner-online.ch:/usr/share/nginx/www/oci/m4-poo/corrige/

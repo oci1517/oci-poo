@@ -34,19 +34,32 @@ Programmation orientée objets
 
     theorie/bwillis-analyse
 
-..  only:: publish
-    
-    Jeux et POO
-    ===========
 
-    ..  toctree::
-        :glob:
-        :maxdepth: 1
 
-        theorie/objects
-        theorie/classes-et-objets
-        theorie/static_vars_methods
-        theorie/jeux-arcades-frogger
+Jeux et POO
+===========
+
+..  toctree::
+    :glob:
+    :maxdepth: 1
+
+    theorie/objects
+    theorie/classes-et-objets
+    theorie/static_vars_methods
+    theorie/jeux-arcades-frogger
+
+
+POO avancées
+============
+
+..  toctree::
+    :glob:
+    :maxdepth: 1
+
+    theorie/objects
+    theorie/classes-et-objets
+    theorie/static_vars_methods
+    theorie/jeux-arcades-frogger
 
 ..
     Questionnaire sur le cours

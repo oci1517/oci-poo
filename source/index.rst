@@ -48,7 +48,6 @@ Jeux et POO
     theorie/static_vars_methods
     theorie/jeux-arcades-frogger
 
-
 POO avancées
 ============
 
@@ -56,10 +55,8 @@ POO avancées
     :glob:
     :maxdepth: 1
 
-    theorie/objects
-    theorie/classes-et-objets
-    theorie/static_vars_methods
-    theorie/jeux-arcades-frogger
+    theorie/operator_overloading
+    theorie/exceptions_avance
 
 ..
     Questionnaire sur le cours
@@ -89,6 +86,7 @@ Annexes
 
     annexes/install-tigerjython-linux
     annexes/uml
+    theorie/glossaire
 
 ..
     Indices and ref

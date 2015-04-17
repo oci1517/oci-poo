@@ -10,7 +10,7 @@ Module 4 : Programmation orientée objets et développement de jeux
 ..  admonition:: Référence et sources
     :class: danger
 
-    Source : Ce cours est une traduction et adaptation du magnifique ouvrage *Programmierkonzepte mit Python und der Lernumgebung TigerJython* de Karka Arnold, Tobias Kohn et Aegidius Plüss (www.tigerjython.ch/).
+    Source : Ce cours est une traduction et adaptation du magnifique ouvrage *Programmierkonzepte mit Python und der Lernumgebung TigerJython* de Jarka Arnold, Tobias Kohn et Aegidius Plüss (www.tigerjython.ch/).
 
 ..  only:: html
 

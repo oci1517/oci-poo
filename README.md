@@ -1,6 +1,6 @@
 ## Programmation orienté objets
 
-Le présent cours est une traduction et une adaptation de l'excellent ouvrage allemand *Programmierkonzepte mit Python und der Lernumgebung TigerJython* de Karka Arnold, Tobias Kohn et Aegidius Plüss (www.tigerjython.ch/).
+Le présent cours est une traduction et une adaptation de l'excellent ouvrage allemand *Programmierkonzepte mit Python und der Lernumgebung TigerJython* de Jarka Arnold, Tobias Kohn et Aegidius Plüss (www.tigerjython.ch/).
 
 Site du cours : http://www.donner-online.ch/demo/poo/
 

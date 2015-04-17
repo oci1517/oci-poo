@@ -8,10 +8,10 @@
 
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': u"Oraux de BAC d'OCI (2015)",
+    'navbar_title': u"Programmation orientée objets",
 
     # Tab name for entire site. (Default: "Site")
-    'navbar_site_name': "Questions",
+    'navbar_site_name': "Sections",
 
     # A list of tuples containing pages or urls to link to.
     # Valid tuples should be in the following forms:

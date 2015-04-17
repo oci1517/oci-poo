@@ -16,7 +16,7 @@ import sys, os
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-#sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('../modules'))
 
 # -- General configuration -----------------------------------------------------
 
@@ -112,45 +112,26 @@ else:
 # option pour afficher les todos et les todolists
 todo_include_todos = True
 
-# Theme Option are theme-specific and customize the look and feel of a theme
-# further.  For a list of Option available for each theme, see the
-# documentation.
-#html_theme_Option = {}
+# The theme to use for HTML and HTML Help pages.  See the documentation for
+# a list of builtin themes.
+theme = 'bootstrap'
+try:
+    #raise Exception
+    if theme == 'readthedocs':
+        import sphinx_rtd_theme
+        html_theme = "sphinx_rtd_theme"
+        html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+    elif theme == 'bootstrap':
+        import sphinx_bootstrap_theme
+        from bootstrap_theme_options import *
+        html_theme = 'bootstrap'
+        html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+except Exception as e:
+    import sys
+    print(str(e))
+    sys.exit(1)
+    html_theme = 'sphinxdoc'
 
-# html_theme_options = {
-#     # Bootswatch (http://bootswatch.com/) theme.
-#     #
-#     # Options are nothing with "" (default) or the name of a valid theme such
-#     # as "amelia" or "cosmo".
-#     #
-#     # Note that this is served off CDN, so won't be available offline.
-#     # 'bootswatch_theme': "readable"
-#     'bootstrap_version': "3",
-#     'navbar_sidebarrel': True,
-#     # 'bootswatch_theme': "united"
-#     # 'navbar_title': "Demo",
-#     'navbar_site_name': "Site",
-
-# }
-
-# Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = []
-
-# The name for this set of Sphinx documents.  If None, it defaults to
-# "<project> v<release> documentation".
-#html_title = None
-
-# A shorter title for the navigation bar.  Default is the same as html_title.
-#html_short_title = None
-
-# The name of an image file (relative to this directory) to place at the top
-# of the sidebar.
-#html_logo = None
-
-# The name of an image file (within the static path) to use as favicon of the
-# docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
-# pixels large.
-#html_favicon = None
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

@@ -21,13 +21,13 @@ I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
 
 PROF = -t prof -t corrige -t publish -t hidden
 CORRIGE = -t corrige -t publish 
-HTML_OPTS = -t corrige -t publish
+HTML_OPTS = -t publish
 LATEX_OPTS = -t corrige -t publish
 
 .PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext
 
 help:
-	@echo "Please use \`make <target>' where <target> is one of"
+	@echo "Please use \'make <target>' where <target> is one of"
 	@echo "  html       to make standalone HTML files"
 	@echo "  dirhtml    to make HTML files named index.html in directories"
 	@echo "  singlehtml to make a single large HTML file"
@@ -112,8 +112,8 @@ latex:
 	$(SPHINXBUILD) $(LATEX_OPTS) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
 	@echo
 	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex."
-	@echo "Run \`make' in that directory to run these through (pdf)latex" \
-	      "(use \`make latexpdf' here to do that automatically)."
+	@echo "Run \'make' in that directory to run these through (pdf)latex" \
+	      "(use \'make latexpdf' here to do that automatically)."
 
 latexpdf:
 	$(SPHINXBUILD) $(LATEX_OPTS) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
@@ -142,8 +142,8 @@ texinfo:
 	$(SPHINXBUILD) -b texinfo $(ALLSPHINXOPTS) $(BUILDDIR)/texinfo
 	@echo
 	@echo "Build finished. The Texinfo files are in $(BUILDDIR)/texinfo."
-	@echo "Run \`make' in that directory to run these through makeinfo" \
-	      "(use \`make info' here to do that automatically)."
+	@echo "Run \'make' in that directory to run these through makeinfo" \
+	      "(use \'make info' here to do that automatically)."
 
 info:
 	$(SPHINXBUILD) -b texinfo $(ALLSPHINXOPTS) $(BUILDDIR)/texinfo
@@ -183,23 +183,27 @@ pseudoxml:
 	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
 
 puthtml:
-	rsync -raz build/html/* webpub@donner-online.ch:/home/webpub/html/demo/poo/
+	rsync -raz build/html/* webpub@donner-online.ch:/home/webpub/html/oci/poo/ --progress --delete
+	rsync -raz build/corrige/html/* webpub@donner-online.ch:/home/webpub/html/oci/poo/corrige/ --progress --delete
 
+putdemo:
+	rsync -raz build/html/* webpub@donner-online.ch:/home/webpub/html/oci/demo/poo/ --progress --delete
+	rsync -raz build/corrige/html/* webpub@donner-online.ch:/home/webpub/html/oci/demo/poo/corrige/ --progress --delete
 
 viewhtml:
 	firefox build/prof/html/index.html &	
 
-profhtml:
+prof:
 	$(SPHINXBUILD) -v -b html $(PROF) $(ALLSPHINXOPTS) $(BUILDDIR)/prof/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/prof/html."
 
-corrigehtml:
+corrige:
 	$(SPHINXBUILD) -b html  $(CORRIGE) $(ALLSPHINXOPTS) $(BUILDDIR)/corrige/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/corrige/html."
 
-all: html corrigehtml profhtml
+htmlall: html corrige prof
 
 edit:
 	explorer.exe . &

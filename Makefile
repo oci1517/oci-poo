@@ -12,6 +12,23 @@ ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
 $(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you don't have Sphinx installed, grab it from http://sphinx-doc.org/)
 endif
 
+ifndef SPHINX_PORT
+	SPHINX_PORT=8080
+endif
+
+ifndef SPHINX_HOST
+	SPHINX_HOST=localhost
+endif
+
+SPHINX_URL=http://$(SPHINX_HOST):$(SPHINX_PORT)/
+
+ifdef C9_HOSTNAME
+	SPHINX_PORT=$(C9_PORT)
+	SPHINX_HOST=$(C9_IP)
+	SPHINX_URL=https://$(C9_HOSTNAME)/
+endif
+
+
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
@@ -19,15 +36,12 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) sou
 # the i18n builder cannot share the environment and doctrees with the others
 I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
 
-PROF = -t prof -t corrige -t publish -t hidden
-CORRIGE = -t corrige -t publish 
-HTML_OPTS = -t publish
-LATEX_OPTS = -t corrige -t publish
 
 .PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext
 
 help:
-	@echo "Please use \'make <target>' where <target> is one of"
+	@echo "Please use \`make <target>' where <target> is one of"
+
 	@echo "  html       to make standalone HTML files"
 	@echo "  dirhtml    to make HTML files named index.html in directories"
 	@echo "  singlehtml to make a single large HTML file"
@@ -55,9 +69,17 @@ clean:
 	rm -rf $(BUILDDIR)/*
 
 html:
-	$(SPHINXBUILD) -b html $(HTML_OPTS) $(ALLSPHINXOPTS) $(BUILDDIR)/html
+	$(SPHINXBUILD) -b html -t corrige $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
+encours:
+	$(SPHINXBUILD) -b html -t encours $(ALLSPHINXOPTS) $(BUILDDIR)/encours
+	@echo
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/encours."
+corrige:
+	$(SPHINXBUILD) -b html -t corrige $(ALLSPHINXOPTS) $(BUILDDIR)/corrige
+	@echo
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/corrige."
 
 dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
@@ -90,17 +112,17 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/Optionscoomplmentaireinformatiqueprogrammation.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/Dveloppementduneapplicationwebdecrationdequiz.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/Optionscoomplmentaireinformatiqueprogrammation.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/Dveloppementduneapplicationwebdecrationdequiz.qhc"
 
 devhelp:
 	$(SPHINXBUILD) -b devhelp $(ALLSPHINXOPTS) $(BUILDDIR)/devhelp
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/Optionscoomplmentaireinformatiqueprogrammation"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/Optionscoomplmentaireinformatiqueprogrammation"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/Dveloppementduneapplicationwebdecrationdequiz"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/Dveloppementduneapplicationwebdecrationdequiz"
 	@echo "# devhelp"
 
 epub:
@@ -109,18 +131,17 @@ epub:
 	@echo "Build finished. The epub file is in $(BUILDDIR)/epub."
 
 latex:
-	$(SPHINXBUILD) $(LATEX_OPTS) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
+	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
 	@echo
 	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex."
-	@echo "Run \'make' in that directory to run these through (pdf)latex" \
-	      "(use \'make latexpdf' here to do that automatically)."
+	@echo "Run \`make' in that directory to run these through (pdf)latex" \
+	      "(use \`make latexpdf' here to do that automatically)."
 
 latexpdf:
-	$(SPHINXBUILD) $(LATEX_OPTS) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
+	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
 	@echo "Running LaTeX files through pdflatex..."
 	$(MAKE) -C $(BUILDDIR)/latex all-pdf
 	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex."
-	cp 	$(BUILDDIR)/latex/oci-chap-poo.pdf source/files/
 
 latexpdfja:
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
@@ -142,8 +163,8 @@ texinfo:
 	$(SPHINXBUILD) -b texinfo $(ALLSPHINXOPTS) $(BUILDDIR)/texinfo
 	@echo
 	@echo "Build finished. The Texinfo files are in $(BUILDDIR)/texinfo."
-	@echo "Run \'make' in that directory to run these through makeinfo" \
-	      "(use \'make info' here to do that automatically)."
+	@echo "Run \`make' in that directory to run these through makeinfo" \
+	      "(use \`make info' here to do that automatically)."
 
 info:
 	$(SPHINXBUILD) -b texinfo $(ALLSPHINXOPTS) $(BUILDDIR)/texinfo
@@ -182,30 +203,24 @@ pseudoxml:
 	@echo
 	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
 
-puthtml:
+tmpdf:
+	make latex
+	curl https://gist.githubusercontent.com/donnerc/ceb6e0045d108f41e702/raw/31fc417fe7b8c16e1b2c5d207dfc6e7218c99606/sphinxmanual.cls > build/latex/sphinxmanual.cls
+	cd build/latex/ && make
+
+firefox:
+	$(firefox) "http://$(HOSTNAME):$(SPHINX_PORT)/" &
+
+chrome:
+	$(chrome) "http://$(HOSTNAME):$(SPHINX_PORT)/" &
+
+livehtml: encours
+	@echo Serving pages on $(SPHINX_URL)
+	sphinx-autobuild -b html -t encours -t corrige $(ALLSPHINXOPTS) $(BUILDDIR)/html --port=$(SPHINX_PORT) --host=$(SPHINX_HOST) > /dev/null
+
+ssh-key-publish:
+	cat ~/.ssh/id_rsa.pub | ssh webpub@donner-online.ch 'cat >> ~/.ssh/authorized_keys'
+
+puthtml: clean html
 	rsync -raz build/html/* webpub@donner-online.ch:/home/webpub/html/oci/poo/ --progress --delete
-	rsync -raz build/corrige/html/* webpub@donner-online.ch:/home/webpub/html/oci/poo/corrige/ --progress --delete
-
-putdemo:
-	rsync -raz build/html/* webpub@donner-online.ch:/home/webpub/html/oci/demo/poo/ --progress --delete
-	rsync -raz build/corrige/html/* webpub@donner-online.ch:/home/webpub/html/oci/demo/poo/corrige/ --progress --delete
-
-viewhtml:
-	firefox build/prof/html/index.html &	
-
-prof:
-	$(SPHINXBUILD) -v -b html $(PROF) $(ALLSPHINXOPTS) $(BUILDDIR)/prof/html
-	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/prof/html."
-
-corrige:
-	$(SPHINXBUILD) -b html  $(CORRIGE) $(ALLSPHINXOPTS) $(BUILDDIR)/corrige/html
-	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/corrige/html."
-
-htmlall: html corrige prof
-
-edit:
-	explorer.exe . &
-	chrome.exe build/prof/html/index.html &
-	sublime_text.exe &
+	# rsync -raz build/corrige/html/* webpub@donner-online.ch:/home/webpub/html/oci/evals/corrige/ --progress --delete

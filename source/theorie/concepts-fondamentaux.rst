@@ -82,12 +82,6 @@ de l'interface. L'usage d'un objet à travers son interface permet d'en
 simplifier la manipulation tout en évitant à son utilisateur de devoir savoir
 faire appel aux mécanismes fondamentaux régissant son fonctionnement.
 
-Un second bénéfice résultant de l’utilisation des classes est la possibilité
-qu’elles offrent de construire de nouveaux objets à partir d’objets
-préexistants, et donc de réutiliser des pans entiers d’une programmation déjà
-écrite (sans toucher à celle-ci !), pour en tirer une fonctionnalité nouvelle.
-Cela est rendu possible grâce aux concepts de dérivation et de polymorphisme :
-
 Héritage
 --------
 

@@ -27,7 +27,7 @@ Scénario du jeu et cahier des charges
 =====================================
 
 ..  only:: html
-    
+
     ..  figure:: figures/frogger.gif
         :align: center
 
@@ -78,7 +78,7 @@ nous allons adopter :
 #.   D'abord les mouvements de la grenouille et ceux des véhicules
 #.   Gestion des collisions
 #.   Comptage des points et gestion de la fin du jeu
-    
+
 Les voitures sont représentées par des instances de la classe ``Car`` qui
 dérive de la classe ``Actor``. Dans leur méthode ``act()``, on programme la
 direction dans laquelle elles se déplacent. On utilisera les sprites
@@ -119,7 +119,7 @@ faut faire le suivant :
     clavier qui vont la faire bouger.
 
 *   Définir le gestionnaire d'événements ``keyCallback()`` qui sera signalé au
-    moteur de jeu comme gestionnaire d'événements du clavier avec 
+    moteur de jeu comme gestionnaire d'événements du clavier avec
 
     ..  code-block:: python
 
@@ -153,7 +153,7 @@ faut faire le suivant :
         K_DOWN      = 40
 
 
-    ..  tip:: 
+    ..  tip::
 
         Si tu ne connais pas le ``keyCode`` d'une touche du clavier, il suffit
         d'essayer en exécutant ce programme qui fait appel à un gestionnaire
@@ -178,7 +178,7 @@ suffit, lors de la création d'une instance ``car`` de la classe ``Car``,
 d'appeler la méthode ``addCollisionActor`` de la grenouille :
 
 ..  code-block:: python
-    
+
     frog.addCollisionActor(car)
 
 Cet appel va indiquer à l'instance ``frog`` de la classe ``Frog`` que lors de
@@ -222,14 +222,17 @@ taille et les coordonnées de la zone du sprite sensible à la collision :
 
 *   ``setCollisionCircle(centerPoint, radius)`` :  Cercle de centre ``centerPoint`` et de rayon ``radius`` (en pixels)
 
-*   ``setCollisionImage()`` : Nicht-transparente Bildpixels (nur mit einem Partner der Kreis, Linie oder Punkt als Kollisionsarea hat)
-    
+*   ``setCollisionImage()`` : Définit les pixels non transparents de l'image de
+    sprite comme sensibles à la collision avec un autre acteur. Possible
+    uniquement avec des acteurs qui définissent leur zone de collision comme
+    ``setCollisionCircle``, ``setCollisionLine`` ou ``setCollisionSpot``
+
 *   ``setCollisionLine(startPoint, endPoint)`` : Segment de droite dont les extrémités sont les points ``startPoint`` et ``endPoint``
 
 *   ``setCollisionRectangle(center, width, height)`` : Rectangle de centre ``center``, de largeur ``width`` et de hauteur ``height``
 
-*    ``setCollisionSpot(spotPoint)`` : Un point particulier de l'image 
-     
+*    ``setCollisionSpot(spotPoint)`` : Un point particulier de l'image
+
 ..  admonition:: Remarque
 
     Pour toutes les méthodes décrites ci-dessus, le système de coordonnées
@@ -247,7 +250,7 @@ peut changer la zone de la grenouille sensible aux collisions dans le
 construteur de la classe ``Frog`` :
 
 ..  code-block:: python
-    
+
     self.setCollisionCircle(Point(0, -10), 5)
 
 de sorte qu'une collision sera générée lorsqu'une voiture roule sur le cercle
@@ -261,13 +264,13 @@ de centre :math:`(0;-15)` et de rayon :math:`5` qui entoure sa tête :
 
         *   - Méthode
             - Zone de collision
-                  
+
         *   - ``setCollisionCircle(centerPoint, radius)``
             - Cercle de centre ``centerPoint`` et de rayon ``radius`` (en pixels)
-        
+
         *   - ``setCollisionImage()``
             - Nicht-transparente Bildpixels (nur mit einem Partner der Kreis, Linie oder Punkt als Kollisionsarea hat)
-            
+
         *   - ``setCollisionLine(startPoint, endPoint)``
             - Segment de droite dont les extrémités sont les points ``startPoint`` et ``endPoint``
 
@@ -275,7 +278,7 @@ de centre :math:`(0;-15)` et de rayon :math:`5` qui entoure sa tête :
             - Rectangle de centre ``center``, de largeur ``width`` et de hauteur ``height``
 
         *   -  ``setCollisionSpot(spotPoint)``
-            - Une point particulier de l'image 
+            - Une point particulier de l'image
 
 
 Moteur de jeu
@@ -287,7 +290,7 @@ le comptage des points et les conditions de fin de jeu.
 
 Pour ce faire, on pourrait utiliser des variables globales pour stocker le
 nombre de fois que la grenouille a traversé avec succès toute la route et le
-nombre de fois que la grenouille a été écrasée. 
+nombre de fois que la grenouille a été écrasée.
 
 Si la grenouille a trois vies, on peut stoper le jeu et afficher un message de
 *Game Over* lorsqu'elle s'est faite écraser trois fois.
@@ -297,7 +300,7 @@ indiquée dans le 99% des cas et le nôtre ne fait pas exception. Le mieux
 serait de créer une classe ``FroggerGame`` qui va stocker ces différents
 paramètres en tant que variables d'instances.
 
-    
+
 Extensions / Exercices
 ======================
 
@@ -323,14 +326,14 @@ Extensions / Exercices
                 doivent être remplacés par ``self.frog``
 
             *   Le gestionnaire d'événement ``keyCallback`` devient également
-                une méthode d'instance de la classe ``FroggerGame`` puisque cette 
-                méthode doit accéder à la variable d'instance ``self.frog``. Il faut donc modifier 
+                une méthode d'instance de la classe ``FroggerGame`` puisque cette
+                méthode doit accéder à la variable d'instance ``self.frog``. Il faut donc modifier
                 l'appel de ``makeGameGrid`` aux lignes 13-14 pour faire référence à la méthode
                 d'instance ``self.keyCallback`` :
 
                 ::
 
-                    makeGameGrid(800, 600, 1, None, "sprites/lane.gif", False, 
+                    makeGameGrid(800, 600, 1, None, "sprites/lane.gif", False,
                              keyRepeated = self.keyCallback )
 
             *   Les codes d'accès ``K_LEFT`` etc ... sont devenus des variables de classe, définis en dehors du constructeur et accessibles avec ``FroggerGame.K_LEFT`` etc ...
@@ -339,7 +342,7 @@ Extensions / Exercices
                 :language: python
                 :linenos:
 
-#.  Rajouter les fonctionnalités suivantes dans le jeu :    
+#.  Rajouter les fonctionnalités suivantes dans le jeu :
 
     ..  admonition:: Consignes
 
@@ -348,18 +351,18 @@ Extensions / Exercices
             défini judicieusement
         *   À chaque fois que la grenouille se fait écraser, diminuer le nombre de vies de 1
         *   Afficher dans le titre de la fenêtre le nombre de succès et le nombre de vies restantes
-            
+
     ..  admonition:: Indications
 
-        *   On peut afficher la chaine ``texte`` dans la barre de titre de la fenêtre avec 
-            
+        *   On peut afficher la chaine ``texte`` dans la barre de titre de la fenêtre avec
+
             ::
 
                 setTitle(texte)
 
-        *   On peut mettre le jeu en pause avec 
-            
-            :: 
+        *   On peut mettre le jeu en pause avec
+
+            ::
 
                 doPause()
 
@@ -381,7 +384,7 @@ Extensions / Exercices
         ..  admonition:: Corrigé
 
             Il suffit d'ajouter l'importation du module ``soundsystem`` et de
-            jouer ensuite le son au bon moment avec 
+            jouer ensuite le son au bon moment avec
 
             ::
 
@@ -393,11 +396,11 @@ Extensions / Exercices
             ..  literalinclude:: scripts/frogger/exo-02_cor.py
                 :language: python
 
-#.  Modifier le code pour que la grenouille revienne à la position de départ lorsqu'elle a fini de traverser la route                
+#.  Modifier le code pour que la grenouille revienne à la position de départ lorsqu'elle a fini de traverser la route
 
 #.  Changer le code pour pouvoir bouger la grenouille avec les touches ``A``, ``S``, ``D``, ``W``,
     au lieu des touches "flèches" du clavier
-     
+
 #.  Faire un comptage de points qui sera affiché dans la barre de titre de la
     fenêtre.
 
@@ -411,10 +414,10 @@ Extensions / Exercices
     toutes les voies.
 
 #.  Au lieu d'avoir un décallage régulier entre les voitures, introduis
-    une distance aléatoire comprise entre 20 et 100 pixels. 
+    une distance aléatoire comprise entre 20 et 100 pixels.
 
 #.  Sois créatif et ajoute tes propres fonctionnalités au jeu.
-    
+
 Corrections
 -----------
 

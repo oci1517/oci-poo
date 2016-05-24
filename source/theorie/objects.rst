@@ -89,7 +89,7 @@ peut afficher une fenêtre dans laquelle on pourra développer nos jeux.
 *   Le fichier image ``sprites/town.jpg`` correspond au fond d'écran sur lequel va se dérouler le jeu
 
 *   Le dernier paramètre gère l'affichage de la barre de navigation qui n'est pas nécessaire dans cet exemple
-        
+
 
 ..  admonition:: Exécuter le code
 
@@ -285,10 +285,10 @@ Code Python
             *   ``e.getX()`` : coordonnées ``x`` du clic ``(0, 0)`` étant tout en haut à gauche de la fenêtre (pixels)
             *   ``e.getY()`` : coordonnées ``y`` du clic ``(0, 0)`` étant tout en haut à gauche de la fenêtre (pixels)
             *   Les coordonnée ``(0, 0)`` correspond au coin supérieur gauche de l'espace contenu dans la fenêtre du jeu
-            
+
     *   ``toLocationInGrid()`` transforme les coordonnées exprimées sous forme de
         pixels en une adresse de cellule dans la grille de jeu. Si les cases de la
-        grille font par exemple :math:`60 \times 60`` pixels, on aura 
+        grille font par exemple :math:`60 \times 60`` pixels, on aura
 
         ::
 
@@ -298,11 +298,11 @@ Code Python
             (1, 0)
 
     *   ``setSimulationPeriod(800)`` fait en sorte que la méthode ``act()`` des acteurs soit appelée toutes les 800 ms
-        
+
 ..  only:: html
-    
+
     Présentation vidéo
-    ++++++++++++++++++        
+    ++++++++++++++++++
 
     ..  only:: html
 
@@ -313,15 +313,13 @@ Code Python
 Devoirs
 =======
 
-..  admonition:: Page d'origine 
+..  admonition:: Page d'origine
 
     http://tigerjython.ch/index.php?inhalt_links=navigation.inc.php&inhalt_mitte=gamegrid/objekte.inc.php
 
-    
 
-1.  
 
-    Générer une image avec un éditeur d'images ou prendre une image libre de
+1.  Générer une image avec un éditeur d'images ou prendre une image libre de
     droits sur Internet et la placer en image de fond du jeu.
 
     ..  admonition:: Conseils
@@ -329,7 +327,7 @@ Devoirs
         *   Créer un dossier ``sprites`` dans le dossier dans lequel se trouve le fichier ``tigerjython.jar``
         *   Déposer votre image dans ce dossier ``sprites``
         *   modifier l'appel à la fonction ``makeGameGrid`` pour charger votre fichier
-            
+
         Remarque : il est également possible de charger une image se trouvant
         n'importe où sur le disque mais il faudra alors indiquer le chemin
         absolu complet de ce fichier.
@@ -349,7 +347,7 @@ Devoirs
 
         *   utiliser ``addStatusBar(<nbre_pixels>)`` pour ajouter la barre d'état à la fenêtre du jeu.
         *   utiliser ``setStatusText(chaine)`` pour afficher la chaine ``chaine`` dans la barre d'état.
-            
+
     ..  only:: html and corrige
 
         ..  admonition:: Corrigé
@@ -359,12 +357,12 @@ Devoirs
                 ..  youtube:: XrEvSLjv-84
 
 3.  Les aliens qui ont atterri dans la ville ne doivent pas simplement
-    disparaître mais doivent, une fois atterri dans la ville, prendre une autre
+    disparaître mais doivent, une fois atterris dans la ville, prendre une autre
     forme (par exemple ``sprites/alien_1.png``) et garder leur position.
 
     ..  admonition:: Conseil
 
-        *   Il faut modifier la méthode ``act()`` des aliens qui est appelée à  
+        *   Il faut modifier la méthode ``act()`` des aliens qui est appelée à
             chaque cycle du jeu pour les faire bouger. À l'intérieur de cette méthode,
             ``self`` fait référence à l'acteur courant.
 
@@ -387,7 +385,7 @@ Devoirs
 
         *   La méthode ``Actor.removeSelf()`` permet de supprimer du jeu
             l'acteur sur lequel la méthode est appelée. Donc, dans la méthode ``Alien.act()``,
-            on peut faire appel à cette méthode avec 
+            on peut faire appel à cette méthode avec
 
             ::
 
@@ -412,7 +410,7 @@ Devoirs
     ..  admonition:: Conseils
 
         *   Consulter la documentation du module ``random`` de Python, en particulier pour la méthode ``random.choice``
-            
+
     ..  only:: html and corrige
 
         ..  admonition:: Corrigé
@@ -422,7 +420,7 @@ Devoirs
                 ..  youtube:: _Md1MSA8Rzw
 
 5)  Faire preuve de créativité pour ajouter d'autres règles au jeu.
-    
+
     ..  admonition:: Suggestions
 
         1.  Compter le nombre de points pour chaque alien tué et afficher le score dans la barre d'état
@@ -493,7 +491,7 @@ exercices.
             class Alien(Actor):
                 def __init__(self):
                     Actor.__init__(self, "sprites/alien.png")
-                
+
                 def act(self):
                     self.move()
 
@@ -516,7 +514,7 @@ exercices.
             class Alien(Actor):
                 def __init__(self):
                     Actor.__init__(self, "sprites/alien.png")
-                
+
                 def act(self):
                     self.move()
 
@@ -542,7 +540,7 @@ exercices.
             class Alien(Actor):
                 def __init__(self):
                     Actor.__init__(self, "sprites/alien.png")
-                
+
                 def act(self):
                     self.move()
 
@@ -553,7 +551,7 @@ exercices.
                     removeActor(actor)
                 refresh()
 
-            makeGameGrid(10, 10, 60, Color.red, "sprites/town.jpg", False, 
+            makeGameGrid(10, 10, 60, Color.red, "sprites/town.jpg", False,
                          mousePressed = pressCallback)
             setSimulationPeriod(800)
             show()
@@ -584,7 +582,7 @@ exercices.
     *   Le fichier image ``sprites/town.jpg`` correspond au fond d'écran sur lequel va se dérouler le jeu
 
     *   Le dernier paramètre gère l'affichage de la barre de navigation qui n'est pas nécessaire dans cet exemple
-            
+
 
     ..  admonition:: Exécuter le code
 
@@ -622,7 +620,7 @@ exercices.
         *   Puisque les lignes de la grilles sont affichées également tout en bas et tout à droite, la fenêtre a une taille de 601 x 601 pixels.
             Cela correspondant à la taille minimale de l'image d'arrière-plan
         *   Le dernier paramètre booléen détermine si une barre de navigation apparaît.
-            
+
     Définir une classe par dérivation
     =================================
 
@@ -643,14 +641,38 @@ exercices.
     ableitest votre classe . Puisque vous voulez tirer le caractère de Acteur ,
     vous donnez sur ce nom de classe .
 
-    La définition de la classe contenant la définition des méthodes qui sont définies comme des fonctions normales , à la différence près qu'elles ont besoin d'être rempli a le paramètre de soi que le premier paramètre. Avec ce paramètre , vous pouvez accéder à d'autres méthodes et variables d'instance de sa propre classe et sa classe de base .
+    La définition de la classe contenant la définition des méthodes qui sont
+    définies comme des fonctions normales , à la différence près qu'elles ont
+    besoin d'être rempli a le paramètre de soi que le premier paramètre. Avec ce
+    paramètre , vous pouvez accéder à d'autres méthodes et variables d'instance
+    de sa propre classe et sa classe de base .
 
-    La liste des définitions de méthode commence généralement par la définition d'une méthode spéciale nommée __ init__ ( deux avant et arrière Sous Lignes ) . C'est ce qu'on appelle un constructeur et il sera appelé automatiquement quand un objet de la classe est créée . Dans notre cas , vous appelez le constructeur de Alien au constructeur de la classe de base Acteur , que vous abandonnez le chemin de l'image du sprite .
+    La liste des définitions de méthode commence généralement par la définition
+    d'une méthode spéciale nommée __ init__ ( deux avant et arrière Sous Lignes ) .
+    C'est ce qu'on appelle un constructeur et il sera appelé automatiquement
+    quand un objet de la classe est créée . Dans notre cas , vous appelez le
+    constructeur de Alien au constructeur de la classe de base Acteur , que vous
+    abandonnez le chemin de l'image du sprite .
 
-    Ensuite, vous définissez la méthode acte ( ) . Celui-ci joue pour l'animation de jeu un rôle central , car il est automatiquement appelée par le gestionnaire de jeu dans chaque cycle de simulation . C'est un truc particulièrement intelligent , vous n'avez donc pas à vous soucier d'un motif répétitif lui-même pour l'animation.
+    Ensuite, vous définissez la méthode acte ( ) . Celui-ci joue pour
+    l'animation de jeu un rôle central , car il est automatiquement appelée par
+    le gestionnaire de jeu dans chaque cycle de simulation . C'est un truc
+    particulièrement intelligent , vous n'avez donc pas à vous soucier d'un
+    motif répétitif lui-même pour l'animation.
 
-    Dans l'acte ( ) vous mettez l'action qui devrait rendre le personnage de jeu dans chaque cycle de simulation . Comme une démonstration vous déplacez ici que move () à la cellule suivante . Depuis move () est une méthode de l'acteur de classe de base , vous devez les appeler auto lettre préfixe .
+    Dans l'acte ( ) vous mettez l'action qui devrait rendre le personnage de jeu
+    dans chaque cycle de simulation . Comme une démonstration vous déplacez ici
+    que move () à la cellule suivante . Depuis move () est une méthode de
+    l'acteur de classe de base , vous devez les appeler auto lettre préfixe .
 
-    Avez-vous déjà défini votre classe Alien , de sorte que vous générer un objet étranger en composant le nom de la classe et l'affecte à une variable . Typique de la POO , c'est que vous pouvez bien sûr créer autant étrangers . Comme dans la vie de tous les jours , ceux-ci ont leur propre individualité , «savoir» , c'est la façon dont ils doivent se déplacer .
+    Avez-vous déjà défini votre classe Alien , de sorte que vous générer un
+    objet étranger en composant le nom de la classe et l'affecte à une variable .
+    Typique de la POO , c'est que vous pouvez bien sûr créer autant étrangers .
+    Comme dans la vie de tous les jours , ceux-ci ont leur propre individualité ,
+    «savoir» , c'est la façon dont ils doivent se déplacer .
 
-    Pour insérer les étrangers créent le plateau de jeu , vous utilisez addActor ( ) , où vous devez indiquer les coordonnées de la cellule avec l'emplacement ( ) ( la cellule avec les coordonnées (0,0) est en haut à gauche , prend x à gauche, y vers ) . Pour démarrer le cycle de simulation , vous appelez enfin sur doRun ( ) .
+    Pour insérer les étrangers créent le plateau de jeu , vous utilisez addActor ( ) ,
+    où vous devez indiquer les coordonnées de la cellule avec l'emplacement ( ) (
+    la cellule avec les coordonnées (0,0) est en haut à gauche , prend x à
+    gauche, y vers ) . Pour démarrer le cycle de simulation , vous appelez enfin
+    sur doRun ( ) .

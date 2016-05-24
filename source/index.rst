@@ -20,7 +20,7 @@ Module 4 : Programmation orientée objets et développement de jeux
             *   Théorie distribuée en cours (en cours d'amélioration) : https://www.dropbox.com/s/xm75t0mhnry39uj/theorie-m4-POO.pdf
             *   Exercices (CHAJ) : https://www.dropbox.com/s/sin4qwgz7q5yl1k/exercices-chaj--m4-POO.pdf
             *   Notes de cours : https://www.dropbox.com/s/jiy3ov9wi3v2pp7/dossier-perso.pdf
-                
+
     ..  admonition:: Version PDF de ce cours
 
         *   :download:`files/oci-chap-poo.pdf`
@@ -69,7 +69,7 @@ POO avancées
 
     ..  raw:: html
 
-        <iframe src="https://docs.google.com/forms/d/19venArqzZgNsIXZUbwkumMoCeJiI4L_FNL7hOG6EyKU/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Chargement en cours...</iframe>        
+        <iframe src="https://docs.google.com/forms/d/19venArqzZgNsIXZUbwkumMoCeJiI4L_FNL7hOG6EyKU/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Chargement en cours...</iframe>
 
 
 
@@ -79,8 +79,8 @@ POO avancées
 ..  toctree::
     :maxdepth: 1
 
-    eval/theorie.rst
-    eval/pratique.rst
+    ..  eval/theorie.rst
+    ..  eval/pratique.rst
 
 Annexes
 =======
@@ -100,4 +100,3 @@ Annexes
     * :tables:`genindex`
     * :ref:`modindex`
     * :ref:`search`
-

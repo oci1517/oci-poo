@@ -43,3 +43,8 @@ nosetests.xml
 
 # sublimeProject files
 sublime-projet* 
+
+venv
+*~
+
+

@@ -11,7 +11,7 @@ Classes et objets
     ..  admonition:: Documents
 
         Voici une version PDF de cette section pour vous permettre d'étudier et
-        annoter le code sur papier. 
+        annoter le code sur papier.
 
         *   Version PDF de cette section : :download:`classes-et-objets.pdf`
 
@@ -29,18 +29,18 @@ qui peuvent être posées lors d'un oral de BAC.
 
     # ---------------- classe Animal ----------------
     class Animal():
-        
+
         def __init__(self, imgPath):
-            self.imagePath = imgPath 
+            self.imagePath = imgPath
 
-        
-        def showMe(self, x, y): 
-             bg.drawImage(self.imagePath, x, y) 
 
-    
+        def showMe(self, x, y):
+             bg.drawImage(self.imagePath, x, y)
+
+
     def pressCallback(e):
         myAnimal = Animal("sprites/animal.gif")
-        myAnimal.showMe(e.getX(), e.getY()) 
+        myAnimal.showMe(e.getX(), e.getY())
 
     makeGameGrid(600, 600, 1, False, mousePressed = pressCallback)
     setBgColor(Color.green)
@@ -62,7 +62,7 @@ Analyse de code
         ..  admonition:: Corrigé
 
             La fonction ``__init__`` est le constructeur de la classe ``Animal``.
-            Cette fonction est appelée automatiquement à fois que l'on crée un animal avec 
+            Cette fonction est appelée automatiquement à fois que l'on crée un animal avec
 
             ::
 
@@ -96,7 +96,7 @@ Analyse de code
             référence vers l'instance concrète sur laquelle la méthode a été
             invoquée.
 
-            Lors de l'invocation de la méthode avec 
+            Lors de l'invocation de la méthode avec
 
             ::
 
@@ -125,7 +125,7 @@ Analyse de code
             chaque fois qu'un événement de type ``MousePressed`` est généré
             par le système.
 
-            C'est uniquement à la ligne 18 
+            C'est uniquement à la ligne 18
 
             ::
 
@@ -203,13 +203,13 @@ par dérivation. Observer ce code en répondre aux questions posées :
             super(Pet, self).__init__(self, imgPath)
 
         pour appeler le constructeur de la classe de base de ``Pet`` pour éviter
-        d'y faire référence explicitement comme le fait notre code avec 
+        d'y faire référence explicitement comme le fait notre code avec
 
         ::
 
             Animal.__init__(self, imgPath)
 
-        Dans Python 3, il est possible de se contenter de 
+        Dans Python 3, il est possible de se contenter de
 
         ::
 
@@ -228,21 +228,21 @@ par dérivation. Observer ce code en répondre aux questions posées :
 
     # ---------------- classe Animal ----------------
     class Animal():
-        
-        def __init__(self, imgPath): 
-            self.imagePath = imgPath 
 
-        
-        def showMe(self, x, y): 
+        def __init__(self, imgPath):
+            self.imagePath = imgPath
+
+
+        def showMe(self, x, y):
              bg.drawImage(self.imagePath, x, y)
 
     # ---------------- classe Pet ----------------
     class Pet(Animal):   # Derived from Animal
-        
-        def __init__(self, imgPath, name):  
+
+        def __init__(self, imgPath, name):
             Animal.__init__(self, imgPath)
             self.name = name
-        
+
         def tell(self, x, y): # Additional method
             bg.drawText(self.name, Point(x, y))
 
@@ -255,7 +255,7 @@ par dérivation. Observer ce code en répondre aux questions posées :
 
     for i in range(5):
         myPet = Pet("sprites/pet.gif", "Trixi")
-        myPet.showMe(50 + 100 * i, 100) 
+        myPet.showMe(50 + 100 * i, 100)
         myPet.tell(72 + 100 * i, 145)
 
 
@@ -288,7 +288,7 @@ Questions
 
         ..  admonition:: Corrigé
 
-            La ligne 20 
+            La ligne 20
 
             ::
 
@@ -396,40 +396,40 @@ Hiérarchie de classes
 
     # ---------------- classe Animal ----------------
     class Animal():
-        
-        def __init__(self, imgPath): 
-            self.imagePath = imgPath 
 
-        
-        def showMe(self, x, y):  
-             bg.drawImage(self.imagePath, x, y) 
-             
+        def __init__(self, imgPath):
+            self.imagePath = imgPath
+
+
+        def showMe(self, x, y):
+             bg.drawImage(self.imagePath, x, y)
+
     # ---------------- classe Pet ----------------
-    class Pet(Animal): 
-        
-        def __init__(self, imgPath, name): 
+    class Pet(Animal):
+
+        def __init__(self, imgPath, name):
             Animal.__init__(self, imgPath)
             self.name = name
-        
+
         def tell(self, x, y):
             bg.drawText(self.name, Point(x, y))
 
     # ---------------- classe Dog ----------------
     class Dog(Pet):
-        
-        def __init__(self, imgPath, name): 
+
+        def __init__(self, imgPath, name):
             Pet.__init__(self, imgPath, name)
-        
+
         def tell(self, x, y): # Overriding
             bg.setPaintColor(Color.blue)
             bg.drawText(self.name + " tells 'Waoh'", Point(x, y))
 
     # ---------------- classe Cat ----------------
     class Cat(Pet):
-        
+
         def __init__(self, imgPath, name):
             Pet.__init__(self, imgPath, name)
-        
+
         def tell(self, x, y): # Overriding
             bg.setPaintColor(Color.gray)
             bg.drawText(self.name + "  tells 'Meow'", Point(x, y))
@@ -441,15 +441,15 @@ Hiérarchie de classes
     bg = getBg()
 
     alex = Dog("sprites/dog.gif", "Alex")
-    alex.showMe(100, 100) 
-    alex.tell(200, 130) 
+    alex.showMe(100, 100)
+    alex.tell(200, 130)
 
     rex = Dog("sprites/dog.gif", "Rex")
-    rex.showMe(100, 300) 
+    rex.showMe(100, 300)
     rex.tell(200, 330)
 
     xara = Cat("sprites/cat.gif", "Xara")
-    xara.showMe(100, 500) 
+    xara.showMe(100, 500)
     xara.tell(200, 530)
 
 Questions
@@ -472,7 +472,7 @@ Questions
                 Diagramme de classes montrant la classe ``Pet`` dérivée de la classe ``Animal``
 
 
-2)  Modifier les classes ``Dog`` et ``Cat`` pour qu'elles chargent automatiquement le bon sprite (la bonne image représentative) 
+2)  Modifier les classes ``Dog`` et ``Cat`` pour qu'elles chargent automatiquement le bon sprite (la bonne image représentative)
     sans devoir le spécifier dans le construteur
 
     ..  raw:: pdf
@@ -487,7 +487,7 @@ Questions
             Il suffit de modifier le construteur des classes ``Dog`` et
             ``Cat``. Par exemple, pour la classe ``Dog``, en supposant que le
             sprite voulu soit ``sprites/dog.png``, il apporter les modifications suivantes :
-            
+
             ..  code-block:: python
 
                 class Dog(Pet):
@@ -569,8 +569,8 @@ Questions
 
         y = 100
         for pet in pets:
-            animal.showMe(100, y)
-            animal.tell(200, y + 30)    # Which tell()????
+            pet.showMe(100, y)
+            pet.tell(200, y + 30)    # Which tell()????
             y = y + 200
             delay(1000)
 
@@ -635,7 +635,7 @@ Modifications effectuées
 
 Lorsqu'on a deux versions différentes d'un même fichier, on peut toujours
 observer rapidement les ajouts ou suppression du deuxième fichier par rapport
-au fichier original avec la commande 
+au fichier original avec la commande
 
 ..  code-block:: bash
 

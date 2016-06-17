@@ -224,3 +224,6 @@ ssh-key-publish:
 puthtml: clean html
 	rsync -raz build/html/* webpub@donner-online.ch:/home/webpub/html/oci/poo/ --progress --delete
 	# rsync -raz build/corrige/html/* webpub@donner-online.ch:/home/webpub/html/oci/evals/corrige/ --progress --delete
+
+update-youtube:
+	cp -f modules/youtube.py venv/lib/python*/site-packages/sphinxcontrib/youtube/youtube.py

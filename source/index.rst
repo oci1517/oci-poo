@@ -52,6 +52,8 @@ Jeux et POO
     theorie/classes-et-objets
     theorie/static_vars_methods
     theorie/jeux-arcades-frogger
+    theorie/solitaire-specifications
+    theorie/fruit-shoot
 
 POO avancées
 ============

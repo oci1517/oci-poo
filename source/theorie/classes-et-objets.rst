@@ -190,7 +190,7 @@ Héritage
 
 L'héritage est une des propriétés les plus utiles et fondamentales dans la
 POO. Ce mécanisme permet de réutiliser du code défini dans d'autres classes
-par dérivation. Observer ce code en répondre aux questions posées :
+par dérivation. Observer ce code et répondre aux questions posées :
 
 ..  only:: not pdf
 

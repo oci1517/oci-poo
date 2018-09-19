@@ -79,7 +79,7 @@ l'aide du mot-clé ``class``, on peut créer des récipients différents.
 de données utilisable dans notre programme.
 
     >>> r2.remplir() # remplir le recipient r2
-    >>> r1.transferer(r2) # transfère le contenu de r2 dans r1
+    >>> r1.transferer(r2) # transfère le contenu de r1 dans r2
     >>> r2.vider() # vider le récipient r2
     >>> r2.volume
     0

@@ -37,7 +37,7 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) sou
 I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
 
 
-.PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext
+.PHONY: help clean corrige dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -69,7 +69,7 @@ clean:
 	rm -rf $(BUILDDIR)/*
 
 html:
-	$(SPHINXBUILD) -b html -t corrige $(ALLSPHINXOPTS) $(BUILDDIR)/html
+	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 encours:
@@ -218,7 +218,7 @@ livehtml: encours
 	@echo Serving pages on $(SPHINX_URL)
 	sphinx-autobuild -b html -t encours -t corrige $(ALLSPHINXOPTS) $(BUILDDIR)/html --port=$(SPHINX_PORT) --host=$(SPHINX_HOST) > /dev/null
 
-ssh-key-publish:
+ssh-key-surge:
 	cat ~/.ssh/id_rsa.pub | ssh webpub@donner-online.ch 'cat >> ~/.ssh/authorized_keys'
 
 puthtml: clean html
@@ -230,6 +230,9 @@ update-youtube:
 
 surge: html
 	surge -d oci-poo.surge.sh -p build/html
+	surge -d corrige.oci-poo.surge.sh -p build/corrige
+	
+
 
 teardown:
 	surge teardown oci-poo.surge.sh 

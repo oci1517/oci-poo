@@ -63,7 +63,7 @@ POO avancées
     :maxdepth: 1
 
     theorie/operator_overloading
-    theorie/exceptions_avance
+    theorie/exceptions
 
 ..
     Questionnaire sur le cours

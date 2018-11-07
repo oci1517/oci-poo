@@ -71,7 +71,16 @@ importants, nous retiendrons surtout les opérateurs suivants :
         - ``__mul__``
 
     *   - ``/``
-        - ``__div__``
+        - ``__truediv__``
+
+    *   - ``//``
+        - ``__floordiv__``
+
+    *   - ``%``
+        - ``__mod__``
+
+..  list-table:: Surcharge des opérateurs de comparaison
+    :header-rows: 1
 
     *   - ``<``
         - ``__lt__``
@@ -87,8 +96,18 @@ importants, nous retiendrons surtout les opérateurs suivants :
 
     *   - ``==``
         - ``__eq__``
+
+    *   - ``!=``
+        - ``__ne__``
+    
+Références
+==========
+
+Vous trouverez plus de détails sur la surcharge d'opérateurs dans les sources / références suivantes
+
+*   https://www.python-course.eu/python3_magic_methods.php
           
-Exercice 1 (opérations sur les fractions)
+Exercice 1 (opérations sur les vecteurs)
 =========================================
 
 On donne la classe ``Vector`` suivante qui représente des vecteurs.
@@ -120,7 +139,7 @@ Surcharger les opérateurs ``+`` et ``*`` pour que les opérations suivantes soi
     6
 
 
-Exercice 2 (Opérations sur les vecteurs)
+Exercice 2 (Opérations sur les fractions)
 ========================================
 
 Implémenter une classe Fraction qui doit pouvoir s’utiliser de la manière suivante :
@@ -164,16 +183,33 @@ Implémenter une classe Fraction qui doit pouvoir s’utiliser de la manière su
     >>> gcd(15, 5)
     5
 
+Code de base
+------------
+
+..  literalinclude:: code/my_fraction_base.py
+    :language: python
+    :linenos:
+
+..  comment::
+
+    ..  admonition:: Téléchargement
+        :class: attention
+
+        :download:`code/my_fraction_base.py`
+
+
 Indications
 -----------
 
-*   Compléter le fichier ``my_fractions.py`` qui se trouve sur GoogleDocs et qui dispose déjà
-    d’une fonction ``pgcd`` qui calcule le pgcd de deux nombres entiers à l’aide de l’algorithme d’Euclide
+*   Compléter le code de la classe ``Franction`` présenté plus haut
+    (:download:`code/my_fraction_base.py`) et qui dispose déjà d’une fonction
+    ``pgcd`` qui calcule le PGCD de deux nombres entiers à l’aide de
+    l’algorithme d’Euclide
 
 *   Le module intégré ``fractions`` contient une classe ``Fraction`` qui présente ces caractéristiques.
     Il est donc possible d’importer la classe ``Fraction`` avec ``from fractions import Fraction``.
 *   Une fraction négative est représentée par un numérateur négatif et un dénominateur positif.
-*   Veiller à définir une méthode ``reduire()`` qui divise le numérateur et le dénominateur par leur PGCD.
+*   Veiller à définir une méthode ``reduce()`` qui divise le numérateur et le dénominateur par leur PGCD.
 *   Surcharger les fonctions spéciales ``__add__``, ``__mul__``, ``__div__`` etc … pour implémenter les opérations mathématiques sur les fractions
 *   Surcharger les opérations de comparaison pour pouvoir comparer des fractions (cf. la documentation pour savoir comment s’appellent ces méthodes spéciales, comme par exemple ``__le__`` pour ``<``.
 *   Tester le type de la valeur donnée au constructeur et lever des erreurs de manière appropriée, par exemple si le dénominateur vaut 0, si la chaine de caractère ne représente pas un nombre, etc …

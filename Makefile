@@ -228,13 +228,15 @@ puthtml: clean html
 update-youtube:
 	cp -f modules/youtube.py venv/lib/python*/site-packages/sphinxcontrib/youtube/youtube.py
 
-surge: html
+surge-html: html
 	surge -d oci-poo.surge.sh -p build/html
+surge-corrige: corrige
 	surge -d corrige.oci-poo.surge.sh -p build/corrige
-	
-
+surge: surge-html surge-corrige
 
 teardown:
 	surge teardown oci-poo.surge.sh 
 
-deploy: surge
+deploy-html: surge-html
+deploy-corrige: surge-corrige
+deploy: deploy-html deploy-corrige

@@ -1,7 +1,60 @@
-# fichier my_fractions.py
-# auteur : Cédric Donner
+class Fraction:
+    
+    '''
+    Classe Fraction : représente une fraction 
 
-# Description : fichier de base pour l'exercice 4.4 sur les fractions
+    #Manières d'appeler le constructeur de fractions.
+    >>> Fraction(4, -6)
+    Fraction(-2, 3)
+    >>> Fraction('-5/6')
+    Fraction(-5, 6)
+    >>> Fraction('4')
+    Fraction(4, 1)
+    >>> Fraction('4.2')
+    Fraction(21, 5)
+    >>> f1, f2 = Fraction(6, 3), Fraction(2, 5)
+    >>> f1 + f2
+    Fraction(12, 5)
+    >>> f1 - f2
+    Fraction(8, 5)
+    >>> f1 * f2
+    Fraction(4, 5)
+    >>> f1 / f2
+    Fraction(5, 1)
+    >>> f2 < f1
+    True
+    >>> f2 > f1
+    False
+    >>> Fraction(1, 2) <= Fraction(2, 4)
+    True
+    >>> Fraction(1, 2) >= Fraction(2, 4)
+    True
+    >>> f1 == f2
+    False
+    >>> f1 <= f2
+    False
+    >>> f1 >= f2
+    True
+    >>> gcd(15, 21)
+    3
+    >>> gcd(15, 5)
+    5
+    '''
+
+    def __init__(self, num, denom):
+
+        self.num = num
+        self.denom = denom
+        
+
+    def __str__(self):
+        pass
+
+    def __repr__(self):
+        pass
+
+    
+                                          
 def gcd(m,n):
     while m%n != 0:
         oldm = m
@@ -11,32 +64,6 @@ def gcd(m,n):
         n = oldm%oldn
     return n
 
-
-
-class Fraction:
-
-    def __init__(self, top, bottom):
-        self.num = top
-        self.den = bottom
-
-    
-    def __str__(self):
-        # à compléter
-
-    def __repr__(self):
-        # à compléter
-        pass
-
-    # Par convention, les méthodes qui commencent par un caractère de
-    # soulignement ne devraient pas etre appelées depuis l'extérieur
-    # de la classe ... On parle de méthode privée
-    
-    def _reduce(self):
-        '''
-
-        Cette méthode réduit la fraction à une fraction irréductible.
-        Méthode privée : à ne pas appeler depuis l'extérieur de la
-        classe.
-
-        '''
-        pass
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()

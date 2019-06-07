@@ -70,6 +70,9 @@ importants, nous retiendrons surtout les opérateurs suivants :
     *   - ``*``
         - ``__mul__``
 
+    *   - ``**``
+        - ``__pow__``
+
     *   - ``/``
         - ``__truediv__``
 
@@ -127,7 +130,7 @@ On donne la classe ``Vector`` suivante qui représente des vecteurs.
 Consigne
 --------
 
-Surcharger les opérateurs ``+`` et ``*`` pour que les opérations suivantes soient possibles :
+Surcharger les opérateurs ``+``, ``*`` et ``==`` pour que les opérations suivantes soient possibles :
 
 ..  code-block:: python
 
@@ -137,6 +140,25 @@ Surcharger les opérateurs ``+`` et ``*`` pour que les opérations suivantes soi
     Vector(3, 3, 3)
     >>> v1 * v2  # produit scalaire
     6
+    >>> v1 + v2 == V(3,3,3)  # tester si deux vecteurs sont identiques
+    True
+    >>> v1 + v2 == V(3,4,3)  # tester si deux vecteurs sont identiques
+    False
+
+
+..  only:: corrige
+
+    Corrigé
+    -------
+
+    Voici le code corrigé, y compris une fonction de test qui permet de tester
+    que le code est fonctionnel. Remarquez l'utilisdation de la fonction
+    intégrée ``all(conditions)`` qui prend en paramètre une liste de booléens et
+    qui retourne ``True`` si et seulement si tous les éléments de la liste sont
+    ``True`` :
+
+    ..  literalinclude:: code/vector_corrige.py
+        :language: python
 
 
 Exercice 2 (Opérations sur les fractions)
@@ -146,31 +168,30 @@ Implémenter une classe Fraction qui doit pouvoir s’utiliser de la manière su
  
 ..  code-block:: python
 
-    # Manières d'appeler le constructeur #de fractions.
     >>> Fraction(4, -6)
     Fraction(-2, 3)
     >>> Fraction('-5/6')
     Fraction(-5, 6)
     >>> Fraction('4')
-    Fraction(4,1)
+    Fraction(4, 1)
     >>> Fraction('4.2')
     Fraction(21, 5)
-    # donne le plus petit dénominateur com-mun 
-    >>> f1, f2 = Fraction(6, 3), Frac-tion(2, 5)
-    # opérations arithmétiques sur les ob-jets Fraction
+    >>> f1, f2 = Fraction(6, 3), Fraction(2, 5)
     >>> f1 + f2
     Fraction(12, 5)
     >>> f1 - f2
     Fraction(8, 5)
-
     >>> f1 * f2
     Fraction(4, 5)
     >>> f1 / f2
     Fraction(5, 1)
-    # opérations de comparaison sur les fractions
-    >>> f1 < f2
-    False
     >>> f2 < f1
+    True
+    >>> f2 > f1
+    False
+    >>> Fraction(1, 2) <= Fraction(2, 4)
+    True
+    >>> Fraction(1, 2) >= Fraction(2, 4)
     True
     >>> f1 == f2
     False
@@ -198,6 +219,27 @@ Code de base
         :download:`code/my_fraction_base.py`
 
 
+    ..  admonition:: Remarque
+        :class: note
+
+        Remarquez les lignes
+
+        ::
+
+            if __name__ == '__main__':
+                import doctest
+                doctest.testmod()
+
+        à la fin du fichier. Ces lignes ne sont exécutées que lorsque l'on
+        exécute directement le script python mais pas lorsqu'il est importé en
+        tant que module dans un autre programme Python. Le module ``doctest``
+        utilise les exemples présents dans la docstring pour effectuer des tests
+        sur la classe.
+
+        Ainsi, tant que toutes les méthodes ne sont pas implémentées
+        correctement, l'exécution du script va causer des erreurs.
+
+
 Indications
 -----------
 
@@ -213,3 +255,31 @@ Indications
 *   Surcharger les fonctions spéciales ``__add__``, ``__mul__``, ``__div__`` etc … pour implémenter les opérations mathématiques sur les fractions
 *   Surcharger les opérations de comparaison pour pouvoir comparer des fractions (cf. la documentation pour savoir comment s’appellent ces méthodes spéciales, comme par exemple ``__le__`` pour ``<``.
 *   Tester le type de la valeur donnée au constructeur et lever des erreurs de manière appropriée, par exemple si le dénominateur vaut 0, si la chaine de caractère ne représente pas un nombre, etc …
+
+
+..  only:: corrige
+
+    Corrigé
+    -------
+
+    Voici un corrigé possible pour la classe ``Fraction``.
+
+    ..  warning:: 
+
+        Étudier particulièrement le constructeur ``__init__`` qui utilise
+        quelques fonctionnalités intéressantes telles que la fonction
+        ``isinstance(instance, classinfo)`` qui permet de tester si l'objet
+        ``instance`` est une instance de la classe ``classinfo``
+
+        Exemples d'utilisation :
+
+        ::
+
+            >>> isinstance('salut', str)
+            True
+            >>> isinstance('salut', int)
+            False
+
+    ..  literalinclude:: code/my_fraction_corrige.py
+        :language: python
+        :linenos:

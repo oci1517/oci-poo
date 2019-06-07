@@ -33,7 +33,11 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.autodoc',
     'sphinxcontrib.youtube',
+    'sphinxcontrib.plantuml',
 ]
+
+# Config for plantuml
+plantuml = 'java -jar ~/bin/plantuml.jar'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

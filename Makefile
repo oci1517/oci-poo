@@ -7,6 +7,8 @@ SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = build
 
+DOMAIN = oci-poo
+
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
 $(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you don't have Sphinx installed, grab it from http://sphinx-doc.org/)
@@ -37,7 +39,7 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) sou
 I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
 
 
-.PHONY: help clean corrige dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext
+.PHONY: help clean dev dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -76,10 +78,10 @@ encours:
 	$(SPHINXBUILD) -b html -t encours $(ALLSPHINXOPTS) $(BUILDDIR)/encours
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/encours."
-corrige:
-	$(SPHINXBUILD) -b html -t corrige $(ALLSPHINXOPTS) $(BUILDDIR)/corrige
+dev:
+	$(SPHINXBUILD) -b html -t dev $(ALLSPHINXOPTS) $(BUILDDIR)/dev
 	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/corrige."
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/dev."
 
 dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
@@ -216,27 +218,32 @@ chrome:
 
 livehtml: encours
 	@echo Serving pages on $(SPHINX_URL)
-	sphinx-autobuild -b html -t encours -t corrige $(ALLSPHINXOPTS) $(BUILDDIR)/html --port=$(SPHINX_PORT) --host=$(SPHINX_HOST) > /dev/null
+	sphinx-autobuild -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html --port=$(SPHINX_PORT) --host=$(SPHINX_HOST) > /dev/null
+
+livedev: dev
+	@echo Serving pages on $(SPHINX_URL)
+	sphinx-autobuild -b html -t dev $(ALLSPHINXOPTS) $(BUILDDIR)/dev --port=$(SPHINX_PORT) --host=$(SPHINX_HOST) > /dev/null
+
 
 ssh-key-surge:
 	cat ~/.ssh/id_rsa.pub | ssh webpub@donner-online.ch 'cat >> ~/.ssh/authorized_keys'
 
 puthtml: clean html
 	rsync -raz build/html/* webpub@donner-online.ch:/home/webpub/html/oci/poo/ --progress --delete
-	# rsync -raz build/corrige/html/* webpub@donner-online.ch:/home/webpub/html/oci/evals/corrige/ --progress --delete
+	# rsync -raz build/dev/html/* webpub@donner-online.ch:/home/webpub/html/oci/evals/dev/ --progress --delete
 
 update-youtube:
 	cp -f modules/youtube.py venv/lib/python*/site-packages/sphinxcontrib/youtube/youtube.py
 
 surge-html: html
-	surge -d oci-poo.surge.sh -p build/html
-surge-corrige: corrige
-	surge -d corrige.oci-poo.surge.sh -p build/corrige
-surge: surge-html surge-corrige
+	surge -d $(DOMAIN).surge.sh -p build/html
+surge-dev: dev
+	surge -d dev.$(DOMAIN).surge.sh -p build/dev
+surge: surge-html surge-dev
 
 teardown:
-	surge teardown oci-poo.surge.sh 
+	surge teardown $(DOMAIN).surge.sh 
 
 deploy-html: surge-html
-deploy-corrige: surge-corrige
-deploy: deploy-html deploy-corrige
+deploy-dev: surge-dev
+deploy: deploy-html deploy-dev
